@@ -1,8 +1,6 @@
 # Makefile.am for installation/general
 #
 
-SUBDIRS = tests
-
 controldir = $(yast2dir)/control
 
 control_DATA = \
