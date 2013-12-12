@@ -1,0 +1,13 @@
+## configure.ac.in for yast2-installation-control
+##
+## 'y2tool y2autoconf' should be called
+## from Makefile.cvs to get configure.ac
+
+## Initialize
+@YAST2-INIT-COMMON@
+
+## some common checks
+@YAST2-CHECKS-COMMON@
+
+## and generate the output...
+@YAST2-OUTPUT@
