@@ -1,7 +1,5 @@
-# Makefile.am for installation/general
+# Makefile.am for yast2-installation-control/control
 #
-
-SUBDIRS = tests
 
 controldir = $(yast2dir)/control
 
@@ -9,7 +7,12 @@ control_DATA = \
 	control.rnc \
 	control.rng
 
-xml_files = \
+# install the XML control files into documentation dir
+# they are not used directly, they are just picked there by a specific
+# skelcd-control-* package
+xmldir = $(docdir)/control_files
+
+xml_DATA = \
 	control.SLED.xml \
 	control.SLES.xml \
 	control.SLES-for-VMware.xml \
@@ -32,7 +35,7 @@ xml_files = \
 #
 # At build time the RNG file from tarball will have a newer time stamp
 # and thus it will not need rebuild/update making "trang" unnecessary.
-EXTRA_DIST =  $(control_DATA) $(xml_files)
+EXTRA_DIST =  $(control_DATA) $(xml_DATA)
 
 include $(top_srcdir)/Makefile.am.common
 
@@ -41,4 +44,4 @@ control.rng: control.rnc
 
 # checks only those control files that belong to this package
 check-local: control.rng
-	xmllint --relaxng control.rng --noout $(xml_files)
+	xmllint --relaxng control.rng --noout $(xml_DATA)
