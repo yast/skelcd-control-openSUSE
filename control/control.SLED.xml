@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<productDefines  xmlns="http://www.suse.com/1.0/yast2ns"
-    xmlns:config="http://www.suse.com/1.0/configns">
+<productDefines xmlns="http://www.suse.com/1.0/yast2ns" xmlns:config="http://www.suse.com/1.0/configns">
 
 <!--
 Work around for the text domain
@@ -10,7 +9,7 @@ textdomain="control"
     <textdomain>control</textdomain>
 
     <globals>
-	<additional_kernel_parameters></additional_kernel_parameters>
+	<additional_kernel_parameters/>
         <enable_autologin config:type="boolean">false</enable_autologin>
 	<enable_firewall config:type="boolean">true</enable_firewall>
 	<firewall_enable_ssh config:type="boolean">false</firewall_enable_ssh>
@@ -25,7 +24,7 @@ textdomain="control"
         <skip_language_dialog config:type="boolean">true</skip_language_dialog>
         <ui_mode>simple</ui_mode>
         <enable_clone config:type="boolean">false</enable_clone>
-        <enable_register_hwdata   config:type="boolean">true</enable_register_hwdata>
+        <enable_register_hwdata config:type="boolean">true</enable_register_hwdata>
         <enable_register_optional config:type="boolean">true</enable_register_optional>
         <display_register_forcereg config:type="boolean">true</display_register_forcereg>
         <disable_register_w3m config:type="boolean">false</disable_register_w3m>
@@ -148,7 +147,7 @@ textdomain="control"
 		<packages>gdm gnome-shell-classic</packages>
 		<order config:type="integer">1</order>
 		<!-- Patterns are selected by the product itself -->
-		<patterns></patterns>
+		<patterns/>
 		<icon>pattern-gnome</icon>
 	    </one_supported_desktop>
 
@@ -170,7 +169,7 @@ textdomain="control"
 		<label_id>desktop_textmode</label_id>
 		<logon>xdm</logon>
 		<cursor>DMZ</cursor>
-		<packages></packages>
+		<packages/>
 		<order config:type="integer">8</order>
 		<patterns>enhanced_base</patterns>
 		<icon>yast-sshd</icon>
@@ -236,8 +235,8 @@ Please visit us at http://www.suse.com/.
 	</congratulate>
 
 	<!-- BNC #431336, Do not display any system type -->
-	<desktop_gnome><label></label></desktop_gnome>
-	<dummy_desktop><label></label></dummy_desktop>
+	<desktop_gnome><label/></desktop_gnome>
+	<dummy_desktop><label/></dummy_desktop>
 
 	<!-- FATE #305583: Start CIMOM by default -->
 	<service_sfcb><label>CIM Server</label></service_sfcb>
@@ -384,7 +383,7 @@ Please visit us at http://www.suse.com/.
 	    <label>Preparation</label>
             <mode>installation</mode>
             <stage>initial</stage>
-            <modules  config:type="list">
+            <modules config:type="list">
                 <module>
                     <label>Network Autosetup</label>
                     <name>setup_dhcp</name>
@@ -590,7 +589,7 @@ Please visit us at http://www.suse.com/.
 	    <label>Preparation</label>
             <mode>update</mode>
             <stage>initial</stage>
-            <modules  config:type="list">
+            <modules config:type="list">
                 <module>
                     <name>complex_welcome</name>
 	            <label>Welcome</label>

@@ -1,6 +1,5 @@
 <?xml version="1.0"?>
-<productDefines  xmlns="http://www.suse.com/1.0/yast2ns"
-    xmlns:config="http://www.suse.com/1.0/configns">
+<productDefines xmlns="http://www.suse.com/1.0/yast2ns" xmlns:config="http://www.suse.com/1.0/configns">
 
 <!--
 Work around for the text domain
@@ -10,7 +9,7 @@ textdomain="control"
     <textdomain>control</textdomain>
 
     <globals>
-	<additional_kernel_parameters></additional_kernel_parameters>
+	<additional_kernel_parameters/>
         <enable_autologin config:type="boolean">false</enable_autologin>
 	<enable_firewall config:type="boolean">true</enable_firewall>
 	<firewall_enable_ssh config:type="boolean">false</firewall_enable_ssh>
@@ -26,7 +25,7 @@ textdomain="control"
         <ui_mode>expert</ui_mode>
 	<displaymanager_shutdown>root</displaymanager_shutdown>
         <enable_clone config:type="boolean">true</enable_clone>
-        <enable_register_hwdata   config:type="boolean">true</enable_register_hwdata>
+        <enable_register_hwdata config:type="boolean">true</enable_register_hwdata>
         <enable_register_optional config:type="boolean">true</enable_register_optional>
         <display_register_forcereg config:type="boolean">true</display_register_forcereg>
         <disable_register_w3m config:type="boolean">false</disable_register_w3m>
@@ -223,7 +222,7 @@ textdomain="control"
 		<label_id>dummy_desktop</label_id>
 		<logon>xdm</logon>
 		<cursor>DMZ</cursor>
-		<packages></packages>
+		<packages/>
 		<order config:type="integer">8</order>
 		<patterns>enhanced_base</patterns>
 		<icon>yast-sshd</icon>
@@ -296,7 +295,7 @@ Please visit us at http://www.suse.com/.
       </congratulate>
 
 	<!-- Empty string is intentional, bnc #431251, bnc #431336 -->
-	<dummy_desktop><label></label></dummy_desktop>
+	<dummy_desktop><label/></dummy_desktop>
 
 	<!-- FATE #304373: Server scenarios -->
 	<scenarios_caption><label>Server Base Scenario</label></scenarios_caption>
@@ -541,7 +540,7 @@ Choose the one that matches your server the best.</label></scenarios_text>
 	    <label>Preparation</label>
             <mode>installation</mode>
             <stage>initial</stage>
-            <modules  config:type="list">
+            <modules config:type="list">
                 <module>
                     <label>Network Autosetup</label>
                     <name>setup_dhcp</name>
@@ -748,7 +747,7 @@ Choose the one that matches your server the best.</label></scenarios_text>
 	    <label>Preparation</label>
             <mode>update</mode>
             <stage>initial</stage>
-            <modules  config:type="list">
+            <modules config:type="list">
                 <module>
                     <name>complex_welcome</name>
 	            <label>Welcome</label>
@@ -864,7 +863,7 @@ Choose the one that matches your server the best.</label></scenarios_text>
                 <enable_back>no</enable_back>
                 <enable_next>no</enable_next>
             </defaults>
-            <modules  config:type="list">
+            <modules config:type="list">
                 <module>
 	            <label>Perform Update</label>
 	            <name>rpmcopy_secondstage_update</name>
@@ -1182,7 +1181,7 @@ Choose the one that matches your server the best.</label></scenarios_text>
             </defaults>
             <stage>continue</stage>
             <mode>autoupgrade</mode>
-            <modules  config:type="list">
+            <modules config:type="list">
                 <module>
                     <label>Perform Update</label>
                     <name>autopost</name>
@@ -1209,4 +1208,3 @@ Choose the one that matches your server the best.</label></scenarios_text>
 
     </workflows>
 </productDefines>
-
