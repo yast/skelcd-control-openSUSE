@@ -17,7 +17,18 @@ xml_DATA = \
 	control.SLES.xml \
 	control.SLES-for-VMware.xml \
 	control.openSUSE.xml \
+        control.openSUSE-promo.xml \
 	add-on-template_installation.xml
+
+CLEANFILES = control.openSUSE-promo.xml control.SLES-for-VMware.xml
+
+# generate the control.openSUSE-promo.xml control file
+control.openSUSE-promo.xml: control.openSUSE-promo.xsl control.openSUSE-promo.changes.xml control.openSUSE.xml
+	xsltproc control.openSUSE-promo.xsl control.openSUSE.xml > control.openSUSE-promo.xml
+
+# generate the control.SLES-for-VMware.xml control file
+control.SLES-for-VMware.xml: control.SLES-for-VMware.xsl control.SLES.xml
+	xsltproc control.SLES-for-VMware.xsl control.SLES.xml > control.SLES-for-VMware.xml
 
 # Note: The control.*.glade -> control.*.xml symlink is required to make xgettext
 # auto-detect the type of this file (glade) so it will extract all
@@ -43,5 +54,5 @@ control.rng: control.rnc
 	trang -I rnc -O rng control.rnc control.rng
 
 # checks only those control files that belong to this package
-check-local: control.rng
+check-local: control.rng $(xml_DATA)
 	xmllint --relaxng control.rng --noout $(xml_DATA)
