@@ -192,8 +192,8 @@ textdomain="control"
         <vm_desired_size>15GB</vm_desired_size>
         <vm_home_max_size>25GB</vm_home_max_size>
         <btrfs_increase_percentage config:type="integer">100</btrfs_increase_percentage>
-	<!-- the default subvolume "@" was requested by product management -->
-	<btrfs_default_subvolume>@</btrfs_default_subvolume>
+        <!-- the default subvolume "@" was requested by product management -->
+        <btrfs_default_subvolume>@</btrfs_default_subvolume>
     </partitioning>
 
     <network>
@@ -283,43 +283,43 @@ Please visit us at http://www.suse.com/.
             <enable_skip>no</enable_skip>
 
             <proposal_modules config:type="list">
-		<proposal_module>
-		    <name>hwinfo</name>
-		    <presentation_order>10</presentation_order>
-		</proposal_module>
-		<proposal_module>
-		    <name>keyboard</name>
-		    <presentation_order>15</presentation_order>
-		</proposal_module>
-		<proposal_module>
-		    <name>partitions</name>
-		    <presentation_order>25</presentation_order>
-		</proposal_module>
-		<proposal_module>
-		    <name>add-on</name>
-		    <presentation_order>30</presentation_order>
-		</proposal_module>
-		<proposal_module>
-		    <name>bootloader</name>
-		    <presentation_order>40</presentation_order>
-		</proposal_module>
-		<proposal_module>
-		    <name>language</name>
-		    <presentation_order>50</presentation_order>
-		</proposal_module>
-		<proposal_module>
-		    <name>timezone</name>
-		    <presentation_order>45</presentation_order>
-		</proposal_module>
-		<!-- software proposal should be computed almost at the end -->
-		<proposal_module>
-		    <name>software</name>
-		    <presentation_order>35</presentation_order>
-		</proposal_module>
-		<proposal_module>
-		    <name>default_target</name>
-		    <presentation_order>55</presentation_order>
-		</proposal_module>
+                <proposal_module>
+                    <name>hwinfo</name>
+                    <presentation_order>10</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>keyboard</name>
+                    <presentation_order>15</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>partitions</name>
+                    <presentation_order>25</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>add-on</name>
+                    <presentation_order>30</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>bootloader</name>
+                    <presentation_order>40</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>language</name>
+                    <presentation_order>50</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>timezone</name>
+                    <presentation_order>45</presentation_order>
+                </proposal_module>
+                <!-- software proposal should be computed almost at the end -->
+                <proposal_module>
+                    <name>software</name>
+                    <presentation_order>35</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>default_target</name>
+                    <presentation_order>55</presentation_order>
+                </proposal_module>
             </proposal_modules>
 
             <proposal_tabs config:type="list">
@@ -338,7 +338,7 @@ Please visit us at http://www.suse.com/.
                         <proposal_module>keyboard</proposal_module>
                         <proposal_module>partitions</proposal_module>
                         <proposal_module>bootloader</proposal_module>
-			<proposal_module>add-on</proposal_module>
+                        <proposal_module>add-on</proposal_module>
                         <proposal_module>software</proposal_module>
                         <proposal_module>timezone</proposal_module>
                         <proposal_module>language</proposal_module>
