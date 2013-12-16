@@ -790,6 +790,7 @@ Comma and/or space-separated list of packages</a:documentation>
       <ref name="remove_special_partitions"/>
       <ref name="partitions"/>
       <ref name="btrfs_increase_percentage"/>
+      <ref name="btrfs_default_subvolume"/>
     </choice>
   </define>
   <define name="try_separate_home">
@@ -856,6 +857,11 @@ Comma and/or space-separated list of packages</a:documentation>
   <define name="btrfs_increase_percentage">
     <element name="btrfs_increase_percentage">
       <ref name="INTEGER"/>
+    </element>
+  </define>
+  <define name="btrfs_default_subvolume">
+    <element name="btrfs_default_subvolume">
+      <text/>
     </element>
   </define>
   <!-- these have to be defined by Storage -->

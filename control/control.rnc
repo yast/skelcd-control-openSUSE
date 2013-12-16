@@ -390,6 +390,7 @@ partitioning_elements =
     | remove_special_partitions
     | partitions
     | btrfs_increase_percentage
+    | btrfs_default_subvolume
 
 try_separate_home =		element try_separate_home { BOOLEAN }
 limit_try_home =		element limit_try_home { text }
@@ -405,6 +406,7 @@ vm_keep_unpartitioned_region =	element vm_keep_unpartitioned_region { BOOLEAN }
 # used by HASI Add-On
 use_separate_multipath_module =	element use_separate_multipath_module { BOOLEAN }
 btrfs_increase_percentage =	element btrfs_increase_percentage { INTEGER }
+btrfs_default_subvolume =	element btrfs_default_subvolume { text }
 
 # these have to be defined by Storage
 partitions = element partitions {
