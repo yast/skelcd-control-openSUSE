@@ -17,7 +17,7 @@
 
 
 Name:           yast2-installation-control
-Version:        3.1.2
+Version:        3.1.3
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -32,6 +32,9 @@ BuildRequires:  yast2-devtools >= 3.1.10
 
 # xmllint for validation
 BuildRequires:  libxml2-tools
+
+# xsltproc for generating some XML files
+BuildRequires:  libxslt-tools
 
 BuildArch:      noarch
 
