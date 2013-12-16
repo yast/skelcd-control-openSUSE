@@ -35,7 +35,7 @@ xml_DATA = \
 #
 # At build time the RNG file from tarball will have a newer time stamp
 # and thus it will not need rebuild/update making "trang" unnecessary.
-EXTRA_DIST =  $(control_DATA) $(xml_DATA)
+EXTRA_DIST =  $(control_DATA) $(xml_DATA) indent.xsl
 
 include $(top_srcdir)/Makefile.am.common
 
