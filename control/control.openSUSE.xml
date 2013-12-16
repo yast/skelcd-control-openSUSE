@@ -387,7 +387,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
     <proposals config:type="list">
         <proposal>
             <label>Installation Settings</label>
-            <mode>installation,autoinstallation</mode>
+            <mode>installation</mode>
             <stage>initial</stage>
             <name>initial</name>
             <unique_id>inst_initial</unique_id>
@@ -421,6 +421,62 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <name>firewall_stage1</name>
                     <presentation_order>99</presentation_order>
                 </proposal_module>
+            </proposal_modules>
+        </proposal>
+
+        <proposal>
+            <label>Installation Settings</label>
+            <mode>autoinstallation</mode>
+            <stage>initial</stage>
+            <name>initial</name>
+	    <unique_id>inst_initial</unique_id>
+            <enable_skip>no</enable_skip>
+            <proposal_modules config:type="list">
+		<proposal_module>
+		    <name>partitions</name>
+		    <presentation_order>10</presentation_order>
+		</proposal_module>
+		<proposal_module>
+		    <name>bootloader</name>
+		    <presentation_order>20</presentation_order>
+		</proposal_module>
+		<proposal_module>
+		    <name>country_simple</name>
+		    <presentation_order>40</presentation_order>
+		</proposal_module>
+		<proposal_module>
+		    <name>timezone</name>
+		    <presentation_order>50</presentation_order>
+		</proposal_module>
+		<!-- FATE #302980 -->
+		<proposal_module>
+		    <name>users</name>
+		    <presentation_order>60</presentation_order>
+		</proposal_module>
+		<proposal_module>
+		    <name>hwinfo</name>
+		    <presentation_order>80</presentation_order>
+		</proposal_module>
+		<!-- software proposal should be computed almost at the end -->
+		<proposal_module>
+		    <name>software</name>
+		    <presentation_order>30</presentation_order>
+		</proposal_module>
+		<!-- propose the default runlevel after software is selected, bnc #380141 -->
+		<proposal_module>
+		    <name>default_target</name>
+		    <presentation_order>70</presentation_order>
+		</proposal_module>
+		<!-- finds images to deploy -->
+		<proposal_module>
+		    <name>deploying</name>
+		    <presentation_order>95</presentation_order>
+		</proposal_module>
+		<!-- FaTE #303859 - simple network (in fact firewall) cfg in 1st stage -->
+		<proposal_module>
+		    <name>firewall_stage1</name>
+		    <presentation_order>99</presentation_order>
+		</proposal_module>
             </proposal_modules>
         </proposal>
 
