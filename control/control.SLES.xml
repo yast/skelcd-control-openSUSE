@@ -338,6 +338,7 @@ Please visit us at http://www.suse.com/.
             <stage>initial</stage>
             <name>initial</name>
             <enable_skip>no</enable_skip>
+            <unique_id>auto_inst_proposal</unique_id>
 
             <proposal_modules config:type="list">
                 <proposal_module>
