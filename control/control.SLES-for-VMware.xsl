@@ -16,14 +16,4 @@
       <xsl:apply-templates select="node()|@*"/>
     </xsl:copy>
   </xsl:template>
-
-  <!-- match the preceding comment, see http://stackoverflow.com/questions/2613159/xslt-and-xpath-match-preceding-comments -->
-  <xsl:template match="comment()[following-sibling::*[1]/self::n:system_scenarios]">
-    <xsl:comment> There are no system scenarios, VMware is always virtual with a defined set of packages </xsl:comment>
-  </xsl:template>
-  <xsl:template match="n:system_scenarios"/>
-
-  <xsl:template match="comment()[following-sibling::*[1]/self::n:default_system_scenario]"/>
-  <xsl:template match="n:default_system_scenario"/>
-
 </xsl:stylesheet>
