@@ -4,7 +4,7 @@
 control_DATA = \
 	control.openSUSE.xml \
         control.openSUSE-promo.xml \
-	add-on-template_installation.xml
+	add-on-installation.xml
 
 CLEANFILES = control.openSUSE-promo.xml
 
@@ -17,5 +17,5 @@ EXTRA_DIST =  $(control_DATA)
 include $(top_srcdir)/Makefile.am.common
 
 # checks only those control files that belong to this package
-check-local: $(xml_DATA)
-	xmllint --relaxng $(controldir)/control.rng --noout $(xml_DATA)
+check-local: $(control_DATA)
+	xmllint --relaxng $(controldir)/control.rng --noout $(control_DATA)

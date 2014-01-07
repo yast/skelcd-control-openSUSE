@@ -85,6 +85,6 @@ This package contains the control file for the openSUSE language add-on product.
 
 %files addon
 %defattr(-,root,root)
-%yast_controldir/add-on-template_installation.xml
+%yast_controldir/add-on-installation.xml
 
 %changelog
