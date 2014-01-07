@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Jan  7 12:05:04 UTC 2014 - lslezak@suse.cz
+
+- updated the language add-on control file
+- 3.1.2
+
+-------------------------------------------------------------------
 Tue Jan  7 10:06:56 CET 2014 - locilka@suse.com
 
 - Removed calling inst_mode (doesn't exist anymore) during upgrade

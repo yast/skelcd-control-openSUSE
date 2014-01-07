@@ -17,7 +17,7 @@
 
 
 Name:           yast2-installation-control-openSUSE
-Version:        3.1.1
+Version:        3.1.2
 Release:        0
 
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
@@ -85,6 +85,6 @@ This package contains the control file for the openSUSE language add-on product.
 
 %files addon
 %defattr(-,root,root)
-%yast_controldir/add-on-template_installation.xml
+%yast_controldir/add-on-installation.xml
 
 %changelog
