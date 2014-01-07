@@ -24,5 +24,9 @@ Control file validation:
 
 Run command
 
-    xmllint --noout --relaxng control.rng <XML_FILE>
+    xmllint --noout --relaxng /usr/share/YaST2/control/control.rng *.xml
+
+or simply
+
+    make check
 

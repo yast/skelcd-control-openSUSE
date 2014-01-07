@@ -9,5 +9,7 @@
 ## some common checks
 @YAST2-CHECKS-COMMON@
 
+AC_CHECK_FILE($prefix/share/YaST2/control/control.rng, , [AC_MSG_ERROR([control.rng file is missing, install yast2-installation-control])])
+
 ## and generate the output...
 @YAST2-OUTPUT@
