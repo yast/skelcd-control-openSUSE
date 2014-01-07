@@ -9,5 +9,6 @@ Mon Jan  6 11:58:15 UTC 2014 - lslezak@suse.cz
 
 - moved from yast2-installation-control package to a separate
   package
+- updated the language add-on control file
 - 3.1.0
 

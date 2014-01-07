@@ -2,7 +2,7 @@
 <productDefines  xmlns="http://www.suse.com/1.0/yast2ns"
   xmlns:config="http://www.suse.com/1.0/configns">
 
-  <textdomain>control</textdomain>
+  <textdomain>add-on</textdomain>
 
   <workflows config:type="list">
     <workflow>
