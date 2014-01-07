@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Jan  7 10:06:56 CET 2014 - locilka@suse.com
+
+- Removed calling inst_mode (doesn't exist anymore) during upgrade
+- 3.1.1
+
+-------------------------------------------------------------------
 Mon Jan  6 11:58:15 UTC 2014 - lslezak@suse.cz
 
 - moved from yast2-installation-control package to a separate
