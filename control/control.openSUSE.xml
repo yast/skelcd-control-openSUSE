@@ -834,10 +834,6 @@ TODO: inst_start_deploy_image does not exist yet
                     <name>system_analysis</name>
                 </module>
                 <module>
-                    <label>System Analysis</label>
-                    <name>mode</name>
-                </module>
-                <module>
                     <label>System for Update</label>
                     <name>update_partition</name>
                 </module>
