@@ -1,9 +1,8 @@
-YaST Contribution Guidelines
+Contribution Guidelines
 ============================
 
-YaST is an open source project and as such it welcomes all kinds of
-contributions. If you decide to contribute, please follow these guidelines to
-ensure the process is effective and pleasant both for you and YaST maintainers.
+If you decide to contribute, please follow these guidelines to
+ensure the process is effective and pleasant both for you and the package maintainers.
 
 There are two main forms of contribution: reporting bugs and performing code
 changes.
@@ -21,36 +20,30 @@ If you find a problem, please report it either using
 [Bugzilla](https://bugzilla.novell.com/) or GitHub issues. We can't guarantee
 that every bug will be fixed, but we'll try.
 
-When creating a bug report, please follow our [bug reporting
-guidelines](http://en.opensuse.org/openSUSE:Report_a_YaST_bug).
-
 Code Changes
 ------------
 
 We welcome all kinds of code contributions, from simple bug fixes to significant
 refactorings and implementation of new features. However, before making any
 non-trivial contribution, get in touch with us first — this can prevent wasted
-effort on both sides. Also, have a look at our [development
-documentation](http://en.opensuse.org/openSUSE:YaST_development).
+effort on both sides.
 
-To send us your code change, use GitHub pull requests. The workflow is as
+To send us your changes, use GitHub pull requests. The workflow is as
 follows:
 
   1. Fork the project.
 
   2. Create a topic branch based on `master`.
 
-  3. Implement your change, including tests (if possible). Make sure you adhere
-     to the [Ruby style
-     guide](https://github.com/SUSE/style-guides/blob/master/Ruby.md).
+  3. Implement your change.
 
   4. Make sure your change didn't break anything by building the RPM package
-     (`rake osc:build`). The build process includes running the full testsuite.
+     (`rake osc:build`). The build process includes running some tests.
 
   5. Publish the branch and create a pull request.
 
-  6. YaST developers will review your change and possibly point out issues.
-     Adapt the code under their guidance until they are all resolved.
+  6. The package developers will review your change and possibly point out issues.
+     Adapt the changes under their guidance until they are all resolved.
 
   7. Finally, the pull request will get merged or rejected.
 
@@ -60,8 +53,7 @@ contributing](https://help.github.com/articles/fork-a-repo).
 If you want to do multiple unrelated changes, use separate branches and pull
 requests.
 
-Do not change the `VERSION` and `*.changes` files as this could lead to
-conflicts.
+Do not change the `*.changes` files as this could lead to conflicts.
 
 ### Commits
 
