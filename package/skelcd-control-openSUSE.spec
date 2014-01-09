@@ -46,7 +46,7 @@ This package contains the control file used for openSUSE installation.
 
 %prep
 
-%setup -n %{name}-%{version}
+%setup -n skelcd-control-openSUSE-%{version}
 
 %build
 make -C control
