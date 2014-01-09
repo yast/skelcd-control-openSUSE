@@ -16,7 +16,7 @@
 #
 
 
-Name:           skelcd-control-openSUSE
+Name: skelcd-control-openSUSE-promo
 # xmllint
 BuildRequires:  libxml2-tools
 # xsltproc
