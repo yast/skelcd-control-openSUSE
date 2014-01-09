@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Thu Jan  9 08:14:22 UTC 2014 - lslezak@suse.cz
+
+- the package is maintained now at Yast GitHub repository
+  (https://github.com/yast/skelcd-control-openSUSE)
+- changed versioning schema to 13.2.x (distribution release
+  prefix), magic get_version_number.sh script has been removed
+- version 13.2.1
+
+-------------------------------------------------------------------
 Fri Dec 20 06:37:38 UTC 2013 - coolo@suse.com
 
 - control files moved to yast2-installation-control now

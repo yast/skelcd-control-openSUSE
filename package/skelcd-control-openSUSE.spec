@@ -26,7 +26,7 @@ BuildRequires:  yast2-installation-control
 
 Url:            https://github.com/yast/skelcd-control-openSUSE
 AutoReqProv:    off
-Version:        2013.12.10
+Version:        13.2.1
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -35,6 +35,11 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source:         skelcd-control-openSUSE.tar.bz2
 Provides:       product_control
 Conflicts:      product_control
+
+# NOTE: Do not patch the control file in OBS, fork
+# https://github.com/yast/skelcd-control-openSUSE instead and create a pull
+# request. The package is autosubmitted from Git by Jenkins CI
+# (http://ci.opensuse.org/view/Yast/)
 
 %description
 This package contains the control file used for openSUSE installation.
