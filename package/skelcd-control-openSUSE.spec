@@ -32,7 +32,7 @@ Summary:        The openSUSE Installation Control file
 License:        MIT
 Group:          Metapackages
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Source:         skelcd-control-openSUSE.tar.bz2
+Source:         skelcd-control-openSUSE-%version.tar.bz2
 Provides:       product_control
 Conflicts:      product_control
 
@@ -46,7 +46,7 @@ This package contains the control file used for openSUSE installation.
 
 %prep
 
-%setup -n %{name}
+%setup -n %{name}-%{version}
 
 %build
 make -C control
