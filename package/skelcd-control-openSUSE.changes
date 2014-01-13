@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Jan 13 10:07:03 UTC 2014 - jreidinger@suse.com
+
+- add clone client that handle autoyast cloning settings
+  (FATE#308539)
+- version 13.2.2
+
+-------------------------------------------------------------------
 Thu Jan  9 08:14:22 UTC 2014 - lslezak@suse.cz
 
 - the package is maintained now at Yast GitHub repository

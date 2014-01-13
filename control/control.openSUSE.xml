@@ -414,11 +414,15 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                 <!-- finds images to deploy -->
                 <proposal_module>
                     <name>deploying</name>
-                    <presentation_order>95</presentation_order>
+                    <presentation_order>90</presentation_order>
                 </proposal_module>
                 <!-- FaTE #303859 - simple network (in fact firewall) cfg in 1st stage -->
                 <proposal_module>
                     <name>firewall_stage1</name>
+                    <presentation_order>95</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>clone</name>
                     <presentation_order>99</presentation_order>
                 </proposal_module>
             </proposal_modules>
