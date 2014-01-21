@@ -411,11 +411,6 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <name>default_target</name>
                     <presentation_order>70</presentation_order>
                 </proposal_module>
-                <!-- finds images to deploy -->
-                <proposal_module>
-                    <name>deploying</name>
-                    <presentation_order>90</presentation_order>
-                </proposal_module>
                 <!-- FaTE #303859 - simple network (in fact firewall) cfg in 1st stage -->
                 <proposal_module>
                     <name>firewall_stage1</name>
@@ -470,11 +465,6 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                 <proposal_module>
                     <name>default_target</name>
                     <presentation_order>70</presentation_order>
-                </proposal_module>
-                <!-- finds images to deploy -->
-                <proposal_module>
-                    <name>deploying</name>
-                    <presentation_order>95</presentation_order>
                 </proposal_module>
                 <!-- FaTE #303859 - simple network (in fact firewall) cfg in 1st stage -->
                 <proposal_module>
@@ -637,10 +627,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <label>Disk</label>
                     <name>prepdisk</name>
                 </module>
-TODO: inst_start_deploy_image does not exist yet
-                <module>
-                    <name>start_deploy_image</name>
-                </module>
 -->
                 <module>
                     <label>Time Zone</label>
@@ -682,6 +668,10 @@ TODO: inst_start_deploy_image does not exist yet
                     <name>initial_installation_proposal</name>
                     <execute>inst_proposal</execute>
                     <proposal>initial</proposal>
+                </module>
+                <module>
+                    <label>Perform Installation</label>
+                    <name>prepare_images</name>
                 </module>
                 <!-- FATE #303860: Provide consistent progress during installation -->
                 <module>
