@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Tue Jan 21 12:08:51 UTC 2014 - jreidinger@suse.com
+
+- Remove "use images" from summary page and do it automatic as it
+  now works enough realiable and provide no real user benefit to
+  change proposal
+- version 13.2.3
+
+-------------------------------------------------------------------
 Mon Jan 13 10:07:03 UTC 2014 - jreidinger@suse.com
 
 - add clone client that handle autoyast cloning settings
