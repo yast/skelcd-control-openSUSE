@@ -15,6 +15,16 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
+######################################################################
+#
+# IMPORTANT: Please do not change the control file or this spec file
+#   in build service directly, use
+#   https://github.com/yast/skelcd-control-openSUSE repository
+#
+#   See https://github.com/yast/skelcd-control-openSUSE/blob/master/CONTRIBUTING.md
+#   for more details.
+#
+######################################################################
 
 Name:           skelcd-control-openSUSE
 # xmllint
@@ -24,9 +34,57 @@ BuildRequires:  libxslt-tools
 # RNG schema
 BuildRequires:  yast2-installation-control
 
+######################################################################
+#
+# Here is the list of Yast packages which are needed in the
+# installation system (inst-sys) for the Yast installer
+#
+
+# Generic Yast packages needed for the installer
+Requires:       autoyast2-installation
+Requires:       yast2-add-on
+Requires:       yast2-buildtools
+Requires:       yast2-devtools
+Requires:       yast2-fcoe-client
+Requires:       yast2-iscsi-client
+Requires:       yast2-kdump
+Requires:       yast2-ldap-client
+Requires:       yast2-multipath
+Requires:       yast2-network
+Requires:       yast2-nfs-client
+Requires:       yast2-ntp-client
+Requires:       yast2-pam
+Requires:       yast2-proxy
+Requires:       yast2-qt-branding-openSUSE
+Requires:       yast2-security
+Requires:       yast2-services-manager
+Requires:       yast2-slp
+Requires:       yast2-trans-allpacks
+Requires:       yast2-trans-stats
+Requires:       yast2-tune
+Requires:       yast2-update
+Requires:       yast2-users
+Requires:       yast2-x11
+# this is the default theme
+Requires:       yast2-theme-openSUSE
+Requires:       yast2-theme-openSUSE-Oxygen
+
+# Architecture specific packages
+#
+%ifarch s390 s390x
+BuildRequires:  yast2-reipl
+%endif
+
+%ifarch %ix86 x86_64
+BuildRequires:  yast2-vm
+%endif
+
+#
+######################################################################
+
 Url:            https://github.com/yast/skelcd-control-openSUSE
 AutoReqProv:    off
-Version:        13.2.4
+Version:        13.2.5
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -35,11 +93,6 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source:         skelcd-control-openSUSE-%version.tar.bz2
 Provides:       product_control
 Conflicts:      product_control
-
-# NOTE: Do not patch the control file in OBS, fork
-# https://github.com/yast/skelcd-control-openSUSE instead and create a pull
-# request. The package is autosubmitted from Git by Jenkins CI
-# (http://ci.opensuse.org/view/Yast/)
 
 %description
 This package contains the control file used for openSUSE installation.
