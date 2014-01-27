@@ -670,7 +670,7 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 </module>
                 <module>
                     <label>Perform Installation</label>
-                    <name>prepare_images</name>
+                    <name>prepare_image</name>
                 </module>
                 <!-- FATE #303860: Provide consistent progress during installation -->
                 <module>

@@ -2,6 +2,7 @@
 Mon Jan 27 16:17:04 CET 2014 - locilka@suse.com
 
 - Installation Media removed from upgrade proposal (bnc#857681)
+- Fixed a typo while preparing images (needed for FATE#308539)
 - version 13.2.4
 
 -------------------------------------------------------------------
