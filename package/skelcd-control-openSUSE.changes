@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Jan 28 08:40:22 UTC 2014 - lslezak@suse.cz
+
+- add Yast dependencies to include the installer packages into
+  inst-sys
+- 13.2.5
+
+-------------------------------------------------------------------
 Mon Jan 27 16:17:04 CET 2014 - locilka@suse.com
 
 - Installation Media removed from upgrade proposal (bnc#857681)
