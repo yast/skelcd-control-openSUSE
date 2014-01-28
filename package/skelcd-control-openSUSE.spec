@@ -43,20 +43,14 @@ BuildRequires:  yast2-installation-control
 # Generic Yast packages needed for the installer
 Requires:       autoyast2-installation
 Requires:       yast2-add-on
-Requires:       yast2-buildtools
-Requires:       yast2-devtools
 Requires:       yast2-fcoe-client
 Requires:       yast2-iscsi-client
 Requires:       yast2-kdump
-Requires:       yast2-ldap-client
 Requires:       yast2-multipath
 Requires:       yast2-network
 Requires:       yast2-nfs-client
 Requires:       yast2-ntp-client
-Requires:       yast2-pam
 Requires:       yast2-proxy
-Requires:       yast2-qt-branding-openSUSE
-Requires:       yast2-security
 Requires:       yast2-services-manager
 Requires:       yast2-slp
 Requires:       yast2-trans-allpacks
@@ -66,14 +60,10 @@ Requires:       yast2-update
 Requires:       yast2-users
 Requires:       yast2-x11
 # this is the default theme
-Requires:       yast2-theme-openSUSE
 Requires:       yast2-theme-openSUSE-Oxygen
 
 # Architecture specific packages
 #
-%ifarch s390 s390x
-BuildRequires:  yast2-reipl
-%endif
 
 %ifarch %ix86 x86_64
 BuildRequires:  yast2-vm
