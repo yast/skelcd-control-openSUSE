@@ -53,7 +53,6 @@ Requires:       yast2-ntp-client
 Requires:       yast2-proxy
 Requires:       yast2-services-manager
 Requires:       yast2-slp
-Requires:       yast2-trans-allpacks
 Requires:       yast2-trans-stats
 Requires:       yast2-tune
 Requires:       yast2-update
@@ -61,12 +60,13 @@ Requires:       yast2-users
 Requires:       yast2-x11
 # this is the default theme
 Requires:       yast2-theme-openSUSE-Oxygen
+Requires:       yast2-qt-branding-openSUSE
 
 # Architecture specific packages
 #
 
 %ifarch %ix86 x86_64
-BuildRequires:  yast2-vm
+Requires:  yast2-vm
 %endif
 
 #
@@ -74,7 +74,7 @@ BuildRequires:  yast2-vm
 
 Url:            https://github.com/yast/skelcd-control-openSUSE
 AutoReqProv:    off
-Version:        13.2.5
+Version:        13.2.6
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT

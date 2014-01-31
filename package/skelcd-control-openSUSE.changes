@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Jan 31 13:39:41 UTC 2014 - lslezak@suse.cz
+
+- fixed package dependencies
+- 13.2.6
+
+-------------------------------------------------------------------
 Tue Jan 28 08:40:22 UTC 2014 - lslezak@suse.cz
 
 - add Yast dependencies to include the installer packages into
