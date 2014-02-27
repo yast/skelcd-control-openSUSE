@@ -47,7 +47,7 @@ Requires:       yast2-fcoe-client
 Requires:       yast2-iscsi-client
 Requires:       yast2-kdump
 Requires:       yast2-multipath
-Requires:       yast2-network
+Requires:       yast2-network >= 3.1.24
 Requires:       yast2-nfs-client
 Requires:       yast2-ntp-client
 Requires:       yast2-proxy
