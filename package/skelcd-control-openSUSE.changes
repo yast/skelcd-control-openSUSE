@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Feb 27 07:24:10 UTC 2014 - mfilka@suse.com
+
+- added reference to linuxrc network configuration client
+- 13.2.7 
+
+-------------------------------------------------------------------
 Fri Jan 31 13:39:41 UTC 2014 - lslezak@suse.cz
 
 - fixed package dependencies

@@ -47,7 +47,7 @@ Requires:       yast2-fcoe-client
 Requires:       yast2-iscsi-client
 Requires:       yast2-kdump
 Requires:       yast2-multipath
-Requires:       yast2-network
+Requires:       yast2-network >= 3.1.24
 Requires:       yast2-nfs-client
 Requires:       yast2-ntp-client
 Requires:       yast2-proxy
@@ -74,7 +74,7 @@ Requires:  yast2-vm
 
 Url:            https://github.com/yast/skelcd-control-openSUSE
 AutoReqProv:    off
-Version:        13.2.6
+Version:        13.2.7
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
