@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Mar 31 14:01:00 UTC 2014 - jreidinger@suse.com
+
+- have complete autoyast2 in inst-sys otherwise cloning in first
+  stage won't work (bnc#869175)
+- 13.2.8
+
+-------------------------------------------------------------------
 Thu Feb 27 07:24:10 UTC 2014 - mfilka@suse.com
 
 - added reference to linuxrc network configuration client

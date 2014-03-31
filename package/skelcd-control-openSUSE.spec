@@ -41,7 +41,7 @@ BuildRequires:  yast2-installation-control
 #
 
 # Generic Yast packages needed for the installer
-Requires:       autoyast2-installation
+Requires:       autoyast2
 Requires:       yast2-add-on
 Requires:       yast2-fcoe-client
 Requires:       yast2-iscsi-client
@@ -74,7 +74,7 @@ Requires:  yast2-vm
 
 Url:            https://github.com/yast/skelcd-control-openSUSE
 AutoReqProv:    off
-Version:        13.2.7
+Version:        13.2.8
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
