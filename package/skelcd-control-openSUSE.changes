@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Apr 27 12:17:25 CEST 2014 - dvaleev@suse.com
+
+- Add POWER specific installation hook(bnc#871397)
+- 13.2.9
+
+-------------------------------------------------------------------
 Mon Mar 31 14:01:00 UTC 2014 - jreidinger@suse.com
 
 - have complete autoyast2 in inst-sys otherwise cloning in first
