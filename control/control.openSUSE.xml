@@ -651,6 +651,9 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <enable_back>yes</enable_back>
                 </module>
                 <module>
+                    <name>download_release_notes</name>
+                </module>
+                <module>
                     <label>Desktop Selection</label>
                     <name>new_desktop</name>
                 </module>
@@ -854,6 +857,9 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <label>Add-On Products</label>
                     <name>add-on</name>
                     <enable_back>yes</enable_back>
+                </module>
+                <module>
+                    <name>download_release_notes</name>
                 </module>
                 <module>
                     <heading>yes</heading>
