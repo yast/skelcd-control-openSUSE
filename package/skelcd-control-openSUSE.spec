@@ -32,7 +32,7 @@ BuildRequires:  libxml2-tools
 # xsltproc
 BuildRequires:  libxslt-tools
 # RNG schema
-BuildRequires:  yast2-installation-control
+BuildRequires:  yast2-installation-control >= 3.1.7
 
 ######################################################################
 #
@@ -74,7 +74,7 @@ Requires:  yast2-vm
 
 Url:            https://github.com/yast/skelcd-control-openSUSE
 AutoReqProv:    off
-Version:        13.2.10
+Version:        13.2.11
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
