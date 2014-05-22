@@ -74,7 +74,7 @@ Requires:  yast2-vm
 
 Url:            https://github.com/yast/skelcd-control-openSUSE
 AutoReqProv:    off
-Version:        13.2.9
+Version:        13.2.10
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
