@@ -867,23 +867,9 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 </module>
                 <module>
                     <label>Update Settings</label>
-                    <name>lilo_convert</name>
-                    <execute>inst_lilo_convert</execute>
-                </module>
-                <module>
-                    <label>Update Settings</label>
                     <name>initial_update_proposal</name>
                     <execute>inst_proposal</execute>
                     <proposal>initial</proposal>
-                </module>
-                <!--
-                    BNC #414490, #477778:  Updating SLES 10 (hdX) to SLES 11 (sdX)
-                    produces multiple identical grub boot menu entries
-                -->
-                <module>
-                    <label>Perform Update</label>
-                    <name>bl_preupdate</name>
-                    <execute>bootloader_preupdate</execute>
                 </module>
                 <!--
                     FATE #303860: Provide consistent progress during installation
@@ -1065,14 +1051,8 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 </module>
                 <module>
                     <label>Perform Update</label>
-                    <name>bl_preupdate</name>
-                    <execute>bootloader_preupdate</execute>
-                </module>
-                <module>
-                    <label>Perform Update</label>
                     <name>prepareprogress</name>
                 </module>
-
                 <module>
                     <label>Perform Update</label>
                     <name>do_resize</name>
