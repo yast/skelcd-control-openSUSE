@@ -867,11 +867,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 </module>
                 <module>
                     <label>Update Settings</label>
-                    <name>lilo_convert</name>
-                    <execute>inst_lilo_convert</execute>
-                </module>
-                <module>
-                    <label>Update Settings</label>
                     <name>initial_update_proposal</name>
                     <execute>inst_proposal</execute>
                     <proposal>initial</proposal>
