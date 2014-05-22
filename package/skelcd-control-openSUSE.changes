@@ -3,6 +3,7 @@ Thu May 22 12:07:47 UTC 2014 - jreidinger@suse.com
 
 - UPGRADE: remove client to convert bootloader configuration from
   lilo(bnc#878833)
+- UPGRADE: drop ancient /dev/hd* to /dev/sd* conversion client
 - 13.2.10
 
 -------------------------------------------------------------------
