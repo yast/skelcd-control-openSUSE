@@ -872,15 +872,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <proposal>initial</proposal>
                 </module>
                 <!--
-                    BNC #414490, #477778:  Updating SLES 10 (hdX) to SLES 11 (sdX)
-                    produces multiple identical grub boot menu entries
-                -->
-                <module>
-                    <label>Perform Update</label>
-                    <name>bl_preupdate</name>
-                    <execute>bootloader_preupdate</execute>
-                </module>
-                <!--
                     FATE #303860: Provide consistent progress during installation
                     BNC  #438848: Also during upgrade
                 -->
@@ -1060,14 +1051,8 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 </module>
                 <module>
                     <label>Perform Update</label>
-                    <name>bl_preupdate</name>
-                    <execute>bootloader_preupdate</execute>
-                </module>
-                <module>
-                    <label>Perform Update</label>
                     <name>prepareprogress</name>
                 </module>
-
                 <module>
                     <label>Perform Update</label>
                     <name>do_resize</name>
