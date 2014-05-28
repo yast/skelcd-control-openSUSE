@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed May 28 09:54:50 CEST 2014 - locilka@suse.com
+
+- Added handling for upgrading default desktops using
+  software->upgrade->window_managers (bnc#874116)
+- 13.2.11
+
+-------------------------------------------------------------------
 Thu May 22 12:07:47 UTC 2014 - jreidinger@suse.com
 
 - UPGRADE: remove client to convert bootloader configuration from

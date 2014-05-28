@@ -302,6 +302,42 @@ textdomain="control"
         <!-- FaTE #306967 KDE is preselected desktop -->
         <default_desktop>kde</default_desktop>
 
+        <!-- bnc#874116: Handling software proposal during product upgrade -->
+        <upgrade>
+            <window_managers config:type="list">
+                <window_manager>
+                    <sysconfig_wm>gnome</sysconfig_wm>
+                    <check_packages>gnome-session</check_packages>
+                    <install_patterns>gnome</install_patterns>
+                    <install_packages>gdm</install_packages>
+                </window_manager>
+
+                <window_manager>
+                    <sysconfig_wm>startkde</sysconfig_wm>
+                    <check_packages>kdebase3-session</check_packages>
+                    <install_patterns>kde4</install_patterns>
+                    <install_packages>kdm</install_packages>
+                </window_manager>
+
+                <window_manager>
+                    <sysconfig_wm>startkde4</sysconfig_wm>
+                    <check_packages>kdebase4-session</check_packages>
+                    <install_patterns>kde4</install_patterns>
+                    <install_packages>kdm</install_packages>
+                </window_manager>
+
+                <window_manager>
+                    <sysconfig_wm>xfce</sysconfig_wm>
+                    <install_patterns>xfce</install_patterns>
+                </window_manager>
+
+                <window_manager>
+                    <sysconfig_wm>lxde</sysconfig_wm>
+                    <install_patterns>lxde</install_patterns>
+                </window_manager>
+            </window_managers>
+        </upgrade>
+
     </software>
 
     <partitioning>
