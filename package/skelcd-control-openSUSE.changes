@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Jun 17 08:55:44 UTC 2014 - coolo@suse.com
+
+- Replace 13.2 repos with Factory repos till 13.2 is forked
+- 13.2.12
+
+-------------------------------------------------------------------
 Wed May 28 09:54:50 CEST 2014 - locilka@suse.com
 
 - Added handling for upgrading default desktops using
