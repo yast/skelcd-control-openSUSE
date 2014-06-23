@@ -1112,12 +1112,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <name>rpmcopy</name>
                 </module>
                 <module>
-                    <!-- FATE #304940: s390 reIPL -->
-                    <label>Perform Update</label>
-                    <name>reiplauto</name>
-                    <archs>s390</archs>
-                </module>
-                <module>
                     <label>Perform Update</label>
                     <name>finish</name>
                 </module>
