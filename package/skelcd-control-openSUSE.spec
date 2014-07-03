@@ -81,6 +81,8 @@ License:        MIT
 Group:          Metapackages
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 Source:         skelcd-control-openSUSE-%version.tar.bz2
+# we do not distribute it, but need to have it here, otherwise build service checks complain
+Source99:       README.md
 Provides:       product_control
 Conflicts:      product_control
 
