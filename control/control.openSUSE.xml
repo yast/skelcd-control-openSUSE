@@ -137,15 +137,6 @@ textdomain="control"
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
-            <extra_url>
-                <baseurl>http://download.opensuse.org/update/factory-non-oss/</baseurl>
-                <alias>repo-update-non-oss</alias>
-                <name>openSUSE-Factory-Update-Non-Oss</name>
-                <prod_dir>/</prod_dir>
-                <enabled config:type="boolean">true</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
-            </extra_url>
 
             <!-- Replacement for EXTRAURLS and OPTIONALURLS -->
             <extra_url>
@@ -175,26 +166,6 @@ textdomain="control"
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
-            <extra_url>
-                <baseurl>http://download.opensuse.org/debug/update/factory/</baseurl>
-                <alias>repo-debug-update</alias>
-                <name>openSUSE-Factory-Update-Debug</name>
-                <prod_dir>/</prod_dir>
-                <enabled config:type="boolean">false</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
-            </extra_url>
-            <extra_url>
-                <baseurl>http://download.opensuse.org/debug/update/factory-non-oss/</baseurl>
-                <alias>repo-debug-update-non-oss</alias>
-                <name>openSUSE-Factory-Update-Debug-Non-Oss</name>
-                <prod_dir>/</prod_dir>
-                <enabled config:type="boolean">false</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
-            </extra_url>
-
-
             <extra_url>
                 <baseurl>http://download.opensuse.org/source/factory/repo/oss/</baseurl>
                 <alias>repo-source</alias>
