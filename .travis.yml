@@ -1,0 +1,11 @@
+language: cpp
+compiler:
+    - gcc
+before_install:
+    - wget https://raw.githubusercontent.com/yast/yast-devtools/master/travis-tools/travis_setup.sh
+    - sh ./travis_setup.sh -p "yast2-installation-control xsltproc"
+script:
+    - cd control
+    - make
+    - make check
+
