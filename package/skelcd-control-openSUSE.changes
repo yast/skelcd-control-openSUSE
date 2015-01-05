@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Jan  5 14:35:01 UTC 2015 - jreidinger@suse.com
+
+- allow smooth upgrade to grub2 during upgrade
+  (bnc#900824, bnc#906124)
+- 13.2.17
+
+-------------------------------------------------------------------
 Tue Oct  7 08:40:57 UTC 2014 - coolo@suse.com
 
 - for Factory we only have one update repository not 4
