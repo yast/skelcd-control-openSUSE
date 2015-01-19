@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Jan 19 09:32:37 UTC 2015 - dimstar@opensuse.org
+
+- Change repositories for Tumbleweed from /factory to /tumbleweed
+  (boo#913561).
+- 13.2.19
+
+-------------------------------------------------------------------
 Wed Jan 14 16:30:50 UTC 2015 - coolo@suse.com
 
 - allow upgrades from TW snapshots
