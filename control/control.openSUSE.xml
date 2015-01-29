@@ -132,9 +132,9 @@ textdomain="control"
         <extra_urls config:type="list">
             <!-- Default update repository, bnc #381360 -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/update/factory/</baseurl>
+                <baseurl>http://download.opensuse.org/update/tumbleweed/</baseurl>
                 <alias>repo-update</alias>
-                <name>openSUSE-Factory-Update</name>
+                <name>openSUSE-Tumbleweed-Update</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
@@ -143,36 +143,36 @@ textdomain="control"
 
             <!-- Replacement for EXTRAURLS and OPTIONALURLS -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/factory/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/tumbleweed/repo/oss/</baseurl>
                 <alias>repo-oss</alias>
-                <name>openSUSE-Factory-Oss</name>
+                <name>openSUSE-Tumbleweed-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/factory/repo/non-oss/</baseurl>
+                <baseurl>http://download.opensuse.org/tumbleweed/repo/non-oss/</baseurl>
                 <alias>repo-non-oss</alias>
-                <name>openSUSE-Factory-Non-Oss</name>
+                <name>openSUSE-Tumbleweed-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/factory/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/debug/tumbleweed/repo/oss/</baseurl>
                 <alias>repo-debug</alias>
-                <name>openSUSE-Factory-Debug</name>
+                <name>openSUSE-Tumbleweed-Debug</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/source/factory/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/source/tumbleweed/repo/oss/</baseurl>
                 <alias>repo-source</alias>
-                <name>openSUSE-Factory-Source</name>
+                <name>openSUSE-Tumbleweed-Source</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
