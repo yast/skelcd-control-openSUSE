@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Mar 05 12:23:19 UTC 2015 - dvaleev@suse.com
+
+- Change repositories for Tumbleweed for PowerPC as well 
+- Change repos on ppc64le as well
+- 13.2.20
+
+-------------------------------------------------------------------
 Mon Jan 19 09:32:37 UTC 2015 - dimstar@opensuse.org
 
 - Change repositories for Tumbleweed from /factory to /tumbleweed

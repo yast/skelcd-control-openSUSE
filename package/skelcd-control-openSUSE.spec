@@ -76,7 +76,7 @@ Requires:  yast2-vm
 
 Url:            https://github.com/yast/skelcd-control-openSUSE
 AutoReqProv:    off
-Version:        13.2.19
+Version:        13.2.20
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -115,8 +115,9 @@ CONTROL_FILE=control.openSUSE.xml
 
 install -m 644 control/$CONTROL_FILE $RPM_BUILD_ROOT/CD1/control.xml
 
-%ifarch ppc ppc64
+%ifarch ppc ppc64 ppc64le
 sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse.org/ports/ppc/distribution/," $RPM_BUILD_ROOT/CD1/control.xml
+sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/ppc/tumbleweed/," $RPM_BUILD_ROOT/CD1/control.xml
 sed -i -e "s,http://download.opensuse.org/debug/,http://download.opensuse.org/ports/ppc/debug/," $RPM_BUILD_ROOT/CD1/control.xml
 sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/ppc/source/," $RPM_BUILD_ROOT/CD1/control.xml
 xmllint --noout --relaxng /usr/share/YaST2/control/control.rng $RPM_BUILD_ROOT/CD1/control.xml 
