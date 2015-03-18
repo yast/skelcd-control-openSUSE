@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Mar 18 17:04:19 UTC 2015 - dvaleev@suse.com
+
+- Parse out non-oss repos for Power as we don't build those repos
+  for PowerPC
+- 13.2.21
+
+-------------------------------------------------------------------
 Thu Mar 05 12:23:19 UTC 2015 - dvaleev@suse.com
 
 - Change repositories for Tumbleweed for PowerPC as well 
