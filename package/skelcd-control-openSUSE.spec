@@ -120,6 +120,9 @@ sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse
 sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/ppc/tumbleweed/," $RPM_BUILD_ROOT/CD1/control.xml
 sed -i -e "s,http://download.opensuse.org/debug/,http://download.opensuse.org/ports/ppc/debug/," $RPM_BUILD_ROOT/CD1/control.xml
 sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/ppc/source/," $RPM_BUILD_ROOT/CD1/control.xml
+#we parse out non existing non-oss repo for Power
+xsltproc -o $RPM_BUILD_ROOT/CD1/control_ppc.xml control/nonoss.xsl $RPM_BUILD_ROOT/CD1/control.xml
+mv $RPM_BUILD_ROOT/CD1/control{_ppc,}.xml
 xmllint --noout --relaxng /usr/share/YaST2/control/control.rng $RPM_BUILD_ROOT/CD1/control.xml 
 %endif
 
