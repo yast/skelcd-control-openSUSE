@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Apr 30 14:43:23 UTC 2015 - mlin@suse.com
+
+- Use Plasma 5 as default KDE environment
+- 13.2.22
+
+-------------------------------------------------------------------
 Thu Mar 18 17:04:19 UTC 2015 - dvaleev@suse.com
 
 - Parse out non-oss repos for Power as we don't build those repos

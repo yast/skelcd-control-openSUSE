@@ -197,12 +197,11 @@ textdomain="control"
 
             <one_supported_desktop>
                 <name>kde</name>
-                <!-- BNC #381821, BNC #438212, BNC #667408, BNC #763142 -->
-                <desktop>kde-plasma</desktop>
+                <desktop>plasma5</desktop>
                 <label_id>desktop_kde</label_id>
-                <logon>kdm</logon>
+                <logon>sddm</logon>
                 <cursor>DMZ</cursor>
-                <packages>kdm branding-openSUSE</packages>
+                <packages>sddm branding-openSUSE</packages>
                 <order config:type="integer">1</order>
                 <patterns>kde x11 base</patterns>
                 <icon>pattern-kde4</icon>
@@ -295,9 +294,9 @@ textdomain="control"
 
                 <window_manager>
                     <sysconfig_wm>startkde4</sysconfig_wm>
-                    <check_packages>kdebase4-session</check_packages>
-                    <install_patterns>kde4</install_patterns>
-                    <install_packages>kdm</install_packages>
+                    <check_packages>plasma5-session</check_packages>
+                    <install_patterns>kde_plasma</install_patterns>
+                    <install_packages>sddm</install_packages>
                 </window_manager>
 
                 <window_manager>
