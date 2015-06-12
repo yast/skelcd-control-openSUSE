@@ -108,22 +108,28 @@ make -C control check
 mkdir -p $RPM_BUILD_ROOT/CD1
 
 %if "%{name}" == "skelcd-control-openSUSE-promo"
-CONTROL_FILE=control.openSUSE-promo.xml
+    CONTROL_FILE=control.openSUSE-promo.xml
 %else
-CONTROL_FILE=control.openSUSE.xml
+    CONTROL_FILE=control.openSUSE.xml
 %endif
 
 install -m 644 control/$CONTROL_FILE $RPM_BUILD_ROOT/CD1/control.xml
 
-%ifarch ppc ppc64 ppc64le
-sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse.org/ports/ppc/distribution/," $RPM_BUILD_ROOT/CD1/control.xml
-sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/ppc/tumbleweed/," $RPM_BUILD_ROOT/CD1/control.xml
-sed -i -e "s,http://download.opensuse.org/debug/,http://download.opensuse.org/ports/ppc/debug/," $RPM_BUILD_ROOT/CD1/control.xml
-sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/ppc/source/," $RPM_BUILD_ROOT/CD1/control.xml
-#we parse out non existing non-oss repo for Power
-xsltproc -o $RPM_BUILD_ROOT/CD1/control_ppc.xml control/nonoss.xsl $RPM_BUILD_ROOT/CD1/control.xml
-mv $RPM_BUILD_ROOT/CD1/control{_ppc,}.xml
-xmllint --noout --relaxng /usr/share/YaST2/control/control.rng $RPM_BUILD_ROOT/CD1/control.xml 
+%ifarch aarch64 %arm ppc ppc64 ppc64le
+    %ifarch ppc ppc64 ppc64le
+        ports_arch="ppc"
+    %else
+        ports_arch="%{_arch}"
+    %endif
+    sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse.org/ports/$ports_arch/distribution/," %{buildroot}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/tumbleweed/," %{buildroot}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/debug/,http://download.opensuse.org/ports/$ports_arch/debug/," %{buildroot}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/$ports_arch/source/," %{buildroot}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/update/tumbleweed/,http://download.opensuse.org/update/tumbleweed/," %{buildroot}/CD1/control.xml
+    #we parse out non existing non-oss repo for ports
+    xsltproc -o $RPM_BUILD_ROOT/CD1/control_ports.xml control/nonoss.xsl $RPM_BUILD_ROOT/CD1/control.xml
+    mv $RPM_BUILD_ROOT/CD1/control{_ports,}.xml
+    xmllint --noout --relaxng /usr/share/YaST2/control/control.rng $RPM_BUILD_ROOT/CD1/control.xml 
 %endif
 
 %files
