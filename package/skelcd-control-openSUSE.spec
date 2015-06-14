@@ -1,7 +1,7 @@
 #
 # spec file for package skelcd-control-openSUSE
 #
-# Copyright (c) 2014 SUSE LINUX Products GmbH, Nuernberg, Germany.
+# Copyright (c) 2015 SUSE LINUX GmbH, Nuernberg, Germany.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -15,6 +15,7 @@
 # Please submit bugfixes or comments via http://bugs.opensuse.org/
 #
 
+
 ######################################################################
 #
 # IMPORTANT: Please do not change the control file or this spec file
@@ -25,22 +26,30 @@
 #   for more details.
 #
 ######################################################################
-
 Name:           skelcd-control-openSUSE
+Version:        13.2.22
+Release:        0
+Summary:        The openSUSE Installation Control file
+License:        MIT
+Group:          Metapackages
+Url:            https://github.com/yast/skelcd-control-openSUSE
+Source:         skelcd-control-openSUSE-%{version}.tar.bz2
+# we do not distribute it, but need to have it here, otherwise build service checks complain
+Source99:       README.md
 # xmllint
 BuildRequires:  libxml2-tools
 # xsltproc
 BuildRequires:  libxslt-tools
 # RNG schema
 BuildRequires:  yast2-installation-control >= 3.1.7
-
 ######################################################################
 #
 # Here is the list of Yast packages which are needed in the
 # installation system (inst-sys) for the Yast installer
 #
-
 # Generic Yast packages needed for the installer
+#
+######################################################################
 Requires:       autoyast2
 Requires:       yast2-add-on
 Requires:       yast2-fcoe-client
@@ -53,59 +62,42 @@ Requires:       yast2-network >= 3.1.24
 Requires:       yast2-nfs-client
 Requires:       yast2-ntp-client
 Requires:       yast2-proxy
+# this is the default theme
+Requires:       yast2-qt-branding-openSUSE
 Requires:       yast2-services-manager
 Requires:       yast2-slp
+Requires:       yast2-theme-openSUSE-Oxygen
 Requires:       yast2-trans-stats
 Requires:       yast2-tune
 Requires:       yast2-update
 Requires:       yast2-users
 Requires:       yast2-x11
-# this is the default theme
-Requires:       yast2-theme-openSUSE-Oxygen
-Requires:       yast2-qt-branding-openSUSE
-
-# Architecture specific packages
-#
-
-%ifarch %ix86 x86_64
-Requires:  yast2-vm
-%endif
-
-#
-######################################################################
-
-Url:            https://github.com/yast/skelcd-control-openSUSE
-AutoReqProv:    off
-Version:        13.2.22
-Release:        0
-Summary:        The openSUSE Installation Control file
-License:        MIT
-Group:          Metapackages
-BuildRoot:      %{_tmppath}/%{name}-%{version}-build
-Source:         skelcd-control-openSUSE-%version.tar.bz2
-# we do not distribute it, but need to have it here, otherwise build service checks complain
-Source99:       README.md
-Provides:       product_control
 Conflicts:      product_control
+Provides:       product_control
+BuildRoot:      %{_tmppath}/%{name}-%{version}-build
+# Architecture specific packages
+%ifarch %ix86 x86_64
+Requires:       yast2-vm
+%endif
 
 %description
 This package contains the control file used for openSUSE installation.
 
 %prep
 
-%setup -n skelcd-control-openSUSE-%{version}
+%setup -q -n skelcd-control-openSUSE-%{version}
 
 %build
-make -C control
+make %{?_smp_mflags} -C control
 
 %check
-make -C control check
+make %{?_smp_mflags} -C control check
 
 %install
 #
-# Add control file 
+# Add control file
 #
-mkdir -p $RPM_BUILD_ROOT/CD1
+mkdir -p %{buildroot}/CD1
 
 %if "%{name}" == "skelcd-control-openSUSE-promo"
     CONTROL_FILE=control.openSUSE-promo.xml
@@ -113,7 +105,7 @@ mkdir -p $RPM_BUILD_ROOT/CD1
     CONTROL_FILE=control.openSUSE.xml
 %endif
 
-install -m 644 control/$CONTROL_FILE $RPM_BUILD_ROOT/CD1/control.xml
+install -m 644 control/$CONTROL_FILE %{buildroot}/CD1/control.xml
 
 %ifarch aarch64 %arm ppc ppc64 ppc64le
     %ifarch ppc ppc64 ppc64le
@@ -127,9 +119,9 @@ install -m 644 control/$CONTROL_FILE $RPM_BUILD_ROOT/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/$ports_arch/source/," %{buildroot}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/update/tumbleweed/,http://download.opensuse.org/update/tumbleweed/," %{buildroot}/CD1/control.xml
     #we parse out non existing non-oss repo for ports
-    xsltproc -o $RPM_BUILD_ROOT/CD1/control_ports.xml control/nonoss.xsl $RPM_BUILD_ROOT/CD1/control.xml
-    mv $RPM_BUILD_ROOT/CD1/control{_ports,}.xml
-    xmllint --noout --relaxng /usr/share/YaST2/control/control.rng $RPM_BUILD_ROOT/CD1/control.xml 
+    xsltproc -o %{buildroot}/CD1/control_ports.xml control/nonoss.xsl %{buildroot}/CD1/control.xml
+    mv %{buildroot}/CD1/control{_ports,}.xml
+    xmllint --noout --relaxng %{_datadir}/YaST2/control/control.rng %{buildroot}/CD1/control.xml
 %endif
 
 %files
