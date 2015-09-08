@@ -247,14 +247,15 @@ textdomain="control"
             </one_supported_desktop>
 
             <one_supported_desktop>
-                <name>e17</name>
-                <desktop>e17</desktop>
-                <label_id>desktop_e17</label_id>
+                <name>enlightenment</name>
+                <desktop>enlightenment</desktop>
+                <label_id>desktop_enlightenment</label_id>
                 <logon>lightdm</logon>
                 <cursor>DMZ</cursor>
                 <packages>lightdm branding-openSUSE</packages>
                 <order config:type="integer">7</order>
-                <patterns>e17 x11 base</patterns>
+                <patterns>enlightenment x11 base</patterns>
+		<!-- This icon needs to be found and changed to enlightenment -->
                 <icon>pattern-e17</icon>
             </one_supported_desktop>
 
@@ -388,7 +389,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         <desktop_xfce><label>XFCE Desktop</label></desktop_xfce>
         <desktop_lxde><label>LXDE Desktop</label></desktop_lxde>
         <desktop_min_x><label>Minimal X Window</label></desktop_min_x>
-        <desktop_e17><label>Enlightenment Desktop</label></desktop_e17>
+        <desktop_enlightenment><label>Enlightenment Desktop</label></desktop_enlightenment>
         <desktop_textmode><label>Minimal Server Selection (Text Mode)</label></desktop_textmode>
 
     </texts>
