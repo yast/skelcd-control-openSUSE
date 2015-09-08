@@ -255,8 +255,7 @@ textdomain="control"
                 <packages>lightdm branding-openSUSE</packages>
                 <order config:type="integer">7</order>
                 <patterns>enlightenment x11 base</patterns>
-		<!-- This icon needs to be found and changed to enlightenment -->
-                <icon>pattern-e17</icon>
+                <icon>pattern-enlightenment</icon>
             </one_supported_desktop>
 
             <one_supported_desktop>
