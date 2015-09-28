@@ -267,7 +267,7 @@ textdomain="control"
                 <packages>branding-openSUSE</packages>
                 <order config:type="integer">8</order>
                 <patterns>minimal_base minimal_base-conflicts</patterns>
-                <icon>yast-sshd</icon>
+                <icon>yast-ssh-server</icon>
             </one_supported_desktop>
 
         </supported_desktops>
