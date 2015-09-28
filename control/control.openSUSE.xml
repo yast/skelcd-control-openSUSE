@@ -208,6 +208,18 @@ textdomain="control"
             </one_supported_desktop>
 
             <one_supported_desktop>
+                <name>server</name>
+                <desktop>icewm</desktop>
+                <label_id>desktop_server</label_id>
+                <logon>xdm</logon>
+                <cursor>DMZ</cursor>
+                <packages></packages>
+                <order config:type="integer">1</order>
+                <patterns>generic_server</patterns>
+                <icon>yast-ssh-server</icon>
+            </one_supported_desktop>
+
+            <one_supported_desktop>
                 <name>xfce</name>
                 <!-- BNC #667408 -->
                 <desktop>xfce</desktop>
@@ -385,6 +397,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         <!-- Desktop dialog: desktop names -->
         <desktop_gnome><label>GNOME Desktop</label></desktop_gnome>
         <desktop_kde><label>KDE Desktop</label></desktop_kde>
+        <desktop_server><label>Server (Text Mode)</label></desktop_server>
         <desktop_xfce><label>XFCE Desktop</label></desktop_xfce>
         <desktop_lxde><label>LXDE Desktop</label></desktop_lxde>
         <desktop_min_x><label>Minimal X Window</label></desktop_min_x>
