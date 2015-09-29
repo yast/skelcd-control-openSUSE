@@ -238,7 +238,7 @@ textdomain="control"
                 <name>min_x</name>
                 <desktop>twm</desktop>
                 <label_id>desktop_min_x</label_id>
-                <logon>xdm</logon>
+                <logon></logon>
                 <cursor>DMZ</cursor>
                 <packages>xorg-x11-server branding-openSUSE</packages>
                 <order config:type="integer">6</order>
@@ -262,7 +262,7 @@ textdomain="control"
                 <name>textmode</name>
                 <desktop>twm</desktop>
                 <label_id>desktop_textmode</label_id>
-                <logon>xdm</logon>
+                <logon></logon>
                 <cursor>DMZ</cursor>
                 <packages>branding-openSUSE</packages>
                 <order config:type="integer">8</order>

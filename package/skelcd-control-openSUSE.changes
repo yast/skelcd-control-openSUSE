@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Wed Sep 23 10:29:37 UTC 2015 - sndirsch@suse.com
+
+- use empty string as DISPLAYMANAGER for minimal+X11 and textmode
+  pattern, which on the system already results in chosing xdm as
+  default DM; this enables us to set displaymanager in %post of
+  the appropriated DM package (FATE#319432)
+
+-------------------------------------------------------------------
 Thu Apr 30 14:43:23 UTC 2015 - mlin@suse.com
 
 - Use Plasma 5 as default KDE environment
