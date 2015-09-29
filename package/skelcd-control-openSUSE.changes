@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Tue Sep 29 09:27:24 UTC 2015 - jreidinger@suse.com
+
+- The e17 pattern was renamed to enlightenment a while back, adapt
+  the Display manager dialog to this change
+  by Simon Lees <simon@simotek.net> 
+- 13.2.23
+
+-------------------------------------------------------------------
 Wed Sep 23 10:29:37 UTC 2015 - sndirsch@suse.com
 
 - use empty string as DISPLAYMANAGER for minimal+X11 and textmode
