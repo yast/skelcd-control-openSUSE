@@ -1,9 +1,16 @@
 -------------------------------------------------------------------
+Thu Oct  1 07:52:11 UTC 2015 - jreidinger@suse.com
+
+- sync partitioning settings with SLE (bsc#946891) by lnussel
+- add Leap 42.1 repos by lnussel
+- 42.1.0
+
+-------------------------------------------------------------------
 Tue Sep 29 09:27:24 UTC 2015 - jreidinger@suse.com
 
 - The e17 pattern was renamed to enlightenment a while back, adapt
   the Display manager dialog to this change
-  by Simon Lees <simon@simotek.net> 
+  by Simon Lees <simon@simotek.net>
 - 13.2.23
 
 -------------------------------------------------------------------
