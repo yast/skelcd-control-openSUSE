@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Oct  5 09:05:33 CEST 2015 - locilka@suse.com
+
+- openSUSE Leap 42.1 added to the list of products supported for
+  upgrade by this product (bsc#947398)
+- 42.1.1
+
+-------------------------------------------------------------------
 Thu Oct  1 07:52:11 UTC 2015 - jreidinger@suse.com
 
 - sync partitioning settings with SLE (bsc#946891) by lnussel
