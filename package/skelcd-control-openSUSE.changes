@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Oct 16 07:43:15 UTC 2015 - dmueller@suse.com
+
+- add emergency update channel for the tumbleweed ports
+- 13.2.24
+
+-------------------------------------------------------------------
 Tue Sep 29 09:27:24 UTC 2015 - jreidinger@suse.com
 
 - The e17 pattern was renamed to enlightenment a while back, adapt
