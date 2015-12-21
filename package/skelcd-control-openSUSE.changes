@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Dec 21 15:44:11 UTC 2015 - ancor@suse.com
+
+- Added ed25519 keys to import_ssh_keys (boo#956515)
+- 13.2.25
+
+-------------------------------------------------------------------
 Fri Oct 16 07:43:15 UTC 2015 - dmueller@suse.com
 
 - add emergency update channel for the tumbleweed ports
