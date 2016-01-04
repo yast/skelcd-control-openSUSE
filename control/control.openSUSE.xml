@@ -120,6 +120,8 @@ textdomain="control"
             <!-- openQA tests down to 12.1 -->
             <regexp_item>^openSUSE 12\..*</regexp_item>
             <regexp_item>^openSUSE 13\..*$</regexp_item>
+            <!-- Updating from openSUSE Leap 42.x -->
+            <regexp_item>^openSUSE Leap 42\..*$</regexp_item>
 	    <!-- TW snapshots -->
             <regexp_item>^openSUSE 20[0-9]*$</regexp_item>
         </products_supported_for_upgrade>
