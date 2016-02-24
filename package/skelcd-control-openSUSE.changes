@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Feb 23 11:15:31 CEST 2016 - dvaleev@suse.com
+
+- Adapt update-repo url for ports (bsc#967666)
+- 42.1.1
+
+-------------------------------------------------------------------
 Mon Oct  5 09:05:33 CEST 2015 - locilka@suse.com
 
 - openSUSE Leap 42.1 added to the list of products supported for
