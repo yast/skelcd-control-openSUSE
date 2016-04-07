@@ -329,6 +329,9 @@ textdomain="control"
 
     </software>
 
+    <!-- check the following file for information what the settings mean:
+         https://github.com/yast/yast-storage/blob/master/doc/config.xml.description
+    -->
     <partitioning>
         <try_separate_home config:type="boolean">true</try_separate_home>
         <limit_try_home>7GB</limit_try_home>
@@ -340,6 +343,7 @@ textdomain="control"
         <vm_desired_size>15GB</vm_desired_size>
         <vm_home_max_size>25GB</vm_home_max_size>
         <btrfs_increase_percentage config:type="integer">100</btrfs_increase_percentage>
+        <btrfs_default_subvolume>@</btrfs_default_subvolume>
     </partitioning>
 
     <network>
