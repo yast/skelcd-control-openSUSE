@@ -641,6 +641,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <label>System Analysis</label>
                     <name>system_analysis</name>
                 </module>
+                <!-- As soon as possible but after packager is initialized -->
                 <module>
                     <label>Installer Update</label>
                     <name>update_installer</name>
@@ -874,6 +875,7 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <label>System Analysis</label>
                     <name>system_analysis</name>
                 </module>
+                <!-- As soon as possible but after packager is initialized -->
                 <module>
                     <label>Installer Update</label>
                     <name>update_installer</name>
@@ -981,6 +983,7 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <archs>all</archs>
                     <retranslate config:type="boolean">true</retranslate>
                 </module>
+                <!-- As soon as possible but after packager is initialized -->
                 <module>
                     <label>Installer Update</label>
                     <name>update_installer</name>
@@ -1046,6 +1049,7 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <enable_back>yes</enable_back>
                     <enable_next>yes</enable_next>
                 </module>
+		<!-- As soon as possible but after packager is initialized -->
                 <module>
                     <label>Installer Update</label>
                     <name>update_installer</name>
