@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Wed Apr  6 07:27:55 UTC 2016 - igonzalezsosa@suse.com
+
+- Automatically update the installer in the initial stage of:
+  installation, update, autoinstallation and autoupgrade.
+  Not affected: live_installation. (FATE#319716).
+- 13.2.26
+
+-------------------------------------------------------------------
 Mon Dec 21 15:44:11 UTC 2015 - ancor@suse.com
 
 - Added ed25519 keys to import_ssh_keys (boo#956515)
