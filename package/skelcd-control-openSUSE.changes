@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Apr 14 08:36:07 UTC 2016 - lnussel@suse.de
+
+- Remove vm_keep_unpartitioned_region
+- 13.2.27
+
+-------------------------------------------------------------------
 Wed Apr  6 07:27:55 UTC 2016 - igonzalezsosa@suse.com
 
 - Automatically update the installer in the initial stage of:
