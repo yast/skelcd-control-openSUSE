@@ -407,6 +407,11 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <name>firewall_stage1</name>
                     <presentation_order>95</presentation_order>
                 </proposal_module>
+                <!-- Fate #319624 - proposal and dialog for existing SSH host keys -->
+                <proposal_module>
+                    <name>ssh_import</name>
+                    <presentation_order>97</presentation_order>
+                </proposal_module>
                 <proposal_module>
                     <name>clone</name>
                     <presentation_order>99</presentation_order>
@@ -461,6 +466,11 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                 <proposal_module>
                     <name>firewall_stage1</name>
                     <presentation_order>99</presentation_order>
+                </proposal_module>
+                <!-- Fate #319624 - proposal and dialog for existing SSH host keys -->
+                <proposal_module>
+                    <name>ssh_import</name>
+                    <presentation_order>90</presentation_order>
                 </proposal_module>
             </proposal_modules>
         </proposal>
