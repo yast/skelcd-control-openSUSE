@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu May 19 08:56:56 UTC 2016 - lslezak@suse.cz
+
+- Include the Ruby debugger (byebug) in the inst-sys for easier
+  YaST debugging (FATE#318421)
+- 13.2.29
+
+-------------------------------------------------------------------
 Mon May 16 18:44:49 UTC 2016 - ancor@suse.com
 
 - Removed not longer necessary items from copy_to_system section
