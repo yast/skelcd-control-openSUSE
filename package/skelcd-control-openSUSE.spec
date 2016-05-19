@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        13.2.28
+Version:        13.2.29
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -72,6 +72,9 @@ Requires:       yast2-tune
 Requires:       yast2-update
 Requires:       yast2-users
 Requires:       yast2-x11
+# Ruby debugger in the inst-sys (FATE#318421)
+Requires:       rubygem(%{rb_default_ruby_abi}:byebug)
+
 Conflicts:      product_control
 Provides:       product_control
 BuildRoot:      %{_tmppath}/%{name}-%{version}-build
