@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed May 25 13:44:29 CEST 2016 - schubi@suse.de
+
+- Cloning ssh_import settings for AutoYaST (FATE#319624).
+- 13.2.30
+
+-------------------------------------------------------------------
 Thu May 19 08:56:56 UTC 2016 - lslezak@suse.cz
 
 - Include the Ruby debugger (byebug) in the inst-sys for easier
