@@ -62,8 +62,6 @@ Requires:       yast2-network >= 3.1.24
 Requires:       yast2-nfs-client
 Requires:       yast2-ntp-client
 Requires:       yast2-proxy
-# this is the default theme
-Requires:       yast2-qt-branding-openSUSE
 Requires:       yast2-services-manager
 Requires:       yast2-slp
 Requires:       yast2-theme-openSUSE-Oxygen
