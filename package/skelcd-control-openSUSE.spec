@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        13.2.30
+Version:        13.2.31
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
