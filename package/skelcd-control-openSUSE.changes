@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Jun 14 15:42:12 UTC 2016 - igonzalezsosa@suse.com
+
+- Delay self-update during autoupgrade until software manager
+  is initialized (bsc#984656)
+- 13.2.31
+
+-------------------------------------------------------------------
 Wed May 25 13:44:29 CEST 2016 - schubi@suse.de
 
 - Cloning ssh_import settings for AutoYaST (FATE#319624).
