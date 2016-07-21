@@ -698,6 +698,14 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <label>Perform Installation</label>
                     <name>prepdisk</name>
                 </module>
+                <!-- Clean up the inst-sys to have more free RAM on low memory systems -->
+                <!-- Note: Needs to be call *after* the partitioning step as it might delete
+                the file system or storage kernel modules from inst-sys. They need to be already
+                loaded and active. -->
+                <module>
+                    <label>Installer Cleanup</label>
+                    <name>instsys_cleanup</name>
+                </module>
                 <!-- Installation from images -->
                 <module>
                     <label>Perform Installation</label>
@@ -900,6 +908,14 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <label>Perform Update</label>
                     <name>prepdisk</name>
                 </module>
+                <!-- Clean up the inst-sys to have more free RAM on low memory systems -->
+                <!-- Note: Needs to be call *after* the partitioning step as it might delete
+                the file system or storage kernel modules from inst-sys. They need to be already
+                loaded and active. -->
+                <module>
+                    <label>Installer Cleanup</label>
+                    <name>instsys_cleanup</name>
+                </module>
                 <module>
                     <label>Perform Update</label>
                     <name>kickoff</name>
@@ -987,6 +1003,14 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <label>Perform Installation</label>
                     <name>prepdisk</name>
                 </module>
+                <!-- Clean up the inst-sys to have more free RAM on low memory systems -->
+                <!-- Note: Needs to be call *after* the partitioning step as it might delete
+                the file system or storage kernel modules from inst-sys. They need to be already
+                loaded and active. -->
+                <module>
+                    <label>Installer Cleanup</label>
+                    <name>instsys_cleanup</name>
+                </module>
                 <module>
                 <label>Perform Installation</label>
                     <name>deploy_image</name>
@@ -1073,6 +1097,14 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 <module>
                     <label>Perform Update</label>
                     <name>prepdisk</name>
+                </module>
+                <!-- Clean up the inst-sys to have more free RAM on low memory systems -->
+                <!-- Note: Needs to be call *after* the partitioning step as it might delete
+                the file system or storage kernel modules from inst-sys. They need to be already
+                loaded and active. -->
+                <module>
+                    <label>Installer Cleanup</label>
+                    <name>instsys_cleanup</name>
                 </module>
                 <module>
                     <label>Perform Update</label>

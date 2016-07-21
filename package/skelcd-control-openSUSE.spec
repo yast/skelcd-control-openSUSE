@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        13.2.31
+Version:        42.2.0
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -55,6 +55,8 @@ Requires:       yast2-add-on
 Requires:       yast2-fcoe-client
 # For creating the AutoYast profile at the end of installation (bnc#887406)
 Requires:       yast2-firewall
+# instsys_cleanup
+Requires:       yast2-installation >= 3.1.201
 Requires:       yast2-iscsi-client
 Requires:       yast2-kdump
 Requires:       yast2-multipath

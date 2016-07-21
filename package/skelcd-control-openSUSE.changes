@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Jul 21 11:30:11 UTC 2016 - lslezak@suse.cz
+
+- Remove some files from the inst-sys to have more free RAM on low
+  memory systems (bsc#974601)
+- 42.2.0
+
+-------------------------------------------------------------------
 Tue Jun 14 15:42:12 UTC 2016 - igonzalezsosa@suse.com
 
 - Delay self-update during autoupgrade until software manager
