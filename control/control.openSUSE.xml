@@ -204,7 +204,7 @@ textdomain="control"
                 <!-- BNC #667408 -->
                 <desktop>lxde</desktop>
                 <label_id>desktop_lxde</label_id>
-                <logon>lxdm</logon>
+                <logon>lightdm</logon>
                 <cursor>DMZ</cursor>
                 <packages>lxde-common branding-openSUSE</packages>
                 <order config:type="integer">5</order>

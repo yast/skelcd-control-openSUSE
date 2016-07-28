@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Jul 28 07:20:41 UTC 2016 - dimstar@opensuse.org
+
+- Use lightdm instead of lxdm as displaymanager when installing
+  LXDE as primary desktop.
+- 42.2.1
+
+-------------------------------------------------------------------
 Thu Jul 21 11:30:11 UTC 2016 - lslezak@suse.cz
 
 - Remove some files from the inst-sys to have more free RAM on low
