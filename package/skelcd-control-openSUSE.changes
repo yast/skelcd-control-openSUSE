@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Mon Aug  8 11:01:35 UTC 2016 - dimstar@opensuse.org
+
+- Use icewm as DEFAULT_WM when installing MinimalX. This in fact
+  only configures what had been defacto the case for like ever:
+  as twm is not part of the x11 pattern there was simply a fallback
+  to icewm happening.
+- 42.2.2
+
+-------------------------------------------------------------------
 Thu Jul 28 07:20:41 UTC 2016 - dimstar@opensuse.org
 
 - Use lightdm instead of lxdm as displaymanager when installing

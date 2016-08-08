@@ -214,7 +214,7 @@ textdomain="control"
 
             <one_supported_desktop>
                 <name>min_x</name>
-                <desktop>twm</desktop>
+                <desktop>icewm</desktop>
                 <label_id>desktop_min_x</label_id>
                 <logon></logon>
                 <cursor>DMZ</cursor>
