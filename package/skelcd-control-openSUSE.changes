@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Aug  8 12:34:57 UTC 2016 - lnussel@suse.de
+
+- Adjust for 42.2
+- Adapt update-repo url for ports (bsc#991980)
+
+-------------------------------------------------------------------
 Mon Aug  8 11:01:35 UTC 2016 - dimstar@opensuse.org
 
 - Use icewm as DEFAULT_WM when installing MinimalX. This in fact
