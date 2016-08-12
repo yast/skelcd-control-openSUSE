@@ -179,7 +179,7 @@ textdomain="control"
             </extra_url>
             <extra_url>
                 <baseurl>http://download.opensuse.org/source/distribution/leap/42.2/repo/non-oss/</baseurl>
-                <alias>repo-source</alias>
+                <alias>repo-source-non-oss</alias>
                 <name>openSUSE-Leap-42.2-Source-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
