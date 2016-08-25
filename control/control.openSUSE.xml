@@ -192,18 +192,6 @@ textdomain="control"
         <supported_desktops config:type="list">
 
             <one_supported_desktop>
-                <name>gnome</name>
-                <desktop>gnome</desktop>
-                <label_id>desktop_gnome</label_id>
-                <logon>gdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>gdm branding-openSUSE</packages>
-                <order config:type="integer">1</order>
-                <patterns>gnome x11 base</patterns>
-                <icon>pattern-gnome</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
                 <name>kde</name>
                 <desktop>plasma5</desktop>
                 <label_id>desktop_kde</label_id>
@@ -213,6 +201,18 @@ textdomain="control"
                 <order config:type="integer">1</order>
                 <patterns>kde x11 base</patterns>
                 <icon>pattern-kde4</icon>
+            </one_supported_desktop>
+
+            <one_supported_desktop>
+                <name>gnome</name>
+                <desktop>gnome</desktop>
+                <label_id>desktop_gnome</label_id>
+                <logon>gdm</logon>
+                <cursor>DMZ</cursor>
+                <packages>gdm branding-openSUSE</packages>
+                <order config:type="integer">1</order>
+                <patterns>gnome x11 base</patterns>
+                <icon>pattern-gnome</icon>
             </one_supported_desktop>
 
             <one_supported_desktop>
