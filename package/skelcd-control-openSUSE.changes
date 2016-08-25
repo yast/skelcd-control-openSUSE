@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Aug 25 12:07:32 UTC 2016 - dimstar@opensuse.org
+
+- Drop the 'Minimal Server Selection' which is basically the same
+  as "Server (Text Mode)" already (boo#962725).
+- 42.2.3
+
+-------------------------------------------------------------------
 Mon Aug  8 11:01:35 UTC 2016 - dimstar@opensuse.org
 
 - Use icewm as DEFAULT_WM when installing MinimalX. This in fact

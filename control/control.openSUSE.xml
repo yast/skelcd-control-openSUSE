@@ -236,18 +236,6 @@ textdomain="control"
                 <icon>pattern-enlightenment</icon>
             </one_supported_desktop>
 
-            <one_supported_desktop>
-                <name>textmode</name>
-                <desktop>twm</desktop>
-                <label_id>desktop_textmode</label_id>
-                <logon></logon>
-                <cursor>DMZ</cursor>
-                <packages>branding-openSUSE</packages>
-                <order config:type="integer">8</order>
-                <patterns>minimal_base minimal_base-conflicts</patterns>
-                <icon>yast-ssh-server</icon>
-            </one_supported_desktop>
-
         </supported_desktops>
 
         <!-- FaTE #306967 KDE is preselected desktop -->
@@ -372,7 +360,6 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         <desktop_lxde><label>LXDE Desktop</label></desktop_lxde>
         <desktop_min_x><label>Minimal X Window</label></desktop_min_x>
         <desktop_enlightenment><label>Enlightenment Desktop</label></desktop_enlightenment>
-        <desktop_textmode><label>Minimal Server Selection (Text Mode)</label></desktop_textmode>
 
     </texts>
 
