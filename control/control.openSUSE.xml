@@ -240,20 +240,6 @@ textdomain="control"
                 <icon>pattern-xfce</icon>
             </one_supported_desktop>
 
-            <!-- FaTE #307729 LXDE -->
-            <one_supported_desktop>
-                <name>lxde</name>
-                <!-- BNC #667408 -->
-                <desktop>lxde</desktop>
-                <label_id>desktop_lxde</label_id>
-                <logon>lightdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>lxde-common branding-openSUSE</packages>
-                <order config:type="integer">5</order>
-                <patterns>lxde x11 base</patterns>
-                <icon>pattern-lxde</icon>
-            </one_supported_desktop>
-
             <one_supported_desktop>
                 <name>min_x</name>
                 <desktop>icewm</desktop>
