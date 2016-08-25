@@ -219,7 +219,7 @@ textdomain="control"
                 <name>server</name>
                 <desktop>icewm</desktop>
                 <label_id>desktop_server</label_id>
-                <logon>xdm</logon>
+                <logon></logon>
                 <cursor>DMZ</cursor>
                 <packages></packages>
                 <order config:type="integer">1</order>
@@ -250,18 +250,6 @@ textdomain="control"
                 <order config:type="integer">6</order>
                 <patterns>x11 base</patterns>
                 <icon>yast-x11</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
-                <name>textmode</name>
-                <desktop>twm</desktop>
-                <label_id>desktop_textmode</label_id>
-                <logon></logon>
-                <cursor>DMZ</cursor>
-                <packages>branding-openSUSE</packages>
-                <order config:type="integer">8</order>
-                <patterns>minimal_base minimal_base-conflicts</patterns>
-                <icon>yast-ssh-server</icon>
             </one_supported_desktop>
 
         </supported_desktops>
