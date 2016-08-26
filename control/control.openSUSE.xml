@@ -582,6 +582,11 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <label>Network Autosetup</label>
                     <name>setup_dhcp</name>
                 </module>
+                <!-- As soon as possible but after network is initialized -->
+                <module>
+                    <label>Installer Update</label>
+                    <name>update_installer</name>
+                </module>
                 <module>
                     <label>Welcome</label>
                     <name>complex_welcome</name>
@@ -603,13 +608,6 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                 <module>
                     <label>System Analysis</label>
                     <name>system_analysis</name>
-                </module>
-                <!-- As soon as possible but after packager is initialized -->
-                <module>
-                    <label>Installer Update</label>
-                    <name>update_installer</name>
-                    <enable_back>yes</enable_back>
-                    <enable_next>yes</enable_next>
                 </module>
                 <module>
                     <label>System Analysis</label>
@@ -830,6 +828,19 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
             <stage>initial</stage>
             <modules config:type="list">
                 <module>
+                    <label>Load linuxrc Network Configuration</label>
+                    <name>install_inf</name>
+                </module>
+                <module>
+                    <label>Network Autosetup</label>
+                    <name>setup_dhcp</name>
+                </module>
+                <!-- As soon as possible but after network is initialized -->
+                <module>
+                    <label>Installer Update</label>
+                    <name>update_installer</name>
+                </module>
+                <module>
                     <name>complex_welcome</name>
                     <label>Welcome</label>
                     <enable_back>no</enable_back>
@@ -845,13 +856,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 <module>
                     <label>System Analysis</label>
                     <name>system_analysis</name>
-                </module>
-                <!-- As soon as possible but after packager is initialized -->
-                <module>
-                    <label>Installer Update</label>
-                    <name>update_installer</name>
-                    <enable_back>yes</enable_back>
-                    <enable_next>yes</enable_next>
                 </module>
                 <module>
                     <label>System for Update</label>
@@ -956,18 +960,18 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 <enable_next>no</enable_next>
             </defaults>
             <modules config:type="list">
+                <!-- As soon as possible -->
+                <module>
+                    <label>Installer Update</label>
+                    <name>update_installer</name>
+                    <enable_back>no</enable_back>
+                    <enable_next>yes</enable_next>
+                </module>
                 <module>
                     <label>AutoYaST Settings</label>
                     <name>autoinit</name>
                     <archs>all</archs>
                     <retranslate config:type="boolean">true</retranslate>
-                </module>
-                <!-- As soon as possible but after packager is initialized -->
-                <module>
-                    <label>Installer Update</label>
-                    <name>update_installer</name>
-                    <enable_back>yes</enable_back>
-                    <enable_next>yes</enable_next>
                 </module>
                 <module>
                     <label>AutoYaST Settings</label>
@@ -1030,6 +1034,13 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
             <mode>autoupgrade</mode>
             <stage>initial</stage>
             <modules config:type="list">
+                <!-- As soon as possible -->
+                <module>
+                    <label>Installer Update</label>
+                    <name>update_installer</name>
+                    <enable_back>no</enable_back>
+                    <enable_next>yes</enable_next>
+                </module>
                 <module>
                     <label>System Analysis</label>
                     <name>system_analysis</name>
@@ -1047,13 +1058,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <name>autoinit</name>
                     <archs>all</archs>
                     <retranslate config:type="boolean">true</retranslate>
-                </module>
-                <!-- As soon as possible but after packager is initialized -->
-                <module>
-                    <label>Installer Update</label>
-                    <name>update_installer</name>
-                    <enable_back>yes</enable_back>
-                    <enable_next>yes</enable_next>
                 </module>
                 <module>
                     <label>AutoYaST Settings</label>

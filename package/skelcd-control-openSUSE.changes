@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri Aug 26 12:45:20 UTC 2016 - igonzalezsosa@suse.com
+
+-  Move the YaST self update step earlier in the workflow to avoid
+   bugs caused by restarting YaST (boo#995771)
+- 42.2.4
+
+-------------------------------------------------------------------
 Thu Aug 25 12:07:32 UTC 2016 - dimstar@opensuse.org
 
 - Drop the 'Minimal Server Selection' which is basically the same
