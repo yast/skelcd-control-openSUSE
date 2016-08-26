@@ -827,7 +827,15 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
             <mode>update</mode>
             <stage>initial</stage>
             <modules config:type="list">
-                <!-- As soon as possible -->
+                <module>
+                    <label>Load linuxrc Network Configuration</label>
+                    <name>install_inf</name>
+                </module>
+                <module>
+                    <label>Network Autosetup</label>
+                    <name>setup_dhcp</name>
+                </module>
+                <!-- As soon as possible but after network is initialized -->
                 <module>
                     <label>Installer Update</label>
                     <name>update_installer</name>
