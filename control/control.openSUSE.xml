@@ -192,18 +192,6 @@ textdomain="control"
         <supported_desktops config:type="list">
 
             <one_supported_desktop>
-                <name>gnome</name>
-                <desktop>gnome</desktop>
-                <label_id>desktop_gnome</label_id>
-                <logon>gdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>gdm branding-openSUSE</packages>
-                <order config:type="integer">1</order>
-                <patterns>gnome x11 base</patterns>
-                <icon>pattern-gnome</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
                 <name>kde</name>
                 <desktop>plasma5</desktop>
                 <label_id>desktop_kde</label_id>
@@ -216,10 +204,22 @@ textdomain="control"
             </one_supported_desktop>
 
             <one_supported_desktop>
+                <name>gnome</name>
+                <desktop>gnome</desktop>
+                <label_id>desktop_gnome</label_id>
+                <logon>gdm</logon>
+                <cursor>DMZ</cursor>
+                <packages>gdm branding-openSUSE</packages>
+                <order config:type="integer">1</order>
+                <patterns>gnome x11 base</patterns>
+                <icon>pattern-gnome</icon>
+            </one_supported_desktop>
+
+            <one_supported_desktop>
                 <name>server</name>
                 <desktop>icewm</desktop>
                 <label_id>desktop_server</label_id>
-                <logon>xdm</logon>
+                <logon></logon>
                 <cursor>DMZ</cursor>
                 <packages></packages>
                 <order config:type="integer">1</order>
@@ -240,20 +240,6 @@ textdomain="control"
                 <icon>pattern-xfce</icon>
             </one_supported_desktop>
 
-            <!-- FaTE #307729 LXDE -->
-            <one_supported_desktop>
-                <name>lxde</name>
-                <!-- BNC #667408 -->
-                <desktop>lxde</desktop>
-                <label_id>desktop_lxde</label_id>
-                <logon>lightdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>lxde-common branding-openSUSE</packages>
-                <order config:type="integer">5</order>
-                <patterns>lxde x11 base</patterns>
-                <icon>pattern-lxde</icon>
-            </one_supported_desktop>
-
             <one_supported_desktop>
                 <name>min_x</name>
                 <desktop>icewm</desktop>
@@ -264,30 +250,6 @@ textdomain="control"
                 <order config:type="integer">6</order>
                 <patterns>x11 base</patterns>
                 <icon>yast-x11</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
-                <name>enlightenment</name>
-                <desktop>enlightenment</desktop>
-                <label_id>desktop_enlightenment</label_id>
-                <logon>lightdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>lightdm branding-openSUSE</packages>
-                <order config:type="integer">7</order>
-                <patterns>enlightenment x11 base</patterns>
-                <icon>pattern-enlightenment</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
-                <name>textmode</name>
-                <desktop>twm</desktop>
-                <label_id>desktop_textmode</label_id>
-                <logon></logon>
-                <cursor>DMZ</cursor>
-                <packages>branding-openSUSE</packages>
-                <order config:type="integer">8</order>
-                <patterns>minimal_base minimal_base-conflicts</patterns>
-                <icon>yast-ssh-server</icon>
             </one_supported_desktop>
 
         </supported_desktops>

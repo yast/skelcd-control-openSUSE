@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Thu Aug 25 13:50:17 UTC 2016 - lnussel@suse.de
+
+- Remove LXDE from desktop selection
+- Remove Enlightenment from desktop selection
+- Remove Textmode
+- KDE is default so put it first
+- 42.2.3
+
+-------------------------------------------------------------------
 Mon Aug  8 12:34:57 UTC 2016 - lnussel@suse.de
 
 - Adjust for 42.2
