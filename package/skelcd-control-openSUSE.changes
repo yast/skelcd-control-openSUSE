@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Sep  8 12:24:32 UTC 2016 - lslezak@suse.cz
+
+- Cleanup: remove the LiveCD configuration, the yast2-live-installer
+  package was dropped in Tumbleweed (bsc#997829)
+- 42.2.99.1
+
+-------------------------------------------------------------------
 Fri Aug 26 12:45:20 UTC 2016 - igonzalezsosa@suse.com
 
 -  Move the YaST self update step earlier in the workflow to avoid
