@@ -151,7 +151,7 @@ textdomain="control"
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/update/leap/42.2/oss</baseurl>
+                <baseurl>http://download.opensuse.org/debug/update/leap/42.2/oss/</baseurl>
                 <alias>repo-debug-update</alias>
                 <name>openSUSE-Leap-42.2-Update-Debug</name>
                 <prod_dir>/</prod_dir>
