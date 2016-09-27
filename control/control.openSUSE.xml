@@ -602,10 +602,12 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <name>setup_dhcp</name>
                 </module>
                 <!-- As soon as possible but after network is initialized -->
+		<!-- unused so far
                 <module>
                     <label>Installer Update</label>
                     <name>update_installer</name>
                 </module>
+		-->
                 <module>
                     <label>Welcome</label>
                     <name>complex_welcome</name>
@@ -855,10 +857,12 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <name>setup_dhcp</name>
                 </module>
                 <!-- As soon as possible but after network is initialized -->
+		<!-- unused so far
                 <module>
                     <label>Installer Update</label>
                     <name>update_installer</name>
                 </module>
+		-->
                 <module>
                     <name>complex_welcome</name>
                     <label>Welcome</label>
@@ -980,12 +984,14 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
             </defaults>
             <modules config:type="list">
                 <!-- As soon as possible -->
+		<!-- unused so far
                 <module>
                     <label>Installer Update</label>
                     <name>update_installer</name>
                     <enable_back>no</enable_back>
                     <enable_next>yes</enable_next>
                 </module>
+		-->
                 <module>
                     <label>AutoYaST Settings</label>
                     <name>autoinit</name>
@@ -1054,12 +1060,14 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
             <stage>initial</stage>
             <modules config:type="list">
                 <!-- As soon as possible -->
+		<!-- unused so far
                 <module>
                     <label>Installer Update</label>
                     <name>update_installer</name>
                     <enable_back>no</enable_back>
                     <enable_next>yes</enable_next>
                 </module>
+		-->
                 <module>
                     <label>System Analysis</label>
                     <name>system_analysis</name>
