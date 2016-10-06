@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Sep 26 15:50:44 UTC 2016 - lnussel@suse.de
+
+- Add missing slash to debug/update/leap/42.2/oss for consistency (boo#997232)
+- Disable self-update for openSUSE
+- 42.2.4
+
+-------------------------------------------------------------------
 Fri Aug 26 12:45:20 UTC 2016 - igonzalezsosa@suse.com
 
 - Move the YaST self update step earlier in the workflow to avoid
