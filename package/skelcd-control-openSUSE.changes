@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Thu Oct  6 15:40:29 UTC 2016 - lnussel@suse.de
+
+- remove branding-openSUSE from packages in one_supported_desktop.
+  The list is used to detect the desktop environment, so if
+  branding-openSUSE is installed sddm would be detected as
+  displaymanager even if it's not installed (boo#1003216)
+
+-------------------------------------------------------------------
 Mon Sep 26 15:50:44 UTC 2016 - lnussel@suse.de
 
 - Add missing slash to debug/update/leap/42.2/oss for consistency (boo#997232)
