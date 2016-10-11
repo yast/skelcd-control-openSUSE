@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Oct 11 15:06:37 UTC 2016 - lnussel@suse.de
+
+- add back Enlightenment to desktop selection
+- 42.2.6
+
+-------------------------------------------------------------------
 Thu Oct  6 15:40:29 UTC 2016 - lnussel@suse.de
 
 - remove branding-openSUSE from packages in one_supported_desktop.
