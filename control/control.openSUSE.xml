@@ -252,6 +252,18 @@ textdomain="control"
                 <icon>yast-x11</icon>
             </one_supported_desktop>
 
+            <one_supported_desktop>
+                <name>enlightenment</name>
+                <desktop>enlightenment</desktop>
+                <label_id>desktop_enlightenment</label_id>
+                <logon>lightdm</logon>
+                <cursor>DMZ</cursor>
+                <packages>lightdm</packages>
+                <order config:type="integer">7</order>
+                <patterns>enlightenment x11 base</patterns>
+                <icon>pattern-enlightenment</icon>
+            </one_supported_desktop>
+
         </supported_desktops>
 
         <!-- FaTE #306967 KDE is preselected desktop -->
