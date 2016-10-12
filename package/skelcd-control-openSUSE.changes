@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Wed Oct 12 11:40:12 UTC 2016 - mfilka@suse.com
+
+- Removed reference to netprobe client. It was used in AutoYaST
+  only and everything what this client does should be currently
+  handled by wicked. 
+- 42.2.99.2
+
+-------------------------------------------------------------------
 Thu Sep  8 12:24:32 UTC 2016 - lslezak@suse.cz
 
 - Cleanup: remove the LiveCD configuration, the yast2-live-installer
