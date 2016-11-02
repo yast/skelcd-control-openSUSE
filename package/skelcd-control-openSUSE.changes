@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Nov  2 16:16:22 CET 2016 - shundhammer@suse.de
+
+- Added subvolumes (fate#321737)
+- 42.2.99.3
+
+-------------------------------------------------------------------
 Wed Oct 12 11:40:12 UTC 2016 - mfilka@suse.com
 
 - Removed reference to netprobe client. It was used in AutoYaST
