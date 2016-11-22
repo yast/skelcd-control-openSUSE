@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Tue Nov 22 16:43:21 CET 2016 - schubi@suse.de
+
+- control.xml: Removed double entries "branding-openSUSE" from
+  supported_desktops/one_supported_desktop/packages.
+  (bnc#1010989)
+- 42.2.99.4
+
+-------------------------------------------------------------------
 Wed Nov  2 16:16:22 CET 2016 - shundhammer@suse.de
 
 - Added subvolumes (fate#321737)
