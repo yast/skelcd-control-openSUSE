@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Dec  7 17:26:12 UTC 2016 - jberry@suse.com
+
+- Increase version beyond Leap 42.3.
+- 42.3.99.0
+
+-------------------------------------------------------------------
 Tue Nov 22 16:43:21 CET 2016 - schubi@suse.de
 
 - control.xml: Removed double entries "branding-openSUSE" from
