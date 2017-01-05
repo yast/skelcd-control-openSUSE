@@ -1,7 +1,7 @@
 -------------------------------------------------------------------
 Thu Jan  5 10:04:44 UTC 2017 - dmueller@suse.com
 
-- Fix Leap 42.3 setup for ports
+- Fix Leap 42.3 setup for ports ( lets reuse previous bnc#1010989)
 - 42.3.1
 
 -------------------------------------------------------------------
