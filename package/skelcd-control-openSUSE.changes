@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Feb  8 14:50:06 UTC 2017 - jreidinger@suse.com
+
+- add new desktop selection wokr-flow (poo#14936)
+- 42.3.99.2
+
+-------------------------------------------------------------------
 Wed Jan 25 13:04:28 UTC 2017 - jreidinger@suse.com
 
 - initial support for s390 (bsc#1021615)
