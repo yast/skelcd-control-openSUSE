@@ -496,7 +496,7 @@ allows own patterns selection. &lt;/p&gt;</label>
         </roles_help>
         <kde>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>KDE Plasma Workstation</label>
+          <label>Workstation with KDE Plasma</label>
         </kde>
         <kde_description>
           <label>KDE is a powerful and intuitive desktop environment that uses Kontact as mailer,
@@ -505,7 +505,7 @@ Dolphin as file manager, and offers both Firefox and Konqueror as Web browsers.
         </kde_description>
         <gnome>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>GNOME Workstation</label>
+          <label>Workstation with GNOME</label>
         </gnome>
         <gnome_description>
           <label>GNOME is a powerful and intuitive desktop environment that uses Evolution as mailer,
