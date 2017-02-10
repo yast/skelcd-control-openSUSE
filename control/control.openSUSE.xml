@@ -480,17 +480,17 @@ is the most appropriate desktop for you.</label></desktop_dialog>
 
       <roles_caption>
         <!-- TRANSLATORS: dialog caption -->
-        <label>Machine Role</label>
+        <label>Computer Role</label>
         </roles_caption>
         <roles_text>
           <!-- TRANSLATORS: label in a dialog -->
-          <label>Machine Roles are predefined use cases which tailor the system
+          <label>Computer Role are predefined use cases which tailor the system
 for the selected scenario.</label>
         </roles_text>
         <roles_help>
           <!-- TRANSLATORS: dialog help -->
-          <label>&lt;p&gt;The machine roles adjustments are in the range from package selection up
-to running additional services. By choosing a machine role, the system is
+          <label>&lt;p&gt;The computer role adjustments are in the range from package selection up
+to running additional services. By choosing a computer role, the system is
 configured accordingly to match the use case of the role. For Custom role additional dialog started which
 allows own patterns selection. &lt;/p&gt;</label>
         </roles_help>
@@ -517,7 +517,7 @@ Firefox as browser, and Nautilus as file manager.
           <label>Server (Text Mode)</label>
         </server>
         <server_description>
-          <label>Server is usefull when machine should not have interaction with user and have only command line.</label>
+          <label>Server is usefull when computer should not have interaction with user and have only command line.</label>
         </server_description>
         <custom>
           <!-- TRANSLATORS: a label for a system role -->
