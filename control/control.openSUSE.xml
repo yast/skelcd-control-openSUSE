@@ -857,6 +857,10 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <enable_back>yes</enable_back>
                 </module>
                 <module>
+                    <label>Add-On Products</label>
+                    <name>add-on</name>
+                </module>
+                <module>
                     <label>Custom Pattern Selection</label>
                     <name>custom_patterns</name>
                     <enable_back>yes</enable_back>
