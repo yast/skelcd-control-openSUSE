@@ -484,15 +484,15 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         </roles_caption>
         <roles_text>
           <!-- TRANSLATORS: label in a dialog -->
-          <label>Computer Role are predefined use cases which tailor the system
+          <label>Computer Role is a predefined use case which tailor the system
 for the selected scenario.</label>
         </roles_text>
         <roles_help>
           <!-- TRANSLATORS: dialog help -->
           <label>&lt;p&gt;The computer role adjustments are in the range from package selection up
 to running additional services. By choosing a computer role, the system is
-configured accordingly to match the use case of the role. For Custom role additional dialog started which
-allows own patterns selection. &lt;/p&gt;</label>
+configured accordingly to match the use case of the role. For the &lt;em&gt;Custom&lt;/em&gt; role
+an additional dialog is displayed which allows manual software pattern selection. &lt;/p&gt;</label>
         </roles_help>
         <kde>
           <!-- TRANSLATORS: a label for a system role -->
