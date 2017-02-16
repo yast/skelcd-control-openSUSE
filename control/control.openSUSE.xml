@@ -852,11 +852,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <enable_back>yes</enable_back>
                 </module>
                 <module>
-                    <label>Online Repositories</label>
-                    <name>productsources</name>
-                    <enable_back>yes</enable_back>
-                </module>
-                <module>
                     <label>Add-On Products</label>
                     <name>add-on</name>
                 </module>
