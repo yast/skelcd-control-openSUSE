@@ -389,6 +389,35 @@ textdomain="control"
         <startmode>ifplugd</startmode>
     </network>
 
+    <system_roles config:type="list">
+      <system_role>
+        <!-- the id is a key for texts/$id/label
+                             and texts/$id_description/label below -->
+        <id>kde</id>
+        <software>
+          <default_desktop>kde</default_desktop>
+        </software>
+      </system_role>
+
+      <system_role>
+        <id>gnome</id>
+        <software>
+          <default_desktop>gnome</default_desktop>
+        </software>
+      </system_role>
+
+      <system_role>
+        <id>server</id>
+        <software>
+          <default_desktop>server</default_desktop>
+        </software>
+      </system_role>
+
+      <system_role>
+        <id>custom</id>
+      </system_role>
+    </system_roles>
+
     <clone_modules config:type="list">
         <clone_module>language</clone_module>
         <clone_module>keyboard</clone_module>
@@ -449,6 +478,54 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         <desktop_min_x><label>Minimal X Window</label></desktop_min_x>
         <desktop_enlightenment><label>Enlightenment Desktop</label></desktop_enlightenment>
 
+      <roles_caption>
+        <!-- TRANSLATORS: dialog caption -->
+        <label>Computer Role</label>
+        </roles_caption>
+        <roles_text>
+          <!-- TRANSLATORS: label in a dialog -->
+          <label>Computer Role is a predefined use case which tailor the system
+for the selected scenario.</label>
+        </roles_text>
+        <roles_help>
+          <!-- TRANSLATORS: dialog help -->
+          <label>&lt;p&gt;The computer role adjustments are in the range from package selection up
+to running additional services. By choosing a computer role, the system is
+configured accordingly to match the use case of the role. For the &lt;em&gt;Custom&lt;/em&gt; role
+an additional dialog is displayed which allows manual software pattern selection. &lt;/p&gt;</label>
+        </roles_help>
+        <kde>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Workstation with KDE Plasma</label>
+        </kde>
+        <kde_description>
+          <label>KDE is a powerful and intuitive desktop environment that uses Kontact as mailer,
+Dolphin as file manager, and offers both Firefox and Konqueror as Web browsers.
+          </label>
+        </kde_description>
+        <gnome>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Workstation with GNOME</label>
+        </gnome>
+        <gnome_description>
+          <label>GNOME is a powerful and intuitive desktop environment that uses Evolution as mailer,
+Firefox as browser, and Nautilus as file manager.
+          </label>
+        </gnome_description>
+        <server>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Server (Text Mode)</label>
+        </server>
+        <server_description>
+          <label>Server is usefull when computer should not have interaction with user and have only command line.</label>
+        </server_description>
+        <custom>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Custom</label>
+        </custom>
+        <custom_description>
+          <label>Custom role runs additional dialog where user can select software that fits his requirements.</label>
+        </custom_description>
     </texts>
 
     <proposals config:type="list">
@@ -749,10 +826,6 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <name>system_analysis</name>
                 </module>
                 <module>
-                    <label>System Analysis</label>
-                    <name>installation_options</name>
-                </module>
-                <module>
                     <label>Disk</label>
                     <name>disk_proposal</name>
                     <enable_back>yes</enable_back>
@@ -773,23 +846,22 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     </arguments>
                     <enable_back>yes</enable_back>
                 </module>
-                <!-- Here, user selects whether to perform New Installation, Upgrade, or Repair -->
                 <module>
-                    <label>Online Repositories</label>
-                    <name>productsources</name>
+                    <label>Computer Role</label>
+                    <name>desktop_roles</name>
                     <enable_back>yes</enable_back>
                 </module>
                 <module>
                     <label>Add-On Products</label>
                     <name>add-on</name>
+                </module>
+                <module>
+                    <label>Custom Pattern Selection</label>
+                    <name>custom_patterns</name>
                     <enable_back>yes</enable_back>
                 </module>
                 <module>
                     <name>download_release_notes</name>
-                </module>
-                <module>
-                    <label>Desktop Selection</label>
-                    <name>new_desktop</name>
                 </module>
                 <module>
                     <label>User Settings</label>
