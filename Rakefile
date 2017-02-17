@@ -16,7 +16,3 @@ end
 # generate the *-promo files when creating the tarball
 task :tarball => :create_promo
 
-# check also the syntax of the XML files
-task :"check:syntax" do
-  sh "make -C control check"
-end
