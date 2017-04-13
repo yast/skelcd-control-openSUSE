@@ -1,11 +1,9 @@
-language: cpp
-compiler:
-    - gcc
-before_install:
-    - wget https://raw.githubusercontent.com/yast/yast-devtools/master/travis-tools/travis_setup.sh
-    - sh ./travis_setup.sh -p "yast2-installation-control xsltproc"
-script:
-    - cd control
-    - make
-    - make check
+sudo: required
+language: bash
+services:
+  - docker
 
+before_install:
+  - docker build -t yast-skelcd-control-opensuse-image .
+script:
+  - docker run -it -e TRAVIS=1 -e TRAVIS_JOB_ID="$TRAVIS_JOB_ID" yast-skelcd-control-opensuse-image ./.travis.sh
