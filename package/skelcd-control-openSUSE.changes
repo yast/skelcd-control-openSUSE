@@ -4,6 +4,53 @@ Tue May  9 07:23:50 UTC 2017 - sflees@suse.de
 - Replace the generic_server pattern reference with console.
   * As part of the patterns cleanup the generic_server pattern 
     was merged into the console pattern and removed.
+- 42.3.99.4
+    
+-------------------------------------------------------------------
+Tue Apr 18 14:48:28 UTC 2017 - tchvatal@suse.com
+
+- In desktop selector keep all choices unselected for user to decide
+  (poo#14936, bsc#1025415)
+- 42.3.99.3
+
+-------------------------------------------------------------------
+Wed Feb  8 14:50:06 UTC 2017 - jreidinger@suse.com
+
+- add new desktop selection workflow (poo#14936, bsc#1025415)
+- 42.3.99.2
+
+-------------------------------------------------------------------
+Wed Jan 25 13:04:28 UTC 2017 - jreidinger@suse.com
+
+- initial support for s390 (bsc#1021615)
+- 42.3.99.1
+
+-------------------------------------------------------------------
+Wed Dec  7 17:26:12 UTC 2016 - jberry@suse.com
+
+- Increase version beyond Leap 42.3.
+- 42.3.99.0
+
+-------------------------------------------------------------------
+Tue Nov 22 16:43:21 CET 2016 - schubi@suse.de
+
+- control.xml: Removed double entries "branding-openSUSE" from
+  supported_desktops/one_supported_desktop/packages.
+  (bnc#1010989)
+- 42.2.99.4
+
+-------------------------------------------------------------------
+Wed Nov  2 16:16:22 CET 2016 - shundhammer@suse.de
+
+- Added subvolumes (fate#321737)
+- 42.2.99.3
+
+-------------------------------------------------------------------
+Wed Oct 12 11:40:12 UTC 2016 - mfilka@suse.com
+
+- Removed reference to netprobe client. It was used in AutoYaST
+  only and everything what this client does should be currently
+  handled by wicked.
 - 42.2.99.2
 
 -------------------------------------------------------------------

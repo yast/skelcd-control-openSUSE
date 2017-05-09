@@ -155,7 +155,7 @@ textdomain="control"
                 <label_id>desktop_gnome</label_id>
                 <logon>gdm</logon>
                 <cursor>DMZ</cursor>
-                <packages>gdm branding-openSUSE</packages>
+                <packages>gdm</packages>
                 <order config:type="integer">1</order>
                 <patterns>gnome x11 base</patterns>
                 <icon>pattern-gnome</icon>
@@ -167,7 +167,7 @@ textdomain="control"
                 <label_id>desktop_kde</label_id>
                 <logon>sddm</logon>
                 <cursor>DMZ</cursor>
-                <packages>sddm branding-openSUSE</packages>
+                <packages>sddm</packages>
                 <order config:type="integer">1</order>
                 <patterns>kde x11 base</patterns>
                 <icon>pattern-kde4</icon>
@@ -192,7 +192,7 @@ textdomain="control"
                 <label_id>desktop_xfce</label_id>
                 <logon>lightdm</logon>
                 <cursor>DMZ</cursor>
-                <packages>lightdm branding-openSUSE</packages>
+                <packages>lightdm</packages>
                 <order config:type="integer">4</order>
                 <patterns>xfce x11 base</patterns>
                 <icon>pattern-xfce</icon>
@@ -206,7 +206,7 @@ textdomain="control"
                 <label_id>desktop_lxde</label_id>
                 <logon>lightdm</logon>
                 <cursor>DMZ</cursor>
-                <packages>lxde-common branding-openSUSE</packages>
+                <packages>lxde-common</packages>
                 <order config:type="integer">5</order>
                 <patterns>lxde x11 base</patterns>
                 <icon>pattern-lxde</icon>
@@ -218,7 +218,7 @@ textdomain="control"
                 <label_id>desktop_min_x</label_id>
                 <logon></logon>
                 <cursor>DMZ</cursor>
-                <packages>xorg-x11-server branding-openSUSE</packages>
+                <packages>xorg-x11-server</packages>
                 <order config:type="integer">6</order>
                 <patterns>x11 base</patterns>
                 <icon>yast-x11</icon>
@@ -230,7 +230,7 @@ textdomain="control"
                 <label_id>desktop_enlightenment</label_id>
                 <logon>lightdm</logon>
                 <cursor>DMZ</cursor>
-                <packages>lightdm branding-openSUSE</packages>
+                <packages>lightdm</packages>
                 <order config:type="integer">7</order>
                 <patterns>enlightenment x11 base</patterns>
                 <icon>pattern-enlightenment</icon>
@@ -293,6 +293,94 @@ textdomain="control"
         <vm_home_max_size>25GB</vm_home_max_size>
         <btrfs_increase_percentage config:type="integer">100</btrfs_increase_percentage>
         <btrfs_default_subvolume>@</btrfs_default_subvolume>
+
+        <!-- Subvolumes to be created for a Btrfs root file system -->
+        <!-- copy_on_write is true by default -->
+        <!-- The XML parser is very simplistic, thus not using attributes, but sub-elements -->
+        <subvolumes config:type="list">
+            <subvolume>
+                <path>home</path>
+            </subvolume>
+            <subvolume>
+                <path>opt</path>
+            </subvolume>
+            <subvolume>
+                <path>srv</path>
+            </subvolume>
+            <subvolume>
+                <path>tmp</path>
+            </subvolume>
+            <subvolume>
+                <path>usr/local</path>
+            </subvolume>
+            <subvolume>
+                <path>var/cache</path>
+            </subvolume>
+            <subvolume>
+                <path>var/crash</path>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/libvirt/images</path>
+                <copy_on_write config:type="boolean">false</copy_on_write>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/machines</path>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/mailman</path>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/mariadb</path>
+                <copy_on_write config:type="boolean">false</copy_on_write>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/mysql</path>
+                <copy_on_write config:type="boolean">false</copy_on_write>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/named</path>
+            </subvolume>
+            <subvolume>
+                <path>var/lib/pgsql</path>
+                <copy_on_write config:type="boolean">false</copy_on_write>
+            </subvolume>
+            <subvolume>
+                <path>var/log</path>
+            </subvolume>
+            <subvolume>
+                <path>var/opt</path>
+            </subvolume>
+            <subvolume>
+                <path>var/spool</path>
+            </subvolume>
+            <subvolume>
+                <path>var/tmp</path>
+            </subvolume>
+
+            <!-- architecture specific subvolumes -->
+
+            <subvolume>
+                <path>boot/grub2/i386-pc</path>
+                <archs>i386,x86_64</archs>
+            </subvolume>
+            <subvolume>
+                <path>boot/grub2/x86_64-efi</path>
+                <archs>x86_64</archs>
+            </subvolume>
+            <subvolume>
+                <path>boot/grub2/powerpc-ieee1275</path>
+                <archs>ppc,!board_powernv</archs>
+            </subvolume>
+            <subvolume>
+                <path>boot/grub2/x86_64-efi</path>
+                <archs>x86_64</archs>
+            </subvolume>
+            <subvolume>
+                <path>boot/grub2/s390x-emu</path>
+                <archs>s390</archs>
+            </subvolume>
+        </subvolumes>
+
     </partitioning>
 
     <network>
@@ -300,6 +388,36 @@ textdomain="control"
         <network_manager>laptop</network_manager>
         <startmode>ifplugd</startmode>
     </network>
+
+    <system_roles config:type="list">
+      <system_role>
+        <!-- the id is a key for texts/$id/label
+                             and texts/$id_description/label below -->
+        <id>kde</id>
+        <software>
+          <default_desktop>kde</default_desktop>
+        </software>
+	<no_default config:type="boolean">true</no_default>
+      </system_role>
+
+      <system_role>
+        <id>gnome</id>
+        <software>
+          <default_desktop>gnome</default_desktop>
+        </software>
+      </system_role>
+
+      <system_role>
+        <id>server</id>
+        <software>
+          <default_desktop>server</default_desktop>
+        </software>
+      </system_role>
+
+      <system_role>
+        <id>custom</id>
+      </system_role>
+    </system_roles>
 
     <clone_modules config:type="list">
         <clone_module>language</clone_module>
@@ -361,6 +479,54 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         <desktop_min_x><label>Minimal X Window</label></desktop_min_x>
         <desktop_enlightenment><label>Enlightenment Desktop</label></desktop_enlightenment>
 
+      <roles_caption>
+        <!-- TRANSLATORS: dialog caption -->
+        <label>Computer Role</label>
+        </roles_caption>
+        <roles_text>
+          <!-- TRANSLATORS: label in a dialog -->
+          <label>Computer Role is a predefined use case which tailor the system
+for the selected scenario.</label>
+        </roles_text>
+        <roles_help>
+          <!-- TRANSLATORS: dialog help -->
+          <label>&lt;p&gt;The computer role adjustments are in the range from package selection up
+to running additional services. By choosing a computer role, the system is
+configured accordingly to match the use case of the role. For the &lt;em&gt;Custom&lt;/em&gt; role
+an additional dialog is displayed which allows manual software pattern selection. &lt;/p&gt;</label>
+        </roles_help>
+        <kde>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Workstation with KDE Plasma</label>
+        </kde>
+        <kde_description>
+          <label>KDE is a powerful and intuitive desktop environment that uses Kontact as mailer,
+Dolphin as file manager, and offers both Firefox and Konqueror as Web browsers.
+          </label>
+        </kde_description>
+        <gnome>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Workstation with GNOME</label>
+        </gnome>
+        <gnome_description>
+          <label>GNOME is a powerful and intuitive desktop environment that uses Evolution as mailer,
+Firefox as browser, and Nautilus as file manager.
+          </label>
+        </gnome_description>
+        <server>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Server (Text Mode)</label>
+        </server>
+        <server_description>
+          <label>Server is usefull when computer should not have interaction with user and have only command line.</label>
+        </server_description>
+        <custom>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Custom</label>
+        </custom>
+        <custom_description>
+          <label>Custom role runs additional dialog where user can select software that fits his requirements.</label>
+        </custom_description>
     </texts>
 
     <proposals config:type="list">
@@ -403,6 +569,53 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                 <proposal_module>
                     <name>clone</name>
                     <presentation_order>99</presentation_order>
+                </proposal_module>
+            </proposal_modules>
+        </proposal>
+
+        <proposal>
+            <archs>s390</archs>
+            <label>Installation Settings</label>
+            <mode>installation</mode>
+            <stage>initial</stage>
+            <name>initial</name>
+            <unique_id>inst_initial_s390</unique_id>
+            <enable_skip>no</enable_skip>
+
+            <proposal_modules config:type="list">
+                <proposal_module>
+                    <name>clone</name>
+                    <presentation_order>95</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>cio_ignore</name>
+                    <presentation_order>70</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>hwinfo</name>
+                    <presentation_order>90</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>bootloader</name>
+                    <presentation_order>40</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>kdump</name>
+                    <presentation_order>60</presentation_order>
+                </proposal_module>
+                <!-- software proposal should be computed almost at the end -->
+                <proposal_module>
+                    <name>software</name>
+                    <presentation_order>35</presentation_order>
+                </proposal_module>
+                <!-- propose the default runlevel after software is selected, bnc #380141 -->
+                <proposal_module>
+                    <name>default_target</name>
+                    <presentation_order>75</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>firewall_stage1</name>
+                    <presentation_order>50</presentation_order>
                 </proposal_module>
             </proposal_modules>
         </proposal>
@@ -492,6 +705,28 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                 <proposal_module>backup</proposal_module>
                 <proposal_module>language</proposal_module>
                 <proposal_module>keyboard</proposal_module>
+                <proposal_module>bootloader</proposal_module>
+            </proposal_modules>
+        </proposal>
+
+        <proposal>
+            <archs>s390</archs>
+            <label>Installation Settings</label>
+            <mode>update,autoupgrade</mode>
+            <stage>initial</stage>
+            <name>initial</name>
+            <unique_id>update_S390_initial</unique_id>
+            <enable_skip>no</enable_skip>
+            <proposal_modules config:type="list">
+                <proposal_module>hwinfo</proposal_module>
+                <proposal_module>update</proposal_module>
+                <proposal_module>add-on</proposal_module>
+                <proposal_module>dasd</proposal_module>
+                <proposal_module>zfcp</proposal_module>
+                <proposal_module>packages</proposal_module>
+                <proposal_module>backup</proposal_module>
+                <proposal_module>language</proposal_module>
+                <proposal_module>cio_ignore</proposal_module>
                 <proposal_module>bootloader</proposal_module>
             </proposal_modules>
         </proposal>
@@ -592,10 +827,6 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <name>system_analysis</name>
                 </module>
                 <module>
-                    <label>System Analysis</label>
-                    <name>installation_options</name>
-                </module>
-                <module>
                     <label>Disk</label>
                     <name>disk_proposal</name>
                     <enable_back>yes</enable_back>
@@ -616,23 +847,22 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     </arguments>
                     <enable_back>yes</enable_back>
                 </module>
-                <!-- Here, user selects whether to perform New Installation, Upgrade, or Repair -->
                 <module>
-                    <label>Online Repositories</label>
-                    <name>productsources</name>
+                    <label>Computer Role</label>
+                    <name>desktop_roles</name>
                     <enable_back>yes</enable_back>
                 </module>
                 <module>
                     <label>Add-On Products</label>
                     <name>add-on</name>
+                </module>
+                <module>
+                    <label>Custom Pattern Selection</label>
+                    <name>custom_patterns</name>
                     <enable_back>yes</enable_back>
                 </module>
                 <module>
                     <name>download_release_notes</name>
-                </module>
-                <module>
-                    <label>Desktop Selection</label>
-                    <name>new_desktop</name>
                 </module>
                 <module>
                     <label>User Settings</label>
@@ -998,10 +1228,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
             <stage>continue</stage>
             <mode>autoinstallation</mode>
             <modules config:type="list">
-                <module>
-                    <label>Perform Installation</label>
-                    <name>netprobe</name>
-                </module>
                 <module>
                     <label>Perform Installation</label>
                     <name>autopost</name>
