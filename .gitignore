@@ -1,2 +1,4 @@
 *.pot
 package/*.tar.bz2
+.yardoc
+doc
