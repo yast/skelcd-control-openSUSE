@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Tue May  9 07:23:50 UTC 2017 - sflees@suse.de
+
+- Replace the generic_server pattern reference with console.
+  * As part of the patterns cleanup the generic_server pattern 
+    was merged into the console pattern and removed.
+- 42.3.99.4
+    
+-------------------------------------------------------------------
 Tue Apr 18 14:48:28 UTC 2017 - tchvatal@suse.com
 
 - In desktop selector keep all choices unselected for user to decide

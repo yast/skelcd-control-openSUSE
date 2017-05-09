@@ -181,7 +181,7 @@ textdomain="control"
                 <cursor>DMZ</cursor>
                 <packages></packages>
                 <order config:type="integer">1</order>
-                <patterns>generic_server</patterns>
+                <patterns>console</patterns>
                 <icon>yast-ssh-server</icon>
             </one_supported_desktop>
 
