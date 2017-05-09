@@ -3,7 +3,7 @@ Tue May  9 07:23:50 UTC 2017 - sflees@suse.de
 
 - Replace the generic_server pattern reference with console.
   * As part of the patterns cleanup the generic_server pattern 
-    was merged into the console pattern and removed.
+    was merged into the console pattern and removed. (bsc#1038233)
 - 42.3.99.4
     
 -------------------------------------------------------------------
