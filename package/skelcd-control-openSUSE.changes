@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Tue May  9 07:23:50 UTC 2017 - sflees@suse.de
+
+- Replace the generic_server pattern reference with console.
+  * As part of the patterns cleanup the generic_server pattern 
+    was merged into the console pattern and removed.
+- 42.2.99.2
+
+-------------------------------------------------------------------
 Thu Sep  8 12:24:32 UTC 2016 - lslezak@suse.cz
 
 - Cleanup: remove the LiveCD configuration, the yast2-live-installer
