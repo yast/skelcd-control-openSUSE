@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed May 17 12:44:48 UTC 2017 - lslezak@suse.cz
+
+- Added the new TW identification to the list of the products
+  supported for upgrade (bsc#1039193)
+- 42.3.99.5
+
+-------------------------------------------------------------------
 Tue May  9 07:23:50 UTC 2017 - sflees@suse.de
 
 - Replace the generic_server pattern reference with console.
