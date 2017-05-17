@@ -84,8 +84,10 @@ textdomain="control"
             <regexp_item>^openSUSE 13\..*$</regexp_item>
             <!-- Updating from openSUSE Leap 42.x -->
             <regexp_item>^openSUSE Leap 42\..*$</regexp_item>
-	    <!-- TW snapshots -->
+            <!-- old TW snapshots -->
             <regexp_item>^openSUSE 20[0-9]*$</regexp_item>
+            <!-- new TW snapshots -->
+            <regexp_item>^openSUSE Tumbleweed$</regexp_item>
         </products_supported_for_upgrade>
 
         <!-- Bugzilla #327791, if not set, default is true -->
