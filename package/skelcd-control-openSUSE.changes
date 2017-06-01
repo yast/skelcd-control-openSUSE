@@ -1,9 +1,10 @@
 -------------------------------------------------------------------
 Thu Jun  1 13:21:39 CEST 2017 - schubi@suse.de
 
-- control.cml: "custom" role has an own pattern selection screen
-  mask while the installation workflow. The default values can be
-  defined in the system_role section. (bnc#1031295)
+- The "custom" role displays manual the pattern selection dialog
+  in the installation workflow. The default pre-selected patterns
+  can be configured in the "control.xml" file in the "system_role"
+  section.(bnc#1031295)
 - 42.3.99.6
 
 -------------------------------------------------------------------
