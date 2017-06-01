@@ -444,6 +444,11 @@ textdomain="control"
 
       <system_role>
         <id>custom</id>
+        <!-- We need a manual selection here, see c11 on boo#1031295 -->
+        <software>
+          <default_patterns>base enhanced_base</default_patterns>
+          <default_desktop></default_desktop>
+        </software>
       </system_role>
     </system_roles>
 
