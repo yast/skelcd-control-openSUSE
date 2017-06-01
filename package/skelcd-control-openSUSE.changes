@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue May 16 14:01:59 UTC 2017 - fvogt@suse.com
+
+- Preselect minimal and base patterns when "custom" role is chosen
+  (boo#1031295)
+- 42.3.3
+
+-------------------------------------------------------------------
 Wed Feb  8 14:50:06 UTC 2017 - jreidinger@suse.com
 
 - add new desktop selection workflow (poo#14936, bsc#1025415)
