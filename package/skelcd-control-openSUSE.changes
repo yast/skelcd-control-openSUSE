@@ -1,4 +1,13 @@
 -------------------------------------------------------------------
+Thu Jun  1 13:21:39 CEST 2017 - schubi@suse.de
+
+- The "custom" role displays manual the pattern selection dialog
+  in the installation workflow. The default pre-selected patterns
+  can be configured in the "control.xml" file in the "system_role"
+  section.(bnc#1031295)
+- 42.3.99.6
+
+-------------------------------------------------------------------
 Wed May 17 12:44:48 UTC 2017 - lslezak@suse.cz
 
 - Added the new TW identification to the list of the products

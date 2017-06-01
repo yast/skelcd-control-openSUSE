@@ -418,6 +418,12 @@ textdomain="control"
 
       <system_role>
         <id>custom</id>
+        <software>
+          <!-- The "custom" role displays manual the pattern selection
+               dialog in the installation workflow. (bnc#1031295) -->
+          <default_patterns>base enhanced_base</default_patterns>
+          <default_desktop></default_desktop>
+        </software>
       </system_role>
     </system_roles>
 
