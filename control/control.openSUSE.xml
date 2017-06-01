@@ -418,6 +418,13 @@ textdomain="control"
 
       <system_role>
         <id>custom</id>
+        <software>
+          <!-- "custom" role has an own pattern selection screen mask while
+               the installation workflow. The default values can be
+               defined here. (bnc#1031295) -->
+          <default_patterns>base enhanced_base</default_patterns>
+          <default_desktop></default_desktop>
+        </software>
       </system_role>
     </system_roles>
 
