@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Jun  7 07:22:12 UTC 2017 - mfilka@suse.com
+
+- bnc#1042482
+  - Fixed "Server role" description
+- 42.3.99.7 
+
+-------------------------------------------------------------------
 Thu Jun  1 13:21:39 CEST 2017 - schubi@suse.de
 
 - The "custom" role displays manual the pattern selection dialog
