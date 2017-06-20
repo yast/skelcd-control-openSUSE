@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        42.3.99.7
+Version:        42.3.99.8
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -83,6 +83,7 @@ BuildRoot:      %{_tmppath}/%{name}-%{version}-build
 # Architecture specific packages
 %ifarch s390 s390x
 Requires:       yast2-reipl >= 3.1.4
+Requires:       yast2-s390
 %endif
 
 %ifarch %ix86 x86_64
