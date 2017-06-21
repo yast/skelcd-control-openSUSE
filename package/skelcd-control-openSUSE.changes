@@ -1,7 +1,8 @@
 -------------------------------------------------------------------
 Tue Jun 20 15:44:27 UTC 2017 - cwh@suse.com
 
-- added yast2-s390 as a requirement for s390(x)
+- added yast2-s390 as a requirement for s390(x) as a Storage NG
+  requirement (fate#318196)
 - 42.3.99.8
 
 -------------------------------------------------------------------
