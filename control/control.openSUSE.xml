@@ -94,24 +94,15 @@ textdomain="control"
         <online_repos_preselected config:type="boolean">false</online_repos_preselected>
 
         <!-- FATE #300898, List of external sources accesible during the installation time -->
-        <external_sources_link>http://download.opensuse.org/YaST/Repos/openSUSE_Leap_42.3_Servers.xml</external_sources_link>
+        <external_sources_link>http://download.opensuse.org/YaST/Repos/openSUSE_Factory_Servers.xml</external_sources_link>
 
         <dropped_packages/>
         <extra_urls config:type="list">
             <!-- Default update repository, bnc #381360 -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/update/leap/42.3/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/update/tumbleweed/</baseurl>
                 <alias>repo-update</alias>
-                <name>openSUSE-Leap-42.3-Update</name>
-                <prod_dir>/</prod_dir>
-                <enabled config:type="boolean">true</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
-            </extra_url>
-            <extra_url>
-                <baseurl>http://download.opensuse.org/update/leap/42.3/non-oss/</baseurl>
-                <alias>repo-update-non-oss</alias>
-                <name>openSUSE-Leap-42.3-Update-Non-Oss</name>
+                <name>openSUSE-Tumbleweed-Update</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
@@ -120,72 +111,36 @@ textdomain="control"
 
             <!-- Replacement for EXTRAURLS and OPTIONALURLS -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/distribution/leap/42.3/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/tumbleweed/repo/oss/</baseurl>
                 <alias>repo-oss</alias>
-                <name>openSUSE-Leap-42.3-Oss</name>
+                <name>openSUSE-Tumbleweed-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/distribution/leap/42.3/repo/non-oss/</baseurl>
+                <baseurl>http://download.opensuse.org/tumbleweed/repo/non-oss/</baseurl>
                 <alias>repo-non-oss</alias>
-                <name>openSUSE-Leap-42.3-Non-Oss</name>
+                <name>openSUSE-Tumbleweed-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/distribution/leap/42.3/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/debug/tumbleweed/repo/oss/</baseurl>
                 <alias>repo-debug</alias>
-                <name>openSUSE-Leap-42.3-Debug</name>
+                <name>openSUSE-Tumbleweed-Debug</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/distribution/leap/42.3/repo/non-oss/</baseurl>
-                <alias>repo-debug-non-oss</alias>
-                <name>openSUSE-Leap-42.3-Debug-Non-Oss</name>
-                <prod_dir>/</prod_dir>
-                <enabled config:type="boolean">false</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
-            </extra_url>
-            <extra_url>
-                <baseurl>http://download.opensuse.org/debug/update/leap/42.3/oss/</baseurl>
-                <alias>repo-debug-update</alias>
-                <name>openSUSE-Leap-42.3-Update-Debug</name>
-                <prod_dir>/</prod_dir>
-                <enabled config:type="boolean">false</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
-            </extra_url>
-            <extra_url>
-                <baseurl>http://download.opensuse.org/debug/update/leap/42.3/non-oss/</baseurl>
-                <alias>repo-debug-update-non-oss</alias>
-                <name>openSUSE-Leap-42.3-Update-Debug-Non-Oss</name>
-                <prod_dir>/</prod_dir>
-                <enabled config:type="boolean">false</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
-            </extra_url>
-            <extra_url>
-                <baseurl>http://download.opensuse.org/source/distribution/leap/42.3/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/source/tumbleweed/repo/oss/</baseurl>
                 <alias>repo-source</alias>
-                <name>openSUSE-Leap-42.3-Source</name>
-                <prod_dir>/</prod_dir>
-                <enabled config:type="boolean">false</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
-            </extra_url>
-            <extra_url>
-                <baseurl>http://download.opensuse.org/source/distribution/leap/42.3/repo/non-oss/</baseurl>
-                <alias>repo-source-non-oss</alias>
-                <name>openSUSE-Leap-42.3-Source-Non-Oss</name>
+                <name>openSUSE-Tumbleweed-Source</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
@@ -197,18 +152,6 @@ textdomain="control"
         <supported_desktops config:type="list">
 
             <one_supported_desktop>
-                <name>kde</name>
-                <desktop>plasma5</desktop>
-                <label_id>desktop_kde</label_id>
-                <logon>sddm</logon>
-                <cursor>DMZ</cursor>
-                <packages>sddm</packages>
-                <order config:type="integer">1</order>
-                <patterns>kde x11 base</patterns>
-                <icon>pattern-kde4</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
                 <name>gnome</name>
                 <desktop>gnome</desktop>
                 <label_id>desktop_gnome</label_id>
@@ -218,6 +161,18 @@ textdomain="control"
                 <order config:type="integer">1</order>
                 <patterns>gnome x11 base</patterns>
                 <icon>pattern-gnome</icon>
+            </one_supported_desktop>
+
+            <one_supported_desktop>
+                <name>kde</name>
+                <desktop>plasma5</desktop>
+                <label_id>desktop_kde</label_id>
+                <logon>sddm</logon>
+                <cursor>DMZ</cursor>
+                <packages>sddm</packages>
+                <order config:type="integer">1</order>
+                <patterns>kde x11 base</patterns>
+                <icon>pattern-kde4</icon>
             </one_supported_desktop>
 
             <one_supported_desktop>
@@ -243,6 +198,20 @@ textdomain="control"
                 <order config:type="integer">4</order>
                 <patterns>xfce x11 base</patterns>
                 <icon>pattern-xfce</icon>
+            </one_supported_desktop>
+
+            <!-- FaTE #307729 LXDE -->
+            <one_supported_desktop>
+                <name>lxde</name>
+                <!-- BNC #667408 -->
+                <desktop>lxde</desktop>
+                <label_id>desktop_lxde</label_id>
+                <logon>lightdm</logon>
+                <cursor>DMZ</cursor>
+                <packages>lxde-common</packages>
+                <order config:type="integer">5</order>
+                <patterns>lxde x11 base</patterns>
+                <icon>pattern-lxde</icon>
             </one_supported_desktop>
 
             <one_supported_desktop>
@@ -317,15 +286,14 @@ textdomain="control"
     -->
     <partitioning>
         <try_separate_home config:type="boolean">true</try_separate_home>
-        <limit_try_home>5GB</limit_try_home>
+        <limit_try_home>7GB</limit_try_home>
         <root_space_percent>40</root_space_percent>
-        <root_base_size>3GB</root_base_size>
-        <root_max_size>10GB</root_max_size>
+        <root_base_size>5GB</root_base_size>
+        <root_max_size>20GB</root_max_size>
         <proposal_lvm config:type="boolean">false</proposal_lvm>
-        <vm_keep_unpartitioned_region config:type="boolean">false</vm_keep_unpartitioned_region>
         <vm_desired_size>15GB</vm_desired_size>
         <vm_home_max_size>25GB</vm_home_max_size>
-        <btrfs_increase_percentage config:type="integer">300</btrfs_increase_percentage>
+        <btrfs_increase_percentage config:type="integer">100</btrfs_increase_percentage>
         <btrfs_default_subvolume>@</btrfs_default_subvolume>
 
         <!-- Subvolumes to be created for a Btrfs root file system -->
