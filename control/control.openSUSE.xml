@@ -489,36 +489,31 @@ is the most appropriate desktop for you.</label></desktop_dialog>
 
       <roles_caption>
         <!-- TRANSLATORS: dialog caption -->
-        <label>Computer Role</label>
+        <label>Please select a user interface</label>
         </roles_caption>
         <roles_text>
           <!-- TRANSLATORS: label in a dialog -->
-          <label>Computer Role is a predefined use case which tailor the system
-for the selected scenario.</label>
+          <label>Choose a pre-defined user interface or a custom software selection.</label>
         </roles_text>
         <roles_help>
           <!-- TRANSLATORS: dialog help -->
-          <label>&lt;p&gt;The computer role adjustments are in the range from package selection up
-to running additional services. By choosing a computer role, the system is
-configured accordingly to match the use case of the role. For the &lt;em&gt;Custom&lt;/em&gt; role
-an additional dialog is displayed which allows manual software pattern selection. &lt;/p&gt;</label>
+	  <label>&lt;p&gt;Choose a pre-defined user interface or customize the
+	  software selection manually.&lt;/p&gt;</label>
         </roles_help>
         <kde>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>Workstation with KDE Plasma</label>
+          <label>Desktop with KDE Plasma</label>
         </kde>
         <kde_description>
-          <label>KDE is a powerful and intuitive desktop environment that uses Kontact as mailer,
-Dolphin as file manager, and offers both Firefox and Konqueror as Web browsers.
+          <label>KDE Plasma is a graphical desktop environment and the default on openSUSE Leap.
           </label>
         </kde_description>
         <gnome>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>Workstation with GNOME</label>
+          <label>Desktop with GNOME</label>
         </gnome>
         <gnome_description>
-          <label>GNOME is a powerful and intuitive desktop environment that uses Evolution as mailer,
-Firefox as browser, and Nautilus as file manager.
+          <label>GNOME is a graphical desktop environment and the default on SUSE Linux Enterprise.
           </label>
         </gnome_description>
         <server>
@@ -526,15 +521,14 @@ Firefox as browser, and Nautilus as file manager.
           <label>Server (Text Mode)</label>
         </server>
         <server_description>
-          <label>The "Server" role is useful when the computer should not have any graphical interaction 
-with the user and only provide a command line.</label>
+          <label>The server selection installs a reduced set of packages and offers a text mode interface.</label>
         </server_description>
         <custom>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Custom</label>
         </custom>
         <custom_description>
-          <label>Custom role runs additional dialog where user can select software that fits his requirements.</label>
+          <label>The custom selection allows to select alternative software patterns to customize the installation. Additional software is available in the online repositories.</label>
         </custom_description>
     </texts>
 
@@ -857,7 +851,7 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <enable_back>yes</enable_back>
                 </module>
                 <module>
-                    <label>Computer Role</label>
+                    <label>User Interface</label>
                     <name>desktop_roles</name>
                     <enable_back>yes</enable_back>
                 </module>
