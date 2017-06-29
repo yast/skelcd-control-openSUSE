@@ -94,15 +94,24 @@ textdomain="control"
         <online_repos_preselected config:type="boolean">false</online_repos_preselected>
 
         <!-- FATE #300898, List of external sources accesible during the installation time -->
-        <external_sources_link>http://download.opensuse.org/YaST/Repos/openSUSE_Factory_Servers.xml</external_sources_link>
+        <external_sources_link>http://download.opensuse.org/YaST/Repos/openSUSE_Leap_42.3_Servers.xml</external_sources_link>
 
         <dropped_packages/>
         <extra_urls config:type="list">
             <!-- Default update repository, bnc #381360 -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/update/tumbleweed/</baseurl>
+                <baseurl>http://download.opensuse.org/update/leap/42.3/oss/</baseurl>
                 <alias>repo-update</alias>
-                <name>openSUSE-Tumbleweed-Update</name>
+                <name>openSUSE-Leap-42.3-Update</name>
+                <prod_dir>/</prod_dir>
+                <enabled config:type="boolean">true</enabled>
+                <autorefresh config:type="boolean">true</autorefresh>
+                <priority config:type="integer">99</priority>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/update/leap/42.3/non-oss/</baseurl>
+                <alias>repo-update-non-oss</alias>
+                <name>openSUSE-Leap-42.3-Update-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
@@ -111,36 +120,72 @@ textdomain="control"
 
             <!-- Replacement for EXTRAURLS and OPTIONALURLS -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/tumbleweed/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/distribution/leap/42.3/repo/oss/</baseurl>
                 <alias>repo-oss</alias>
-                <name>openSUSE-Tumbleweed-Oss</name>
+                <name>openSUSE-Leap-42.3-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/tumbleweed/repo/non-oss/</baseurl>
+                <baseurl>http://download.opensuse.org/distribution/leap/42.3/repo/non-oss/</baseurl>
                 <alias>repo-non-oss</alias>
-                <name>openSUSE-Tumbleweed-Non-Oss</name>
+                <name>openSUSE-Leap-42.3-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/tumbleweed/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/debug/distribution/leap/42.3/repo/oss/</baseurl>
                 <alias>repo-debug</alias>
-                <name>openSUSE-Tumbleweed-Debug</name>
+                <name>openSUSE-Leap-42.3-Debug</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/source/tumbleweed/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/debug/distribution/leap/42.3/repo/non-oss/</baseurl>
+                <alias>repo-debug-non-oss</alias>
+                <name>openSUSE-Leap-42.3-Debug-Non-Oss</name>
+                <prod_dir>/</prod_dir>
+                <enabled config:type="boolean">false</enabled>
+                <autorefresh config:type="boolean">true</autorefresh>
+                <priority config:type="integer">99</priority>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/debug/update/leap/42.3/oss/</baseurl>
+                <alias>repo-debug-update</alias>
+                <name>openSUSE-Leap-42.3-Update-Debug</name>
+                <prod_dir>/</prod_dir>
+                <enabled config:type="boolean">false</enabled>
+                <autorefresh config:type="boolean">true</autorefresh>
+                <priority config:type="integer">99</priority>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/debug/update/leap/42.3/non-oss/</baseurl>
+                <alias>repo-debug-update-non-oss</alias>
+                <name>openSUSE-Leap-42.3-Update-Debug-Non-Oss</name>
+                <prod_dir>/</prod_dir>
+                <enabled config:type="boolean">false</enabled>
+                <autorefresh config:type="boolean">true</autorefresh>
+                <priority config:type="integer">99</priority>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/source/distribution/leap/42.3/repo/oss/</baseurl>
                 <alias>repo-source</alias>
-                <name>openSUSE-Tumbleweed-Source</name>
+                <name>openSUSE-Leap-42.3-Source</name>
+                <prod_dir>/</prod_dir>
+                <enabled config:type="boolean">false</enabled>
+                <autorefresh config:type="boolean">true</autorefresh>
+                <priority config:type="integer">99</priority>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/source/distribution/leap/42.3/repo/non-oss/</baseurl>
+                <alias>repo-source-non-oss</alias>
+                <name>openSUSE-Leap-42.3-Source-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
@@ -152,18 +197,6 @@ textdomain="control"
         <supported_desktops config:type="list">
 
             <one_supported_desktop>
-                <name>gnome</name>
-                <desktop>gnome</desktop>
-                <label_id>desktop_gnome</label_id>
-                <logon>gdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>gdm</packages>
-                <order config:type="integer">1</order>
-                <patterns>gnome x11 base</patterns>
-                <icon>pattern-gnome</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
                 <name>kde</name>
                 <desktop>plasma5</desktop>
                 <label_id>desktop_kde</label_id>
@@ -173,6 +206,18 @@ textdomain="control"
                 <order config:type="integer">1</order>
                 <patterns>kde x11 base</patterns>
                 <icon>pattern-kde4</icon>
+            </one_supported_desktop>
+
+            <one_supported_desktop>
+                <name>gnome</name>
+                <desktop>gnome</desktop>
+                <label_id>desktop_gnome</label_id>
+                <logon>gdm</logon>
+                <cursor>DMZ</cursor>
+                <packages>gdm</packages>
+                <order config:type="integer">1</order>
+                <patterns>gnome x11 base</patterns>
+                <icon>pattern-gnome</icon>
             </one_supported_desktop>
 
             <one_supported_desktop>
@@ -198,20 +243,6 @@ textdomain="control"
                 <order config:type="integer">4</order>
                 <patterns>xfce x11 base</patterns>
                 <icon>pattern-xfce</icon>
-            </one_supported_desktop>
-
-            <!-- FaTE #307729 LXDE -->
-            <one_supported_desktop>
-                <name>lxde</name>
-                <!-- BNC #667408 -->
-                <desktop>lxde</desktop>
-                <label_id>desktop_lxde</label_id>
-                <logon>lightdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>lxde-common</packages>
-                <order config:type="integer">5</order>
-                <patterns>lxde x11 base</patterns>
-                <icon>pattern-lxde</icon>
             </one_supported_desktop>
 
             <one_supported_desktop>
@@ -286,14 +317,15 @@ textdomain="control"
     -->
     <partitioning>
         <try_separate_home config:type="boolean">true</try_separate_home>
-        <limit_try_home>7GB</limit_try_home>
+        <limit_try_home>5GB</limit_try_home>
         <root_space_percent>40</root_space_percent>
-        <root_base_size>5GB</root_base_size>
-        <root_max_size>20GB</root_max_size>
+        <root_base_size>3GB</root_base_size>
+        <root_max_size>10GB</root_max_size>
         <proposal_lvm config:type="boolean">false</proposal_lvm>
+        <vm_keep_unpartitioned_region config:type="boolean">false</vm_keep_unpartitioned_region>
         <vm_desired_size>15GB</vm_desired_size>
         <vm_home_max_size>25GB</vm_home_max_size>
-        <btrfs_increase_percentage config:type="integer">100</btrfs_increase_percentage>
+        <btrfs_increase_percentage config:type="integer">300</btrfs_increase_percentage>
         <btrfs_default_subvolume>@</btrfs_default_subvolume>
 
         <!-- Subvolumes to be created for a Btrfs root file system -->
@@ -489,36 +521,31 @@ is the most appropriate desktop for you.</label></desktop_dialog>
 
       <roles_caption>
         <!-- TRANSLATORS: dialog caption -->
-        <label>Computer Role</label>
+        <label>Please select a user interface</label>
         </roles_caption>
         <roles_text>
           <!-- TRANSLATORS: label in a dialog -->
-          <label>Computer Role is a predefined use case which tailor the system
-for the selected scenario.</label>
+          <label>Choose a pre-defined user interface or a custom software selection.</label>
         </roles_text>
         <roles_help>
           <!-- TRANSLATORS: dialog help -->
-          <label>&lt;p&gt;The computer role adjustments are in the range from package selection up
-to running additional services. By choosing a computer role, the system is
-configured accordingly to match the use case of the role. For the &lt;em&gt;Custom&lt;/em&gt; role
-an additional dialog is displayed which allows manual software pattern selection. &lt;/p&gt;</label>
+	  <label>&lt;p&gt;Choose a pre-defined user interface or customize the
+	  software selection manually.&lt;/p&gt;</label>
         </roles_help>
         <kde>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>Workstation with KDE Plasma</label>
+          <label>Desktop with KDE Plasma</label>
         </kde>
         <kde_description>
-          <label>KDE is a powerful and intuitive desktop environment that uses Kontact as mailer,
-Dolphin as file manager, and offers both Firefox and Konqueror as Web browsers.
+          <label>KDE Plasma is a graphical desktop environment and the default on openSUSE Leap.
           </label>
         </kde_description>
         <gnome>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>Workstation with GNOME</label>
+          <label>Desktop with GNOME</label>
         </gnome>
         <gnome_description>
-          <label>GNOME is a powerful and intuitive desktop environment that uses Evolution as mailer,
-Firefox as browser, and Nautilus as file manager.
+          <label>GNOME is a graphical desktop environment and the default on SUSE Linux Enterprise.
           </label>
         </gnome_description>
         <server>
@@ -526,15 +553,14 @@ Firefox as browser, and Nautilus as file manager.
           <label>Server (Text Mode)</label>
         </server>
         <server_description>
-          <label>The "Server" role is useful when the computer should not have any graphical interaction 
-with the user and only provide a command line.</label>
+          <label>The server selection installs a reduced set of packages and offers a text mode interface.</label>
         </server_description>
         <custom>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Custom</label>
         </custom>
         <custom_description>
-          <label>Custom role runs additional dialog where user can select software that fits his requirements.</label>
+          <label>The custom selection allows to select alternative software patterns to customize the installation. Additional software is available in the online repositories.</label>
         </custom_description>
     </texts>
 
@@ -682,6 +708,24 @@ with the user and only provide a command line.</label>
                     <name>ssh_import</name>
                     <presentation_order>90</presentation_order>
                 </proposal_module>
+            </proposal_modules>
+        </proposal>
+
+        <proposal>
+            <label>Live Installation Settings</label>
+            <mode>live_installation</mode>
+            <stage>initial</stage>
+            <name>initial</name>
+            <unique_id>live_inst_initial</unique_id>
+            <enable_skip>no</enable_skip>
+            <proposal_modules config:type="list">
+                <proposal_module>hwinfo</proposal_module>
+                <proposal_module>partitions</proposal_module>
+                <proposal_module>bootloader</proposal_module>
+                <proposal_module>country_simple</proposal_module>
+                <proposal_module>timezone</proposal_module>
+                <proposal_module>users</proposal_module>
+                <proposal_module>default_target</proposal_module>
             </proposal_modules>
         </proposal>
 
@@ -857,7 +901,7 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <enable_back>yes</enable_back>
                 </module>
                 <module>
-                    <label>Computer Role</label>
+                    <label>User Interface</label>
                     <name>desktop_roles</name>
                     <enable_back>yes</enable_back>
                 </module>
@@ -945,6 +989,93 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 <module>
                     <label>Perform Installation</label>
                     <name>finish</name>
+                    <enable_back>no</enable_back>
+                </module>
+            </modules>
+        </workflow>
+
+        <!-- Stage: Initial, Mode: Live Installation -->
+        <workflow>
+            <defaults>
+                <archs>all</archs>
+                <enable_back>yes</enable_back>
+                <enable_next>yes</enable_next>
+            </defaults>
+            <label>Installation</label>
+            <mode>live_installation</mode>
+            <stage>initial</stage>
+            <modules config:type="list">
+               <module>
+                    <label>Load linuxrc Network Configuration</label>
+                    <name>install_inf</name>
+                </module>
+                <module>
+                    <label>Network Autosetup</label>
+                    <name>setup_dhcp</name>
+                </module>
+                <module>
+                    <label>Welcome</label>
+                    <name>complex_welcome</name>
+                    <enable_back>no</enable_back>
+                    <enable_next>yes</enable_next>
+                    <arguments>
+                        <first_run>yes</first_run>
+                    </arguments>
+                    <retranslate config:type="boolean">true</retranslate>
+                </module>
+                <module>
+                    <label>Time Zone</label>
+                    <name>timezone</name>
+                    <arguments>
+                        <first_run>yes</first_run>
+                    </arguments>
+                    <enable_back>yes</enable_back>
+                </module>
+                <module>
+                    <label>Disk</label>
+                    <name>disk_proposal</name>
+                    <enable_back>yes</enable_back>
+                    <enable_next>yes</enable_next>
+                </module>
+                <module>
+                    <label>User Settings</label>
+                    <name>user_first</name>
+                </module>
+                <module>
+                    <label>User Settings</label>
+                    <name>root_first</name>
+                </module>
+                <module>
+                    <label>Installation Settings</label>
+                    <name>inst_live_pre-proposal</name>
+                </module>
+                <module>
+                    <label>Installation Settings</label>
+                    <name>inst_proposal</name>
+                    <proposal>initial</proposal>
+                </module>
+                <!-- FATE #303860: Provide consistent progress during installation -->
+                <module>
+                    <label>Perform Installation</label>
+                    <name>prepareprogress</name>
+                </module>
+                <module>
+                    <label>Perform Installation</label>
+                    <name>inst_prepdisk</name>
+                </module>
+                <module>
+                    <label>Perform Installation</label>
+                    <name>inst_kickoff</name>
+                </module>
+                <module>
+                    <label>Perform Installation</label>
+                    <name>inst_live_doit</name>
+                    <enable_next>no</enable_next>
+                    <enable_back>no</enable_back>
+                </module>
+                <module>
+                    <label>Perform Installation</label>
+                    <name>inst_finish</name>
                     <enable_back>no</enable_back>
                 </module>
             </modules>
@@ -1059,6 +1190,26 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
             </modules>
         </workflow>
 
+        <!-- Stage: Continue, Mode: Live Installation -->
+        <workflow>
+            <stage>continue</stage>
+            <mode>live_installation</mode>
+            <defaults>
+                <enable_back>yes</enable_back>
+                <enable_next>yes</enable_next>
+                <archs>all</archs>
+            </defaults>
+            <modules config:type="list">
+                <module>
+                    <heading>yes</heading>
+                    <label>Configuration</label>
+                </module>
+                <module>
+                    <name>live_cleanup</name>
+                    <enable_back>no</enable_back>
+                </module>
+            </modules>
+        </workflow>
 
         <!-- Stage: Initial, Mode: AutoInstallation -->
         <workflow>

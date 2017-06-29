@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Jun 28 18:06:31 UTC 2017 - lnussel@suse.de
+
+- Reword role selection dialog (boo#1045180)
+- 42.3.99.9
+
+-------------------------------------------------------------------
 Tue Jun 20 15:44:27 UTC 2017 - cwh@suse.com
 
 - added yast2-s390 as a requirement for s390(x) as a Storage NG
@@ -10,7 +16,7 @@ Wed Jun  7 07:22:12 UTC 2017 - mfilka@suse.com
 
 - bnc#1042482
   - Fixed "Server role" description
-- 42.3.99.7 
+- 42.3.99.7
 
 -------------------------------------------------------------------
 Thu Jun  1 13:21:39 CEST 2017 - schubi@suse.de
@@ -32,10 +38,10 @@ Wed May 17 12:44:48 UTC 2017 - lslezak@suse.cz
 Tue May  9 07:23:50 UTC 2017 - sflees@suse.de
 
 - Replace the generic_server pattern reference with console.
-  * As part of the patterns cleanup the generic_server pattern 
+  * As part of the patterns cleanup the generic_server pattern
     was merged into the console pattern and removed. (bsc#1038233)
 - 42.3.99.4
-    
+
 -------------------------------------------------------------------
 Tue Apr 18 14:48:28 UTC 2017 - tchvatal@suse.com
 
@@ -47,19 +53,24 @@ Tue Apr 18 14:48:28 UTC 2017 - tchvatal@suse.com
 Wed Feb  8 14:50:06 UTC 2017 - jreidinger@suse.com
 
 - add new desktop selection workflow (poo#14936, bsc#1025415)
-- 42.3.99.2
+- 42.3.2
 
 -------------------------------------------------------------------
 Wed Jan 25 13:04:28 UTC 2017 - jreidinger@suse.com
 
 - initial support for s390 (bsc#1021615)
-- 42.3.99.1
 
 -------------------------------------------------------------------
-Wed Dec  7 17:26:12 UTC 2016 - jberry@suse.com
+Thu Jan  5 10:04:44 UTC 2017 - dmueller@suse.com
 
-- Increase version beyond Leap 42.3.
-- 42.3.99.0
+- Fix Leap 42.3 setup for ports ( lets reuse previous bnc#1010989)
+- 42.3.1
+
+-------------------------------------------------------------------
+Tue Dec  6 01:32:20 UTC 2016 - jberry@suse.com
+
+- Start Leap 42.3 version.
+- 42.3.0
 
 -------------------------------------------------------------------
 Tue Nov 22 16:43:21 CET 2016 - schubi@suse.de
