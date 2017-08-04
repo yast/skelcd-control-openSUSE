@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Aug  3 06:31:13 UTC 2017 - jreidinger@suse.com
+
+- place skelcd to /usr/lib/skelcd (bsc#1031335)
+- 42.3.99.10
+
+-------------------------------------------------------------------
 Wed Jun 28 18:06:31 UTC 2017 - lnussel@suse.de
 
 - Reword role selection dialog (boo#1045180)
