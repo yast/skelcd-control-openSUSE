@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Aug 17 10:36:53 UTC 2017 - lslezak@suse.cz
+
+- Use HTTPS protocol for downloading the community repositories
+  (bsc#1054198)
+- 42.3.99.11
+
+-------------------------------------------------------------------
 Thu Aug  3 06:31:13 UTC 2017 - jreidinger@suse.com
 
 - place skelcd to /usr/lib/skelcd (bsc#1031335)
