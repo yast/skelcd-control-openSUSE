@@ -807,6 +807,11 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <label>Installer Update</label>
                     <name>update_installer</name>
                 </module>
+                <!-- We need to initialize libzypp in order to read product's license -->
+                <module>
+                    <label>Repositories Initialization</label>
+                    <name>repositories_initialization</name>
+                </module>
                 <module>
                     <label>Welcome</label>
                     <name>complex_welcome</name>
@@ -967,6 +972,11 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 <module>
                     <label>Installer Update</label>
                     <name>update_installer</name>
+                </module>
+                <!-- We need to initialize libzypp in order to read product's license -->
+                <module>
+                    <label>Repositories Initialization</label>
+                    <name>repositories_initialization</name>
                 </module>
                 <module>
                     <name>complex_welcome</name>
