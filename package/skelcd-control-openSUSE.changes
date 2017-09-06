@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Sep  6 07:46:57 UTC 2017 - igonzalezsosa@suse.com
+
+- Initialize libzypp in advance in order to read the product's
+  license (fate#322276)      
+- 42.3.99.13
+
+-------------------------------------------------------------------
 Wed Aug 30 15:09:35 UTC 2017 - gsouza@suse.com
 
 - Added complex welcome module to autoinstallation in order to
