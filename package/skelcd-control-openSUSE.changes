@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Sep 21 07:09:27 UTC 2017 - jreidinger@suse.com
+
+- Adapt to changes in roles (needed for fixing bsc#1049297)
+- 42.3.99.14
+
+-------------------------------------------------------------------
 Wed Sep  6 07:46:57 UTC 2017 - igonzalezsosa@suse.com
 
 - Initialize libzypp in advance in order to read the product's
