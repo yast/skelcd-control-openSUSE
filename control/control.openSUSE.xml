@@ -399,6 +399,7 @@ textdomain="control"
         <software>
           <default_desktop>kde</default_desktop>
         </software>
+        <order config:type="integer">100</order>
 	<no_default config:type="boolean">true</no_default>
       </system_role>
 
@@ -407,6 +408,7 @@ textdomain="control"
         <software>
           <default_desktop>gnome</default_desktop>
         </software>
+        <order config:type="integer">200</order>
       </system_role>
 
       <system_role>
@@ -414,6 +416,7 @@ textdomain="control"
         <software>
           <default_desktop>server</default_desktop>
         </software>
+        <order config:type="integer">300</order>
       </system_role>
 
       <system_role>
@@ -424,6 +427,7 @@ textdomain="control"
           <default_patterns>base enhanced_base</default_patterns>
           <default_desktop></default_desktop>
         </software>
+        <order config:type="integer">400</order>
       </system_role>
     </system_roles>
 
