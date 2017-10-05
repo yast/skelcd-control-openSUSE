@@ -135,6 +135,7 @@ install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT/usr/lib/skelcd/CD1/contro
 
 %files
 %defattr(644,root,root,755)
+%dir /usr/lib/skelcd
 %dir /usr/lib/skelcd/CD1
 /usr/lib/skelcd/CD1/control.xml
 
