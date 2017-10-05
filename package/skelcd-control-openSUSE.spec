@@ -113,8 +113,8 @@ make %{?_smp_mflags} -C control check
     CONTROL_FILE=control.openSUSE.xml
 %endif
 
-mkdir -p $RPM_BUILD_ROOT/usr/lib/skelcd/CD1
-install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT/usr/lib/skelcd/CD1/control.xml
+mkdir -p $RPM_BUILD_ROOT/CD1
+install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT/CD1/control.xml
 
 %ifarch aarch64 %arm ppc ppc64 ppc64le
     %ifarch ppc ppc64 ppc64le
@@ -122,20 +122,19 @@ install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT/usr/lib/skelcd/CD1/contro
     %else
         ports_arch="%{_arch}"
     %endif
-    sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse.org/ports/$ports_arch/distribution/," %{buildroot}/usr/lib/skelcd/CD1/control.xml
-    sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/tumbleweed/," %{buildroot}/usr/lib/skelcd/CD1/control.xml
-    sed -i -e "s,http://download.opensuse.org/debug/,http://download.opensuse.org/ports/$ports_arch/debug/," %{buildroot}/usr/lib/skelcd/CD1/control.xml
-    sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/$ports_arch/source/," %{buildroot}/usr/lib/skelcd/CD1/control.xml
-    sed -i -e "s,http://download.opensuse.org/update/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/update/tumbleweed/," %{buildroot}/usr/lib/skelcd/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse.org/ports/$ports_arch/distribution/," %{buildroot}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/tumbleweed/," %{buildroot}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/debug/,http://download.opensuse.org/ports/$ports_arch/debug/," %{buildroot}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/$ports_arch/source/," %{buildroot}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/update/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/update/tumbleweed/," %{buildroot}/CD1/control.xml
     #we parse out non existing non-oss repo for ports
-    xsltproc -o %{buildroot}/usr/lib/skelcd/CD1/control.xml control/nonoss.xsl %{buildroot}/usr/lib/skelcd/CD1/control.xml/
-    mv %{buildroot}/usr/lib/skelcd/CD1/control{_ports,}.xml
-    xmllint --noout --relaxng %{_datadir}/YaST2/control/control.rng %{buildroot}/usr/lib/skelcd/CD1/control.xml
+    xsltproc -o %{buildroot}/CD1/control.xml control/nonoss.xsl %{buildroot}/CD1/control.xml/
+    mv %{buildroot}/CD1/control{_ports,}.xml
+    xmllint --noout --relaxng %{_datadir}/YaST2/control/control.rng %{buildroot}/CD1/control.xml
 %endif
 
 %files
 %defattr(644,root,root,755)
-%dir /usr/lib/skelcd/CD1
-/usr/lib/skelcd/CD1/control.xml
+/CD1
 
 %changelog
