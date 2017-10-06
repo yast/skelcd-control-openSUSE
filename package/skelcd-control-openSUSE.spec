@@ -1,7 +1,7 @@
 #
 # spec file for package skelcd-control-openSUSE
 #
-# Copyright (c) 2015 SUSE LINUX GmbH, Nuernberg, Germany.
+# Copyright (c) 2017 SUSE LINUX GmbH, Nuernberg, Germany.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        42.3.99.14
+Version:        42.3.99.15
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -90,6 +90,10 @@ Requires:       yast2-s390
 Requires:       yast2-vm
 %endif
 
+%if 0%{?suse_version} >= 1500
+%define skelcdpath /usr/lib/skelcd
+%endif
+
 %description
 This package contains the control file used for openSUSE installation.
 
@@ -113,8 +117,8 @@ make %{?_smp_mflags} -C control check
     CONTROL_FILE=control.openSUSE.xml
 %endif
 
-mkdir -p $RPM_BUILD_ROOT/CD1
-install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT/CD1/control.xml
+mkdir -p $RPM_BUILD_ROOT%{?skelcdpath}/CD1
+install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control.xml
 
 %ifarch aarch64 %arm ppc ppc64 ppc64le
     %ifarch ppc ppc64 ppc64le
@@ -122,19 +126,23 @@ install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT/CD1/control.xml
     %else
         ports_arch="%{_arch}"
     %endif
-    sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse.org/ports/$ports_arch/distribution/," %{buildroot}/CD1/control.xml
-    sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/tumbleweed/," %{buildroot}/CD1/control.xml
-    sed -i -e "s,http://download.opensuse.org/debug/,http://download.opensuse.org/ports/$ports_arch/debug/," %{buildroot}/CD1/control.xml
-    sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/$ports_arch/source/," %{buildroot}/CD1/control.xml
-    sed -i -e "s,http://download.opensuse.org/update/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/update/tumbleweed/," %{buildroot}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse.org/ports/$ports_arch/distribution/," %{buildroot}%{?skelcdpath}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/tumbleweed/," %{buildroot}%{?skelcdpath}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/debug/,http://download.opensuse.org/ports/$ports_arch/debug/," %{buildroot}%{?skelcdpath}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/$ports_arch/source/," %{buildroot}%{?skelcdpath}/CD1/control.xml
+    sed -i -e "s,http://download.opensuse.org/update/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/update/tumbleweed/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     #we parse out non existing non-oss repo for ports
-    xsltproc -o %{buildroot}/CD1/control.xml control/nonoss.xsl %{buildroot}/CD1/control.xml/
-    mv %{buildroot}/CD1/control{_ports,}.xml
-    xmllint --noout --relaxng %{_datadir}/YaST2/control/control.rng %{buildroot}/CD1/control.xml
+    xsltproc -o %{buildroot}%{?skelcdpath}/CD1/control.xml control/nonoss.xsl %{buildroot}%{?skelcdpath}/CD1/control.xml/
+    mv %{buildroot}%{?skelcdpath}/CD1/control{_ports,}.xml
+    xmllint --noout --relaxng %{_datadir}/YaST2/control/control.rng %{buildroot}%{?skelcdpath}/CD1/control.xml
 %endif
 
 %files
 %defattr(644,root,root,755)
-/CD1
+%if %{defined skelcdpath}
+%dir %{skelcdpath}
+%endif
+%dir %{?skelcdpath}/CD1
+%{?skelcdpath}/CD1/control.xml
 
 %changelog
