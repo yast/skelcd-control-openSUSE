@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Oct  6 09:56:49 UTC 2017 - lnussel@suse.de
+
+- use /usr/lib/skelcd conditionally
+- 42.3.99.15
+
+-------------------------------------------------------------------
 Thu Sep 21 07:09:27 UTC 2017 - jreidinger@suse.com
 
 - Adapt to changes in roles (needed for fixing bsc#1049297)
