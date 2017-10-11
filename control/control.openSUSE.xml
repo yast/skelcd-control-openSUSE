@@ -443,7 +443,6 @@ textdomain="control"
           <default_desktop>kde</default_desktop>
         </software>
         <order config:type="integer">100</order>
-	<no_default config:type="boolean">true</no_default>
       </system_role>
 
       <system_role>
