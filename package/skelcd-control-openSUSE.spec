@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        42.3.99.15
+Version:        42.3.99.16
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -90,7 +90,7 @@ Requires:       yast2-s390
 Requires:       yast2-vm
 %endif
 
-%if 0%{?suse_version} >= 1500
+%if 0%{?suse_version} >= 1500 && !0%{?skelcd_compat}
 %define skelcdpath /usr/lib/skelcd
 %endif
 
