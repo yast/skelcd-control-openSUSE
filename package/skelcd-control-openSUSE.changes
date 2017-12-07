@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Dec  7 18:55:07 UTC 2017 - kmroz@suse.com
+
+- /var/lib/ceph as btrfs subvolume with CoW disabled (bsc#1013011)
+- 42.3.99.17
+
+-------------------------------------------------------------------
 Fri Dec  1 12:21:48 UTC 2017 - dimstar@opensuse.org
 
 - In case prjconf defines skelcd_compat, do not yet move skelcdpath

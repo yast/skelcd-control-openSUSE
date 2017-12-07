@@ -321,6 +321,10 @@ textdomain="control"
             <subvolume>
                 <path>var/crash</path>
             </subvolume>
+	    <subvolume>
+		<path>var/lib/ceph</path>
+		<copy_on_write config:type="boolean">false</copy_on_write>
+	    </subvolume>
             <subvolume>
                 <path>var/lib/libvirt/images</path>
                 <copy_on_write config:type="boolean">false</copy_on_write>
