@@ -68,7 +68,7 @@ textdomain="control"
 
         <!-- FATE: #303893, #305588: Default to enabled kdump -->
         <enable_kdump config:type="boolean">true</enable_kdump>
-        
+
         <!-- to debug deploying, set to 'true' -->
         <debug_deploying config:type="boolean">false</debug_deploying>
     </globals>
@@ -316,47 +316,9 @@ textdomain="control"
                 <path>usr/local</path>
             </subvolume>
             <subvolume>
-                <path>var/cache</path>
-            </subvolume>
-            <subvolume>
-                <path>var/crash</path>
-            </subvolume>
-            <subvolume>
-                <path>var/lib/libvirt/images</path>
+            <!-- unified var subvolume - https://lists.opensuse.org/opensuse-packaging/2017-11/msg00017.html -->
+            <path>var</path>
                 <copy_on_write config:type="boolean">false</copy_on_write>
-            </subvolume>
-            <subvolume>
-                <path>var/lib/machines</path>
-            </subvolume>
-            <subvolume>
-                <path>var/lib/mailman</path>
-            </subvolume>
-            <subvolume>
-                <path>var/lib/mariadb</path>
-                <copy_on_write config:type="boolean">false</copy_on_write>
-            </subvolume>
-            <subvolume>
-                <path>var/lib/mysql</path>
-                <copy_on_write config:type="boolean">false</copy_on_write>
-            </subvolume>
-            <subvolume>
-                <path>var/lib/named</path>
-            </subvolume>
-            <subvolume>
-                <path>var/lib/pgsql</path>
-                <copy_on_write config:type="boolean">false</copy_on_write>
-            </subvolume>
-            <subvolume>
-                <path>var/log</path>
-            </subvolume>
-            <subvolume>
-                <path>var/opt</path>
-            </subvolume>
-            <subvolume>
-                <path>var/spool</path>
-            </subvolume>
-            <subvolume>
-                <path>var/tmp</path>
             </subvolume>
 
             <!-- architecture specific subvolumes -->

@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Dec 12 17:11:12 UTC 2017 - rbrown@suse.com
+
+- adjust subvolume list to have NoCOW /var instead of many subvolumes
+- 42.3.99.17
+
+-------------------------------------------------------------------
 Fri Dec  1 12:21:48 UTC 2017 - dimstar@opensuse.org
 
 - In case prjconf defines skelcd_compat, do not yet move skelcdpath
@@ -23,7 +29,7 @@ Thu Sep 21 07:09:27 UTC 2017 - jreidinger@suse.com
 Wed Sep  6 07:46:57 UTC 2017 - igonzalezsosa@suse.com
 
 - Initialize libzypp in advance in order to read the product's
-  license (fate#322276)      
+  license (fate#322276)
 - 42.3.99.13
 
 -------------------------------------------------------------------
@@ -211,7 +217,7 @@ Mon May 16 18:44:49 UTC 2016 - ancor@suse.com
 
 - Removed not longer necessary items from copy_to_system section
 - Added SSH keys import section to the proposal
-- Fate#319624 
+- Fate#319624
 - 13.2.28
 
 -------------------------------------------------------------------
@@ -245,7 +251,7 @@ Tue Sep 29 09:27:24 UTC 2015 - jreidinger@suse.com
 
 - The e17 pattern was renamed to enlightenment a while back, adapt
   the Display manager dialog to this change
-  by Simon Lees <simon@simotek.net> 
+  by Simon Lees <simon@simotek.net>
 - 13.2.23
 
 -------------------------------------------------------------------
@@ -272,7 +278,7 @@ Thu Mar 18 17:04:19 UTC 2015 - dvaleev@suse.com
 -------------------------------------------------------------------
 Thu Mar 05 12:23:19 UTC 2015 - dvaleev@suse.com
 
-- Change repositories for Tumbleweed for PowerPC as well 
+- Change repositories for Tumbleweed for PowerPC as well
 - Change repos on ppc64le as well
 - 13.2.20
 
@@ -361,7 +367,7 @@ Mon Mar 31 14:01:00 UTC 2014 - jreidinger@suse.com
 Thu Feb 27 07:24:10 UTC 2014 - mfilka@suse.com
 
 - added reference to linuxrc network configuration client
-- 13.2.7 
+- 13.2.7
 
 -------------------------------------------------------------------
 Fri Jan 31 13:39:41 UTC 2014 - lslezak@suse.cz
@@ -417,7 +423,7 @@ Tue Dec 10 13:43:49 UTC 2013 - lslezak@suse.cz
 
 - updated control.xml (removed second stage) to validate against
   the latest control.rng
-- use http://download.opensuse.org/ports/ppc/ instead of 
+- use http://download.opensuse.org/ports/ppc/ instead of
   http://powerpc.opensuse.org in online repositories (PPC only)
 
 -------------------------------------------------------------------
@@ -440,12 +446,12 @@ Fri Sep 27 12:07:35 UTC 2013 - coolo@suse.com
 -------------------------------------------------------------------
 Fri Sep 27 13:51:41 CEST 2013 - jsuchome@suse.cz
 
-- yast2-mouse dropped 
+- yast2-mouse dropped
 
 -------------------------------------------------------------------
 Mon Sep  2 15:17:48 CEST 2013 - jsuchome@suse.cz
 
-- do not install xorg-x11 (bnc#837450) 
+- do not install xorg-x11 (bnc#837450)
 
 -------------------------------------------------------------------
 Mon Jun 24 08:52:17 CEST 2013 - jsuchome@suse.cz
@@ -524,7 +530,7 @@ Mon Oct 17 07:31:51 UTC 2011 - coolo@suse.com
 -------------------------------------------------------------------
 Mon Sep 26 14:28:50 CEST 2011 - jsuchome@suse.cz
 
-- also ensure lightdm package is installed 
+- also ensure lightdm package is installed
 
 -------------------------------------------------------------------
 Mon Sep 26 10:30:45 CEST 2011 - jsuchome@suse.cz
@@ -626,7 +632,7 @@ Wed Jan 20 08:25:51 UTC 2010 - coolo@novell.com
 Tue Nov 24 16:58:22 CET 2009 - kmachalkova@suse.cz
 
 - New variable in globals: run_init_scripts_in_parallel, to set
-  /etc/sysconfig/boot:RUN_PARALLEL (FaTE#307555) 
+  /etc/sysconfig/boot:RUN_PARALLEL (FaTE#307555)
 
 -------------------------------------------------------------------
 Fri Nov  6 11:20:46 UTC 2009 - coolo@novell.com
@@ -642,24 +648,24 @@ Mon Sep 14 17:33:04 CEST 2009 - coolo@novell.com
 -------------------------------------------------------------------
 Mon Sep  7 15:00:38 CEST 2009 - kmachalkova@suse.cz
 
-- New texts for DE selection dialog (FaTE #306967)  
+- New texts for DE selection dialog (FaTE #306967)
 
 -------------------------------------------------------------------
 Fri Sep  4 19:00:27 CEST 2009 - kmachalkova@suse.cz
 
-- Introducing unique IDs to unambiguously identify AC steps and 
+- Introducing unique IDs to unambiguously identify AC steps and
   sub-proposals
-- xfce login manager is back to xdm (bnc#481468) 
+- xfce login manager is back to xdm (bnc#481468)
 
 -------------------------------------------------------------------
 Wed Aug 26 17:44:50 CEST 2009 - kmachalkova@suse.cz
 
-- KDE is now the default desktop environment (FaTE #306967) 
+- KDE is now the default desktop environment (FaTE #306967)
 
 -------------------------------------------------------------------
 Fri Aug 14 18:26:49 CEST 2009 - kmachalkova@suse.cz
 
-- Simple network (firewall) configuration in 1st stage (FaTE #303859) 
+- Simple network (firewall) configuration in 1st stage (FaTE #303859)
 
 -------------------------------------------------------------------
 Mon Aug 10 15:41:20 CEST 2009 - locilka@suse.cz
@@ -1477,7 +1483,7 @@ Thu Jan 27 02:18:59 CET 2005 - nashif@suse.de
 -------------------------------------------------------------------
 Tue Jan 25 07:25:26 CET 2005 - nashif@suse.de
 
-- Fixed arguments of workflow clients. use plain yes/no instead of 
+- Fixed arguments of workflow clients. use plain yes/no instead of
   false/true
 
 -------------------------------------------------------------------
@@ -1500,12 +1506,12 @@ Mon Sep 27 13:51:23 CEST 2004 - nashif@suse.de
 Wed Sep 15 09:06:18 CEST 2004 - visnov@suse.de
 
 - Added enable_firewall and enable_ssh values
-- Set enable_ssh to false 
+- Set enable_ssh to false
 
 -------------------------------------------------------------------
 Mon Sep 13 18:24:44 CEST 2004 - nashif@suse.de
 
-- adjust fam on professional if running GNOME 
+- adjust fam on professional if running GNOME
 
 -------------------------------------------------------------------
 Mon Sep 13 15:25:14 CEST 2004 - nashif@suse.de
