@@ -1,7 +1,8 @@
 -------------------------------------------------------------------
 Tue Dec 12 17:11:12 UTC 2017 - rbrown@suse.com
 
-- adjust subvolume list to have NoCOW /var instead of many subvolumes
+- adjust subvolume list to have NoCOW /var instead of many 
+  subvolumes (boo#1075369)
 - 42.3.99.17
 
 -------------------------------------------------------------------
