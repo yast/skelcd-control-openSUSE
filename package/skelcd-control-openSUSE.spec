@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        15.0.11
+Version:        15.0.12
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -132,7 +132,7 @@ install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control
     sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/$ports_arch/source/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/update/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/update/tumbleweed/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     #we parse out non existing non-oss repo for ports
-    xsltproc -o %{buildroot}%{?skelcdpath}/CD1/control_ports.xml control/nonoss.xsl %{buildroot}%{?skelcdpath}/CD1/control.xml/
+    xsltproc -o %{buildroot}%{?skelcdpath}/CD1/control_ports.xml control/nonoss.xsl %{buildroot}%{?skelcdpath}/CD1/control.xml
     mv %{buildroot}%{?skelcdpath}/CD1/control{_ports,}.xml
     xmllint --noout --relaxng %{_datadir}/YaST2/control/control.rng %{buildroot}%{?skelcdpath}/CD1/control.xml
 %endif
