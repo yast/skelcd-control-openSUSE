@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Tue Jan 30 14:46:23 UTC 2017 - rbrown@suse.com
+
+- rewrite partitioning section to use new storage-ng setting
+- adjust subvolume list to have NoCOW /var instead of many 
+subvolumes (boo#1075369)
+- 15.0.2
+
+-------------------------------------------------------------------
 Wed Oct 11 12:26:39 UTC 2017 - lnussel@suse.com
 
 - on Leap KDE is the default (boo#1062595)
