@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Feb 22 17:15:11 UTC 2018 - rbrown@suse.com
+
+- workaround boo#1078495 by making swap not configurable for now
+- 15.0.3
+
+-------------------------------------------------------------------
 Tue Jan 30 14:46:23 UTC 2018 - rbrown@suse.com
 
 - rewrite partitioning section to use new storage-ng setting
