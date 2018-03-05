@@ -425,8 +425,7 @@ textdomain="control"
             <volume>
                 <mount_point>swap</mount_point>
                 <fs_type>swap</fs_type>
-                <!-- workaround boo#1078495 -->
-                <proposed_configurable config:type="boolean">false</proposed_configurable>
+                <proposed_configurable config:type="boolean">true</proposed_configurable>
 
                 <desired_size config:type="disksize">2 GiB</desired_size>
                 <min_size config:type="disksize">1 GiB</min_size>
