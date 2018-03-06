@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Mar  5 14:54:11 UTC 2018 - rbrown@suse.com
+
+- remove boo#1078495 workaround, causes more problems than solved
+- 15.0.4
+
+-------------------------------------------------------------------
 Thu Feb 22 17:15:11 UTC 2018 - rbrown@suse.com
 
 - workaround boo#1078495 by making swap not configurable for now
