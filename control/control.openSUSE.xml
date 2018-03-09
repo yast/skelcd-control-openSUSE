@@ -460,6 +460,7 @@ textdomain="control"
         <clone_module>printer</clone_module>
         <clone_module>add-on</clone_module>
         <clone_module>iscsi-client</clone_module>
+        <clone_module>fcoe-client</clone_module>
         <clone_module>software</clone_module>
         <clone_module>partitioning</clone_module>
         <clone_module>bootloader</clone_module>
