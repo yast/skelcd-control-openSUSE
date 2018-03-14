@@ -1,4 +1,15 @@
 -------------------------------------------------------------------
+Wed Mar 16 13:14:43 UTC 2018 - rbrown@suse.com
+
+- Introduce "Server with Transactional Updates and Read-Only Root
+  Filesystem" System Role (bsc#1084149)
+- Create /root subvolume on fresh installs (bsc#1085266)
+- Re-order installation workflow to ensure partitioning is
+  configured after the system role has altered it
+- Download release notes earlier in installation workflow
+- 42.3.99.23
+
+-------------------------------------------------------------------
 Thu Mar 15 15:33:33 UTC 2018 - knut.anderssen@suse.com
 
 - Unification of firewall proposals (fate#323460, bsc#1085125)

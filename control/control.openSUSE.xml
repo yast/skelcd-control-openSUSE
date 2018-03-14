@@ -188,6 +188,18 @@ textdomain="control"
             </one_supported_desktop>
 
             <one_supported_desktop>
+                <name>serverro</name>
+                <desktop>icewm</desktop>
+                <label_id>desktop_serverro</label_id>
+                <logon>xdm</logon>
+                <cursor>DMZ</cursor>
+                <packages></packages>
+                <order config:type="integer">1</order>
+                <patterns>readonly_root_tools</patterns>
+                <icon>yast-ssh-server</icon>
+            </one_supported_desktop>
+
+            <one_supported_desktop>
                 <name>xfce</name>
                 <!-- BNC #667408 -->
                 <desktop>xfce</desktop>
@@ -323,6 +335,9 @@ textdomain="control"
                         <path>opt</path>
                     </subvolume>
                     <subvolume>
+                        <path>root</path>
+                    </subvolume>
+                    <subvolume>
                         <path>srv</path>
                     </subvolume>
                     <subvolume>
@@ -415,7 +430,7 @@ textdomain="control"
           <default_desktop>kde</default_desktop>
         </software>
         <order config:type="integer">100</order>
-	<no_default config:type="boolean">true</no_default>
+        <no_default config:type="boolean">true</no_default>
       </system_role>
 
       <system_role>
@@ -435,6 +450,132 @@ textdomain="control"
       </system_role>
 
       <system_role>
+        <id>serverro</id>
+        <software>
+          <default_desktop>serverro</default_desktop>
+        </software>
+        <order config:type="integer">400</order>
+        <partitioning>
+            <expert_partitioner_warning config:type="boolean">true</expert_partitioner_warning>
+
+            <proposal>
+                <lvm config:type="boolean">false</lvm>
+                <proposal_settings_editable config:type="boolean">true</proposal_settings_editable>
+            </proposal>
+
+            <volumes config:type="list">
+                <!-- / volume: 5 GiB - 20 GiB, *2 if snapshots are used -->
+                <volume>
+                    <mount_point>/</mount_point>
+                    <fs_type>btrfs</fs_type>
+
+                    <desired_size config:type="disksize">10 GiB</desired_size>
+                    <min_size config:type="disksize">5 GiB</min_size>
+                    <max_size config:type="disksize">20 GiB</max_size>
+                    <weight config:type="integer">60</weight>
+
+                    <snapshots config:type="boolean">true</snapshots>
+                    <snapshots_configurable config:type="boolean">true</snapshots_configurable>
+                    <snapshots_percentage config:type="integer">100</snapshots_percentage>
+
+                    <!-- the default subvolume "@" was requested by product management -->
+                    <btrfs_default_subvolume>@</btrfs_default_subvolume>
+
+                    <!-- root filesystem should be read-only -->
+                    <btrfs_read_only config:type="boolean">true</btrfs_read_only>
+
+                    <!-- subvolumes to be created for a Btrfs root file system -->
+                    <!-- copy_on_write is true by default -->
+                    <subvolumes config:type="list">
+                        <subvolume>
+                            <path>home</path>
+                        </subvolume>
+                        <subvolume>
+                            <path>opt</path>
+                        </subvolume>
+                        <subvolume>
+                            <path>root</path>
+                        </subvolume>
+                        <subvolume>
+                            <path>srv</path>
+                        </subvolume>
+                        <subvolume>
+                            <path>tmp</path>
+                        </subvolume>
+                        <subvolume>
+                            <path>usr/local</path>
+                        </subvolume>
+                        <!-- unified var subvolume - https://lists.opensuse.org/opensuse-packaging/2017-11/msg00017.html -->
+                        <subvolume>
+                            <path>var</path>
+                            <copy_on_write config:type="boolean">false</copy_on_write>
+                        </subvolume>
+
+                        <!-- architecture specific subvolumes -->
+
+                        <subvolume>
+                            <path>boot/grub2/i386-pc</path>
+                            <archs>i386,x86_64</archs>
+                        </subvolume>
+                        <subvolume>
+                            <path>boot/grub2/x86_64-efi</path>
+                            <archs>x86_64</archs>
+                        </subvolume>
+                        <subvolume>
+                            <path>boot/grub2/powerpc-ieee1275</path>
+                            <archs>ppc,!board_powernv</archs>
+                        </subvolume>
+                        <subvolume>
+                            <path>boot/grub2/s390x-emu</path>
+                            <archs>s390</archs>
+                        </subvolume>
+                    </subvolumes>
+                </volume>
+
+                <!-- separate /home: 7 GiB - unlimited -->
+                <volume>
+                    <mount_point>/home</mount_point>
+                    <fs_type>xfs</fs_type>
+
+                    <proposed_configurable config:type="boolean">true</proposed_configurable>
+
+                    <desired_size config:type="disksize">10 GiB</desired_size>
+                    <min_size config:type="disksize">7 GiB</min_size>
+                    <max_size config:type="disksize">unlimited</max_size>
+                    <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
+                    <weight config:type="integer">40</weight>
+
+                    <disable_order config:type="integer">1</disable_order>
+
+                    <!-- if this volume is disabled we want "/" to increase -->
+                    <fallback_for_desired_size>/</fallback_for_desired_size>
+                    <fallback_for_max_size>/</fallback_for_max_size>
+                    <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
+                    <fallback_for_weight>/</fallback_for_weight>
+                </volume>
+
+                <!-- swap: 1 GiB - 2 GiB, but at least RAM size -->
+                <volume>
+                    <mount_point>swap</mount_point>
+                    <fs_type>swap</fs_type>
+
+                    <proposed_configurable config:type="boolean">true</proposed_configurable>
+
+                    <desired_size config:type="disksize">2 GiB</desired_size>
+                    <min_size config:type="disksize">1 GiB</min_size>
+                    <max_size config:type="disksize">2 GiB</max_size>
+                    <weight config:type="integer">10</weight>
+                    <adjust_by_ram config:type="boolean">true</adjust_by_ram>
+                    <adjust_by_ram_configurable config:type="boolean">true</adjust_by_ram_configurable>
+
+                    <disable_order config:type="integer">2</disable_order>
+                </volume>
+
+            </volumes>
+          </partitioning>
+      </system_role>
+
+      <system_role>
         <id>custom</id>
         <software>
           <!-- The "custom" role displays manual the pattern selection
@@ -442,7 +583,7 @@ textdomain="control"
           <default_patterns>base enhanced_base</default_patterns>
           <default_desktop></default_desktop>
         </software>
-        <order config:type="integer">400</order>
+        <order config:type="integer">500</order>
       </system_role>
     </system_roles>
 
@@ -502,6 +643,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         <desktop_gnome><label>GNOME Desktop</label></desktop_gnome>
         <desktop_kde><label>KDE Plasma Desktop</label></desktop_kde>
         <desktop_server><label>Server (Text Mode)</label></desktop_server>
+        <desktop_serverro><label>Server with Transactional Updates and Read-Only Root Filesystem</label></desktop_serverro>
         <desktop_xfce><label>Xfce Desktop</label></desktop_xfce>
         <desktop_lxde><label>LXDE Desktop</label></desktop_lxde>
         <desktop_min_x><label>Minimal X Window</label></desktop_min_x>
@@ -517,8 +659,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         </roles_text>
         <roles_help>
           <!-- TRANSLATORS: dialog help -->
-	  <label>&lt;p&gt;Choose a pre-defined user interface or customize the
-	  software selection manually.&lt;/p&gt;</label>
+          <label>&lt;p&gt;Choose a pre-defined user interface or customize the software selection manually.&lt;/p&gt;</label>
         </roles_help>
         <kde>
           <!-- TRANSLATORS: a label for a system role -->
@@ -543,6 +684,13 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         <server_description>
           <label>The server selection installs a reduced set of packages and offers a text mode interface.</label>
         </server_description>
+        <serverro>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Server with Transactional Updates and Read-Only Root Filesystem</label>
+        </serverro>
+        <serverro_description>
+          <label>Transactional Updates and Read-Only Root Filesystem provides an alternative, atomic, method of updating a system without interfering with the running system.</label>
+        </serverro_description>
         <custom>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Custom</label>
@@ -855,6 +1003,23 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <name>system_analysis</name>
                 </module>
                 <module>
+                    <name>download_release_notes</name>
+                </module>
+                <module>
+                    <label>User Interface</label>
+                    <name>desktop_roles</name>
+                    <enable_back>yes</enable_back>
+                </module>
+                <module>
+                    <label>Add-On Products</label>
+                    <name>add-on</name>
+                </module>
+                <module>
+                    <label>Custom Pattern Selection</label>
+                    <name>custom_patterns</name>
+                    <enable_back>yes</enable_back>
+                </module>
+                <module>
                     <label>Disk</label>
                     <name>disk_proposal</name>
                     <enable_back>yes</enable_back>
@@ -874,23 +1039,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                         <first_run>yes</first_run>
                     </arguments>
                     <enable_back>yes</enable_back>
-                </module>
-                <module>
-                    <label>User Interface</label>
-                    <name>desktop_roles</name>
-                    <enable_back>yes</enable_back>
-                </module>
-                <module>
-                    <label>Add-On Products</label>
-                    <name>add-on</name>
-                </module>
-                <module>
-                    <label>Custom Pattern Selection</label>
-                    <name>custom_patterns</name>
-                    <enable_back>yes</enable_back>
-                </module>
-                <module>
-                    <name>download_release_notes</name>
                 </module>
                 <module>
                     <label>User Settings</label>
