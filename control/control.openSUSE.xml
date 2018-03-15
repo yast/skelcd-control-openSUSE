@@ -333,7 +333,6 @@ textdomain="control"
         <proposal>
             <lvm config:type="boolean">false</lvm>
             <proposal_settings_editable config:type="boolean">true</proposal_settings_editable>
-            <root_subvolume_read_only config:type="boolean">false</root_subvolume_read_only>
         </proposal>
 
         <volumes config:type="list">
@@ -353,6 +352,9 @@ textdomain="control"
 
                 <!-- the default subvolume "@" was requested by product management -->
                 <btrfs_default_subvolume>@</btrfs_default_subvolume>
+
+                <!-- root filesystem should not be read-only -->
+                <btrfs_read_only config:type="boolean">false</btrfs_read_only>
 
                 <!-- subvolumes to be created for a Btrfs root file system -->
                 <!-- copy_on_write is true by default -->
@@ -620,7 +622,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                 </proposal_module>
                 <!-- FaTE #303859 - simple network (in fact firewall) cfg in 1st stage -->
                 <proposal_module>
-                    <name>firewall_stage1</name>
+                    <name>firewall</name>
                     <presentation_order>95</presentation_order>
                 </proposal_module>
                 <!-- Fate #319624 - proposal and dialog for existing SSH host keys -->
@@ -676,7 +678,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <presentation_order>75</presentation_order>
                 </proposal_module>
                 <proposal_module>
-                    <name>firewall_stage1</name>
+                    <name>firewall</name>
                     <presentation_order>50</presentation_order>
                 </proposal_module>
             </proposal_modules>
@@ -727,7 +729,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                 </proposal_module>
                 <!-- FaTE #303859 - simple network (in fact firewall) cfg in 1st stage -->
                 <proposal_module>
-                    <name>firewall_stage1</name>
+                    <name>firewall</name>
                     <presentation_order>99</presentation_order>
                 </proposal_module>
                 <!-- Fate #319624 - proposal and dialog for existing SSH host keys -->
