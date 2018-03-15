@@ -353,7 +353,7 @@ textdomain="control"
                 <!-- the default subvolume "@" was requested by product management -->
                 <btrfs_default_subvolume>@</btrfs_default_subvolume>
 
-                <!-- root filesystem should be read-only -->
+                <!-- root filesystem should not be read-only -->
                 <btrfs_read_only config:type="boolean">false</btrfs_read_only>
 
                 <!-- subvolumes to be created for a Btrfs root file system -->

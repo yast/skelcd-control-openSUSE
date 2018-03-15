@@ -2,11 +2,6 @@
 Thu Mar 15 14:18:58 UTC 2018 - knut.anderssen@suse.com
 
 - Unification of firewall proposals (fate#323460, bsc#1085125)
-- 15.0.7
-
--------------------------------------------------------------------
-Tue Mar 13 12:47:21 UTC 2018 - igonzalezsosa@suse.com
-
 - Replace root_subvolume_read_only with btrfs_read_only (related
   to bsc#1079000).
 - 15.0.6
