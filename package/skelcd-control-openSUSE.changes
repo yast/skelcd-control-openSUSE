@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Mar 29 16:33:11 UTC 2018 - rbrown@suse.com
+
+- Unify serverro role partition config with Kubic (boo#1087449)
+- 15.0.8
+
+-------------------------------------------------------------------
 Wed Mar 16 13:14:55 UTC 2018 - rbrown@suse.com
 
 - Introduce "Server with Transactional Updates and Read-Only Root

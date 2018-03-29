@@ -505,19 +505,21 @@ textdomain="control"
             </proposal>
 
             <volumes config:type="list">
-                <!-- / volume: 5 GiB - 20 GiB, *2 if snapshots are used -->
+                <!-- / volume: 16 GiB - 30 GiB, like Kubic -->
                 <volume>
                     <mount_point>/</mount_point>
                     <fs_type>btrfs</fs_type>
 
-                    <desired_size config:type="disksize">10 GiB</desired_size>
-                    <min_size config:type="disksize">5 GiB</min_size>
-                    <max_size config:type="disksize">20 GiB</max_size>
-                    <weight config:type="integer">60</weight>
+                    <desired_size config:type="disksize">25 GiB</desired_size>
+                    <min_size config:type="disksize">16 GiB</min_size>
+                    <max_size config:type="disksize">30 GiB</max_size>
+                    <weight config:type="integer">80</weight>
 
                     <snapshots config:type="boolean">true</snapshots>
-                    <snapshots_configurable config:type="boolean">true</snapshots_configurable>
-                    <snapshots_percentage config:type="integer">100</snapshots_percentage>
+                    <snapshots_configurable config:type="boolean">false</snapshots_configurable>
+
+                    <!-- You don't want to miss the / volume -->
+                    <proposed_configurable config:type="boolean">false</proposed_configurable>
 
                     <!-- the default subvolume "@" was requested by product management -->
                     <btrfs_default_subvolume>@</btrfs_default_subvolume>
