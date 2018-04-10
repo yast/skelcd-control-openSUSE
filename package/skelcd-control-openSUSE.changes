@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Apr 10 17:01:11 UTC 2018 - rbrown@suse.com
+
+- Rename Transactional Server role (boo#1088893)
+- Set Server role to use enhanced_base (boo#1088884)
+- 15.0.9
+
+-------------------------------------------------------------------
 Thu Mar 29 16:33:11 UTC 2018 - rbrown@suse.com
 
 - Unify serverro role partition config with Kubic (boo#1087449)
