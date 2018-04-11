@@ -183,7 +183,7 @@ textdomain="control"
                 <cursor>DMZ</cursor>
                 <packages></packages>
                 <order config:type="integer">1</order>
-                <patterns>console</patterns>
+                <patterns>enhanced_base</patterns>
                 <icon>yast-ssh-server</icon>
             </one_supported_desktop>
 
@@ -644,8 +644,8 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         <!-- Desktop dialog: desktop names -->
         <desktop_gnome><label>GNOME Desktop</label></desktop_gnome>
         <desktop_kde><label>KDE Plasma Desktop</label></desktop_kde>
-        <desktop_server><label>Server (Text Mode)</label></desktop_server>
-        <desktop_serverro><label>Server with Transactional Updates and Read-Only Root Filesystem</label></desktop_serverro>
+        <desktop_server><label>Server</label></desktop_server>
+        <desktop_serverro><label>Transactional Server</label></desktop_serverro>
         <desktop_xfce><label>Xfce Desktop</label></desktop_xfce>
         <desktop_lxde><label>LXDE Desktop</label></desktop_lxde>
         <desktop_min_x><label>Minimal X Window</label></desktop_min_x>
@@ -653,15 +653,15 @@ is the most appropriate desktop for you.</label></desktop_dialog>
 
       <roles_caption>
         <!-- TRANSLATORS: dialog caption -->
-        <label>Please select a user interface</label>
+        <label>Please select a system role</label>
         </roles_caption>
         <roles_text>
           <!-- TRANSLATORS: label in a dialog -->
-          <label>Choose a pre-defined user interface or a custom software selection.</label>
+          <label>Choose a pre-defined system role or a custom software selection.</label>
         </roles_text>
         <roles_help>
           <!-- TRANSLATORS: dialog help -->
-          <label>&lt;p&gt;Choose a pre-defined user interface or customize the software selection manually.&lt;/p&gt;</label>
+          <label>&lt;p&gt;Choose a pre-defined system role or customize the software selection manually.&lt;/p&gt;</label>
         </roles_help>
         <kde>
           <!-- TRANSLATORS: a label for a system role -->
@@ -681,17 +681,17 @@ is the most appropriate desktop for you.</label></desktop_dialog>
         </gnome_description>
         <server>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>Server (Text Mode)</label>
+          <label>Server</label>
         </server>
         <server_description>
           <label>The server selection installs a reduced set of packages and offers a text mode interface.</label>
         </server_description>
         <serverro>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>Server with Transactional Updates and Read-Only Root Filesystem</label>
+          <label>Transactional Server</label>
         </serverro>
         <serverro_description>
-          <label>Transactional Updates and Read-Only Root Filesystem provides an alternative, atomic, method of updating a system without interfering with the running system.</label>
+          <label>Transactional Server uses a read-only root filesystem to provide an alternative, atomic, automatic, method of updating a system without interfering with the running system.</label>
         </serverro_description>
         <custom>
           <!-- TRANSLATORS: a label for a system role -->
@@ -1008,7 +1008,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <name>download_release_notes</name>
                 </module>
                 <module>
-                    <label>User Interface</label>
+                    <label>System Role</label>
                     <name>desktop_roles</name>
                     <enable_back>yes</enable_back>
                 </module>
