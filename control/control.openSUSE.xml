@@ -238,7 +238,7 @@ textdomain="control"
                 <cursor>DMZ</cursor>
                 <packages></packages>
                 <order config:type="integer">1</order>
-                <patterns>readonly_root_tools</patterns>
+                <patterns>transactional_base</patterns>
                 <icon>yast-ssh-server</icon>
             </one_supported_desktop>
 
