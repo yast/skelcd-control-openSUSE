@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Apr 11 12:43:11 UTC 2018 - rbrown@suse.com
+
+- Rename readonly_root_tools to transactional_base (boo#1089095)
+- 42.3.99.26
+
+-------------------------------------------------------------------
 Tue Apr 10 17:01:11 UTC 2018 - rbrown@suse.com
 
 - Rename Transactional Server role (boo#1088893)
