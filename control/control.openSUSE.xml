@@ -98,18 +98,18 @@ textdomain="control"
         <extra_urls config:type="list">
             <!-- Default update repository, bnc #381360 -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/update/leap/$releasever/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/update/leap/15.0/oss/</baseurl>
                 <alias>repo-update</alias>
-                <name>openSUSE-Leap-$releasever-Update</name>
+                <name>openSUSE-Leap-15.0-Update</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/update/leap/$releasever/non-oss/</baseurl>
+                <baseurl>http://download.opensuse.org/update/leap/15.0/non-oss/</baseurl>
                 <alias>repo-update-non-oss</alias>
-                <name>openSUSE-Leap-$releasever-Update-Non-Oss</name>
+                <name>openSUSE-Leap-15.0-Update-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
@@ -118,72 +118,72 @@ textdomain="control"
 
             <!-- Replacement for EXTRAURLS and OPTIONALURLS -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/distribution/leap/$releasever/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/distribution/leap/15.0/repo/oss/</baseurl>
                 <alias>repo-oss</alias>
-                <name>openSUSE-Leap-$releasever-Oss</name>
+                <name>openSUSE-Leap-15.0-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/distribution/leap/$releasever/repo/non-oss/</baseurl>
+                <baseurl>http://download.opensuse.org/distribution/leap/15.0/repo/non-oss/</baseurl>
                 <alias>repo-non-oss</alias>
-                <name>openSUSE-Leap-$releasever-Non-Oss</name>
+                <name>openSUSE-Leap-15.0-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/distribution/leap/$releasever/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/debug/distribution/leap/15.0/repo/oss/</baseurl>
                 <alias>repo-debug</alias>
-                <name>openSUSE-Leap-$releasever-Debug</name>
+                <name>openSUSE-Leap-15.0-Debug</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/distribution/leap/$releasever/repo/non-oss/</baseurl>
+                <baseurl>http://download.opensuse.org/debug/distribution/leap/15.0/repo/non-oss/</baseurl>
                 <alias>repo-debug-non-oss</alias>
-                <name>openSUSE-Leap-$releasever-Debug-Non-Oss</name>
+                <name>openSUSE-Leap-15.0-Debug-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/update/leap/$releasever/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/debug/update/leap/15.0/oss/</baseurl>
                 <alias>repo-debug-update</alias>
-                <name>openSUSE-Leap-$releasever-Update-Debug</name>
+                <name>openSUSE-Leap-15.0-Update-Debug</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/update/leap/$releasever/non-oss/</baseurl>
+                <baseurl>http://download.opensuse.org/debug/update/leap/15.0/non-oss/</baseurl>
                 <alias>repo-debug-update-non-oss</alias>
-                <name>openSUSE-Leap-$releasever-Update-Debug-Non-Oss</name>
+                <name>openSUSE-Leap-15.0-Update-Debug-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/source/distribution/leap/$releasever/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/source/distribution/leap/15.0/repo/oss/</baseurl>
                 <alias>repo-source</alias>
-                <name>openSUSE-Leap-$releasever-Source</name>
+                <name>openSUSE-Leap-15.0-Source</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
                 <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/source/distribution/leap/$releasever/repo/non-oss/</baseurl>
+                <baseurl>http://download.opensuse.org/source/distribution/leap/15.0/repo/non-oss/</baseurl>
                 <alias>repo-source-non-oss</alias>
-                <name>openSUSE-Leap-$releasever-Source-Non-Oss</name>
+                <name>openSUSE-Leap-15.0-Source-Non-Oss</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">false</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
