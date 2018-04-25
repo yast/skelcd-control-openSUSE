@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Apr 25 16:35:56 UTC 2018 - lnussel@suse.de
+
+- Revert "Use $releasever in repo urls (boo#1090193)
+- 15.0.11
+
+-------------------------------------------------------------------
 Wed Apr 11 12:43:11 UTC 2018 - rbrown@suse.com
 
 - Rename readonly_root_tools to transactional_base (boo#1089095)
