@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon May 14 07:59:05 UTC 2018 - igonzalezsosa@suse.com
+
+- Add yast2-configuration-management to the installation media
+  (bsc#1093078).
+- 42.3.99.27
+
+-------------------------------------------------------------------
 Wed Apr 11 12:43:11 UTC 2018 - rbrown@suse.com
 
 - Rename readonly_root_tools to transactional_base (boo#1089095)
