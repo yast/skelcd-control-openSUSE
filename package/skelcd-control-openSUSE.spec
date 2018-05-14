@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        15.0.12
+Version:        15.0.13
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -67,6 +67,7 @@ Requires:       yast2-proxy
 # this is the default theme
 Requires:       yast2-qt-branding-openSUSE
 Requires:       yast2-services-manager
+Requires:       yast2-configuration-management
 Requires:       yast2-slp
 Requires:       yast2-theme-openSUSE-Oxygen
 Requires:       yast2-trans-stats

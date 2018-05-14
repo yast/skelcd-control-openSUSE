@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon May 14 07:59:05 UTC 2018 - igonzalezsosa@suse.com
+
+- Add yast2-configuration-management to the installation media
+  (bsc#1093078).
+- 15.0.13
+
+-------------------------------------------------------------------
 Fri Apr 27 16:30:06 UTC 2018 - normand@linux.vnet.ibm.com
 
 - in spec file change xsltproc parms to avoid PowerPC build error
