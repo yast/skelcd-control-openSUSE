@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Jun 12 14:24:11 UTC 2018 - rbrown@suse.com
+
+- Add missing aarch64 grub2 efi subvolume (bsc#1097235)
+- 42.3.99.28
+
+-------------------------------------------------------------------
 Mon May 14 07:59:05 UTC 2018 - igonzalezsosa@suse.com
 
 - Add yast2-configuration-management to the installation media
