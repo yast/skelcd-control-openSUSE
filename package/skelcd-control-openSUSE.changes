@@ -1,3 +1,10 @@
+------------------------------------------------------------------
+Mon Mar 25 11:13:31 UTC 2019 - Dirk Mueller <dmueller@suse.com>
+
+- Fix update repository for ports (forward port of change that
+  went into Leap 15.0) (bsc#1101334)
+- 20190325
+
 -------------------------------------------------------------------
 Mon Mar 25 10:26:35 UTC 2019 - Guillaume GARDET <guillaume@opensuse.org>
 
