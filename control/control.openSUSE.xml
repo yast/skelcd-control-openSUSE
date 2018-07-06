@@ -191,113 +191,6 @@ textdomain="control"
             </extra_url>
         </extra_urls>
 
-        <!-- BNC #424678, Definition of supported desktops -->
-        <supported_desktops config:type="list">
-
-            <one_supported_desktop>
-                <name>gnome</name>
-                <desktop>gnome</desktop>
-                <label_id>desktop_gnome</label_id>
-                <logon>gdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>gdm</packages>
-                <order config:type="integer">1</order>
-                <patterns>gnome x11 base</patterns>
-                <icon>pattern-gnome</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
-                <name>kde</name>
-                <desktop>plasma5</desktop>
-                <label_id>desktop_kde</label_id>
-                <logon>sddm</logon>
-                <cursor>DMZ</cursor>
-                <packages>sddm</packages>
-                <order config:type="integer">1</order>
-                <patterns>kde x11 base</patterns>
-                <icon>pattern-kde4</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
-                <name>server</name>
-                <desktop>icewm</desktop>
-                <label_id>desktop_server</label_id>
-                <logon>xdm</logon>
-                <cursor>DMZ</cursor>
-                <packages></packages>
-                <order config:type="integer">1</order>
-                <patterns>enhanced_base</patterns>
-                <icon>yast-ssh-server</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
-                <name>serverro</name>
-                <desktop>icewm</desktop>
-                <label_id>desktop_serverro</label_id>
-                <logon>xdm</logon>
-                <cursor>DMZ</cursor>
-                <packages></packages>
-                <order config:type="integer">1</order>
-                <patterns>transactional_base</patterns>
-                <icon>yast-ssh-server</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
-                <name>xfce</name>
-                <!-- BNC #667408 -->
-                <desktop>xfce</desktop>
-                <label_id>desktop_xfce</label_id>
-                <logon>lightdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>lightdm</packages>
-                <order config:type="integer">4</order>
-                <patterns>xfce x11 base</patterns>
-                <icon>pattern-xfce</icon>
-            </one_supported_desktop>
-
-            <!-- FaTE #307729 LXDE -->
-            <one_supported_desktop>
-                <name>lxde</name>
-                <!-- BNC #667408 -->
-                <desktop>lxde</desktop>
-                <label_id>desktop_lxde</label_id>
-                <logon>lightdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>lxde-common</packages>
-                <order config:type="integer">5</order>
-                <patterns>lxde x11 base</patterns>
-                <icon>pattern-lxde</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
-                <name>min_x</name>
-                <desktop>icewm</desktop>
-                <label_id>desktop_min_x</label_id>
-                <logon></logon>
-                <cursor>DMZ</cursor>
-                <packages>xorg-x11-server</packages>
-                <order config:type="integer">6</order>
-                <patterns>x11 base</patterns>
-                <icon>yast-x11</icon>
-            </one_supported_desktop>
-
-            <one_supported_desktop>
-                <name>enlightenment</name>
-                <desktop>enlightenment</desktop>
-                <label_id>desktop_enlightenment</label_id>
-                <logon>lightdm</logon>
-                <cursor>DMZ</cursor>
-                <packages>lightdm</packages>
-                <order config:type="integer">7</order>
-                <patterns>enlightenment x11 base</patterns>
-                <icon>pattern-enlightenment</icon>
-            </one_supported_desktop>
-
-        </supported_desktops>
-
-        <!-- FaTE #306967 KDE is preselected desktop -->
-        <default_desktop>kde</default_desktop>
-
         <!-- bnc#874116: Handling software proposal during product upgrade -->
         <upgrade>
             <window_managers config:type="list">
@@ -459,7 +352,6 @@ textdomain="control"
 
     <network>
         <force_static_ip config:type="boolean">false</force_static_ip>
-        <network_manager>laptop</network_manager>
         <startmode>ifplugd</startmode>
     </network>
 
@@ -468,16 +360,23 @@ textdomain="control"
         <!-- the id is a key for texts/$id/label
                              and texts/$id_description/label below -->
         <id>kde</id>
+        <network>
+          <network_manager>always</network_manager>
+        </network>
         <software>
-          <default_desktop>kde</default_desktop>
+          <default_patterns>kde x11 base</default_patterns>
         </software>
         <order config:type="integer">100</order>
+        <no_default config:type="boolean">true</no_default>
       </system_role>
 
       <system_role>
         <id>gnome</id>
+        <network>
+          <network_manager>always</network_manager>
+        </network>
         <software>
-          <default_desktop>gnome</default_desktop>
+          <default_patterns>gnome x11 base</default_patterns>
         </software>
         <order config:type="integer">200</order>
       </system_role>
@@ -485,7 +384,7 @@ textdomain="control"
       <system_role>
         <id>server</id>
         <software>
-          <default_desktop>server</default_desktop>
+          <default_patterns>enhanced_base</default_patterns>
         </software>
         <order config:type="integer">300</order>
       </system_role>
@@ -493,7 +392,7 @@ textdomain="control"
       <system_role>
         <id>serverro</id>
         <software>
-          <default_desktop>serverro</default_desktop>
+          <default_patterns>transactional_base</default_patterns>
         </software>
         <order config:type="integer">400</order>
         <partitioning>
@@ -624,7 +523,6 @@ textdomain="control"
           <!-- The "custom" role displays manual the pattern selection
                dialog in the installation workflow. (bnc#1031295) -->
           <default_patterns>base enhanced_base</default_patterns>
-          <default_desktop></default_desktop>
         </software>
         <order config:type="integer">500</order>
       </system_role>
@@ -666,50 +564,32 @@ After clicking &lt;b&gt;Finish&lt;/b&gt;, you can log in to the system.&lt;/p&gt
             </label>
         </congratulate>
 
-        <!--
-            Desktop dialog label. It should not be wider than 75 characters.
-            Please try to keep the same number of lines, if possible
-        -->
-        <desktop_dialog><label>The desktop environment on your computer provides the graphical user
-interface for your computer, as well as a suite of applications for
-email, Web browsing, office productivity, games, and utilities to
-manage your computer.
+        <!-- Empty string is intentional, bnc #431251, bnc #431336 -->
+        <dummy_desktop><label/></dummy_desktop>
 
-openSUSE offers a choice of desktop environments. The most widely
-used desktop environments are GNOME and KDE Plasma, and they are equally
-supported under openSUSE. Both desktop environments are easy to use,
-highly integrated, and have an attractive look and feel. Each desktop
-environment has a distinct style, so personal taste determines which
-is the most appropriate desktop for you.</label></desktop_dialog>
-
-        <!-- Desktop dialog: desktop names -->
-        <desktop_gnome><label>GNOME Desktop</label></desktop_gnome>
-        <desktop_kde><label>KDE Plasma Desktop</label></desktop_kde>
-        <desktop_server><label>Server</label></desktop_server>
-        <desktop_serverro><label>Transactional Server</label></desktop_serverro>
-        <desktop_xfce><label>Xfce Desktop</label></desktop_xfce>
-        <desktop_lxde><label>LXDE Desktop</label></desktop_lxde>
-        <desktop_min_x><label>Minimal X Window</label></desktop_min_x>
-        <desktop_enlightenment><label>Enlightenment Desktop</label></desktop_enlightenment>
-
-      <roles_caption>
-        <!-- TRANSLATORS: dialog caption -->
-        <label>Please select a system role</label>
+        <roles_caption>
+          <!-- TRANSLATORS: dialog caption -->
+          <label>System Role</label>
         </roles_caption>
         <roles_text>
           <!-- TRANSLATORS: label in a dialog -->
-          <label>Choose a pre-defined system role or a custom software selection.</label>
+          <label>System Roles are predefined use cases which tailor the system
+for the selected scenario.</label>
         </roles_text>
         <roles_help>
           <!-- TRANSLATORS: dialog help -->
-          <label>&lt;p&gt;Choose a pre-defined system role or customize the software selection manually.&lt;/p&gt;</label>
+          <label>&lt;p&gt;The system roles adjustments are in the range from package selection up
+to disk partitioning. By choosing a system role, the system is
+configured accordingly to match the use case of the role. &lt;/p&gt;</label>
         </roles_help>
         <kde>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Desktop with KDE Plasma</label>
         </kde>
         <kde_description>
-          <label>KDE Plasma is a graphical desktop environment and the default on openSUSE Leap.
+          <label>KDE Plasma is a graphical desktop environment which is designed to be simple by default, powerful when needed.
+• NetworkManager provides network services
+• Update using the desktop update notification, YaST or `zypper up`
           </label>
         </kde_description>
         <gnome>
@@ -717,7 +597,9 @@ is the most appropriate desktop for you.</label></desktop_dialog>
           <label>Desktop with GNOME</label>
         </gnome>
         <gnome_description>
-          <label>GNOME is a graphical desktop environment and the default on SUSE Linux Enterprise.
+          <label>An easy and elegant way to use your computer, GNOME is designed to put you in control and get things done.
+• NetworkManager provides network services
+• Update using the desktop update notification, YaST or `zypper up`
           </label>
         </gnome_description>
         <server>
@@ -725,14 +607,20 @@ is the most appropriate desktop for you.</label></desktop_dialog>
           <label>Server</label>
         </server>
         <server_description>
-          <label>The server selection installs a reduced set of packages and offers a text mode interface.</label>
+          <label>The server selection installs a reduced set of packages and offers a text mode interface.
+• Wicked provides network services
+• Update using `zypper up`
+          </label>
         </server_description>
         <serverro>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Transactional Server</label>
         </serverro>
         <serverro_description>
-          <label>Transactional Server uses a read-only root filesystem to provide an alternative, atomic, automatic, method of updating a system without interfering with the running system.</label>
+          <label>Transactional Server uses a read-only root filesystem to provide atomic, automatic updates of a system without interfering with the running system.
+• Wicked provides network services
+• Update using `transactional-update up`, then reboot for the update to take effect
+          </label>
         </serverro_description>
         <custom>
           <!-- TRANSLATORS: a label for a system role -->
@@ -1049,9 +937,7 @@ is the most appropriate desktop for you.</label></desktop_dialog>
                     <name>download_release_notes</name>
                 </module>
                 <module>
-                    <label>System Role</label>
-                    <name>desktop_roles</name>
-                    <enable_back>yes</enable_back>
+                    <name>system_role</name>
                 </module>
                 <module>
                     <label>Add-On Products</label>

@@ -1,4 +1,14 @@
 -------------------------------------------------------------------
+Fri Jul  6 15:17:48 UTC 2018 - rbrown@suse.com
+
+- NetworkManager as default for desktop system roles
+- Wicked for default for server roles
+- Use of SLE-15 system role screen
+- Tidy up of old desktop selection options that are no longer
+  needed (bsc#1100417)
+- 15.1.0
+
+-------------------------------------------------------------------
 Mon May 14 07:59:05 UTC 2018 - igonzalezsosa@suse.com
 
 - Add yast2-configuration-management to the installation media
