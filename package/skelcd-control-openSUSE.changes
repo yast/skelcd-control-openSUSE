@@ -1,4 +1,14 @@
 -------------------------------------------------------------------
+Fri Jul  6 15:17:48 UTC 2018 - rbrown@suse.com
+
+- NetworkManager as default for desktop system roles
+- Wicked for default for server roles
+- Use of SLE-15 system role screen
+- Tidy up of old desktop selection options that are no longer
+  needed (bsc#1100417)
+- 42.3.99.29
+
+-------------------------------------------------------------------
 Tue Jun 12 14:24:11 UTC 2018 - rbrown@suse.com
 
 - Add missing aarch64 grub2 efi subvolume (bsc#1097235)
