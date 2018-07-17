@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Jul 17 08:18:24 UTC 2018 - mlin@suse.com
+
+- Update all 15.0 related part to 15.1
+- 15.1.1
+
+-------------------------------------------------------------------
 Fri Jul  6 15:17:48 UTC 2018 - rbrown@suse.com
 
 - NetworkManager as default for desktop system roles

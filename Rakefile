@@ -2,9 +2,9 @@ require "yast/rake"
 
 Yast::Tasks.configuration do |conf|
   conf.obs_api = "https://api.opensuse.org"
-  conf.obs_target = "openSUSE_Leap_15.0"
-  conf.obs_sr_project = "openSUSE:Leap:15.0"
-  conf.obs_project = "YaST:openSUSE:15.0"
+  conf.obs_target = "openSUSE_Leap_15.1"
+  conf.obs_sr_project = "openSUSE:Leap:15.1"
+  conf.obs_project = "YaST:openSUSE:15.1"
   #lets ignore license check for now
   conf.skip_license_check << /.*/
   conf.exclude_files << /README.md/ #do not pack readme
