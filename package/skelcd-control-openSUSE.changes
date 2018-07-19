@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Jul 19 16:31:10 UTC 2018 - rbrown@suse.com
+
+- Remove 'Custom' system_role due to incompatibily with SLE-15 role
+  screen (bsc#1100417)
+- 15.1.2
+
+-------------------------------------------------------------------
 Tue Jul 17 08:18:24 UTC 2018 - mlin@suse.com
 
 - Update all 15.0 related part to 15.1
