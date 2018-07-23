@@ -516,16 +516,6 @@ textdomain="control"
             </volumes>
           </partitioning>
       </system_role>
-
-      <system_role>
-        <id>custom</id>
-        <software>
-          <!-- The "custom" role displays manual the pattern selection
-               dialog in the installation workflow. (bnc#1031295) -->
-          <default_patterns>base enhanced_base</default_patterns>
-        </software>
-        <order config:type="integer">500</order>
-      </system_role>
     </system_roles>
 
     <clone_modules config:type="list">
@@ -622,13 +612,6 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
 • Update using `transactional-update up`, then reboot for the update to take effect
           </label>
         </serverro_description>
-        <custom>
-          <!-- TRANSLATORS: a label for a system role -->
-          <label>Custom</label>
-        </custom>
-        <custom_description>
-          <label>The custom selection allows to select alternative software patterns to customize the installation. Additional software is available in the online repositories.</label>
-        </custom_description>
     </texts>
 
     <proposals config:type="list">
@@ -942,11 +925,6 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                 <module>
                     <label>Add-On Products</label>
                     <name>add-on</name>
-                </module>
-                <module>
-                    <label>Custom Pattern Selection</label>
-                    <name>custom_patterns</name>
-                    <enable_back>yes</enable_back>
                 </module>
                 <module>
                     <label>Disk</label>
