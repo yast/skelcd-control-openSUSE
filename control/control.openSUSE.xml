@@ -84,6 +84,8 @@ textdomain="control"
             <regexp_item>^openSUSE 13\..*$</regexp_item>
             <!-- Updating from openSUSE Leap 42.x -->
             <regexp_item>^openSUSE Leap 42\..*$</regexp_item>
+            <!-- Updating from openSUSE Leap 15.x -->
+            <regexp_item>^openSUSE Leap 15\..*$</regexp_item>
             <!-- old TW snapshots -->
             <regexp_item>^openSUSE 20[0-9]*$</regexp_item>
             <!-- new TW snapshots -->
