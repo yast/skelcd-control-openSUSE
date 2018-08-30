@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Aug 30 06:56:10 UTC 2018 - lslezak@suse.cz
+
+- Mark the upgrade from openSUSE Leap 15.x as supported
+  (bsc#1105335)
+- 42.3.99.31
+
+-------------------------------------------------------------------
 Thu Jul 19 16:31:10 UTC 2018 - rbrown@suse.com
 
 - Remove 'Custom' system_role due to incompatibily with SLE-15 role
