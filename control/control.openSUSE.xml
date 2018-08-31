@@ -342,6 +342,17 @@ textdomain="control"
       </system_role>
 
       <system_role>
+        <id>generic_desktop</id>
+        <network>
+          <network_manager>always</network_manager>
+        </network>
+        <software>
+          <default_patterns>x11 base</default_patterns>
+        </software>
+        <order config:type="integer">250</order>
+      </system_role>
+
+      <system_role>
         <id>server</id>
         <software>
           <default_patterns>enhanced_base</default_patterns>
@@ -572,6 +583,13 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
 • Update using `zypper dup`
           </label>
         </gnome_description>
+        <generic_desktop>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Generic Desktop</label>
+        </generic_desktop>
+        <generic_desktop_description>
+          <label>Graphical system with reduced package set. Intended as base for a customized software selection.</label>
+        </generic_desktop_description>
         <server>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Server</label>
