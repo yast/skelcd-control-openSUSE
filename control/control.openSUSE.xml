@@ -529,22 +529,6 @@ After clicking &lt;b&gt;Finish&lt;/b&gt;, you can log in to the system.&lt;/p&gt
             </label>
         </congratulate>
 
-        <!--
-            Desktop dialog label. It should not be wider than 75 characters.
-            Please try to keep the same number of lines, if possible
-        -->
-        <desktop_dialog><label>The desktop environment on your computer provides the graphical user
-interface for your computer, as well as a suite of applications for
-email, Web browsing, office productivity, games, and utilities to
-manage your computer.
-
-openSUSE offers a choice of desktop environments. The most widely
-used desktop environments are GNOME and KDE Plasma, and they are equally
-supported under openSUSE. Both desktop environments are easy to use,
-highly integrated, and have an attractive look and feel. Each desktop
-environment has a distinct style, so personal taste determines which
-is the most appropriate desktop for you.</label></desktop_dialog>
-
         <!-- Empty string is intentional, bnc #431251, bnc #431336 -->
         <dummy_desktop><label/></dummy_desktop>
 
