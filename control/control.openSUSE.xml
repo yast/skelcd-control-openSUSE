@@ -552,9 +552,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
           <label>Desktop with KDE Plasma</label>
         </kde>
         <kde_description>
-          <label>KDE Plasma is a graphical desktop environment which is designed to be simple by default, powerful when needed.
-• NetworkManager provides network services
-• Update using `zypper dup`
+	  <label>Graphical system with KDE Plasma as desktop environment. Suitable for Workstations, Desktops and Laptops.
           </label>
         </kde_description>
         <gnome>
@@ -562,10 +560,8 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
           <label>Desktop with GNOME</label>
         </gnome>
         <gnome_description>
-          <label>An easy and elegant way to use your computer, GNOME is designed to put you in control and get things done.
-• NetworkManager provides network services
-• Update using `zypper dup`
-          </label>
+	  <label>Graphical system with GNOME as desktop environment. Suitable for Workstations, Desktops and Laptops.
+	  </label>
         </gnome_description>
         <generic_desktop>
           <!-- TRANSLATORS: a label for a system role -->
@@ -579,19 +575,14 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
           <label>Server</label>
         </server>
         <server_description>
-          <label>The server selection installs a reduced set of packages and offers a text mode interface.
-• Wicked provides network services
-• Update using `zypper dup`
-          </label>
+          <label>Small set of packages suitable for servers with a text mode interface.</label>
         </server_description>
         <serverro>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Transactional Server</label>
         </serverro>
         <serverro_description>
-          <label>Transactional Server uses a read-only root filesystem to provide atomic, automatic updates of a system without interfering with the running system.
-• Wicked provides network services
-• Update using `transactional-update dup`, then reboot for the update to take effect
+          <label>Like the Server role but uses a read-only root filesystem to provide atomic, automatic updates of a system without interfering with the running system.
           </label>
         </serverro_description>
     </texts>
