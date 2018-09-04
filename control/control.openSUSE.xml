@@ -68,7 +68,7 @@ textdomain="control"
 
         <!-- FATE: #303893, #305588: Default to enabled kdump -->
         <enable_kdump config:type="boolean">true</enable_kdump>
-        
+
         <!-- to debug deploying, set to 'true' -->
         <debug_deploying config:type="boolean">false</debug_deploying>
     </globals>
@@ -382,6 +382,17 @@ textdomain="control"
       </system_role>
 
       <system_role>
+        <id>generic_desktop</id>
+        <network>
+          <network_manager>always</network_manager>
+        </network>
+        <software>
+          <default_patterns>x11 base</default_patterns>
+        </software>
+        <order config:type="integer">250</order>
+      </system_role>
+
+      <system_role>
         <id>server</id>
         <software>
           <default_patterns>enhanced_base</default_patterns>
@@ -577,9 +588,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
           <label>Desktop with KDE Plasma</label>
         </kde>
         <kde_description>
-          <label>KDE Plasma is a graphical desktop environment which is designed to be simple by default, powerful when needed.
-• NetworkManager provides network services
-• Update using the desktop update notification, YaST or `zypper up`
+	  <label>Graphical system with KDE Plasma as desktop environment. Suitable for Workstations, Desktops and Laptops.
           </label>
         </kde_description>
         <gnome>
@@ -587,29 +596,29 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
           <label>Desktop with GNOME</label>
         </gnome>
         <gnome_description>
-          <label>An easy and elegant way to use your computer, GNOME is designed to put you in control and get things done.
-• NetworkManager provides network services
-• Update using the desktop update notification, YaST or `zypper up`
-          </label>
+	  <label>Graphical system with GNOME as desktop environment. Suitable for Workstations, Desktops and Laptops.
+	  </label>
         </gnome_description>
+        <generic_desktop>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Generic Desktop</label>
+        </generic_desktop>
+        <generic_desktop_description>
+          <label>Graphical system with reduced package set. Intended as base for a customized software selection.</label>
+        </generic_desktop_description>
         <server>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Server</label>
         </server>
         <server_description>
-          <label>The server selection installs a reduced set of packages and offers a text mode interface.
-• Wicked provides network services
-• Update using `zypper up`
-          </label>
+          <label>Small set of packages suitable for servers with a text mode interface.</label>
         </server_description>
         <serverro>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Transactional Server</label>
         </serverro>
         <serverro_description>
-          <label>Transactional Server uses a read-only root filesystem to provide atomic, automatic updates of a system without interfering with the running system.
-• Wicked provides network services
-• Update using `transactional-update up`, then reboot for the update to take effect
+          <label>Like the Server role but uses a read-only root filesystem to provide atomic, automatic updates of a system without interfering with the running system.
           </label>
         </serverro_description>
     </texts>
