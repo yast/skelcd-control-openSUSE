@@ -424,7 +424,7 @@ textdomain="control"
                     <min_size config:type="disksize">16 GiB</min_size>
                     <max_size config:type="disksize">30 GiB</max_size>
                     <weight config:type="integer">80</weight>
-
+                    <!-- Always use snapshots, no matter what -->
                     <snapshots config:type="boolean">true</snapshots>
                     <snapshots_configurable config:type="boolean">false</snapshots_configurable>
 
@@ -481,6 +481,10 @@ textdomain="control"
                         <subvolume>
                             <path>boot/grub2/s390x-emu</path>
                             <archs>s390</archs>
+                        </subvolume>
+                        <subvolume>
+                            <path>boot/grub2/arm64-efi</path>
+                            <archs>aarch64</archs>
                         </subvolume>
                     </subvolumes>
                 </volume>
