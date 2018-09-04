@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Fri Aug 31 12:37:44 UTC 2018 - lnussel@suse.de
+
+- Change text in role selection
+- Remove no longer used desktop_dialog tag
+- Introduce "Generic Desktop" role
+- 42.3.99.32
+
+-------------------------------------------------------------------
 Thu Aug 30 06:56:10 UTC 2018 - lslezak@suse.cz
 
 - Mark the upgrade from openSUSE Leap 15.x as supported
