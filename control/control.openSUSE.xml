@@ -890,6 +890,12 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <label>System Analysis</label>
                     <name>system_analysis</name>
                 </module>
+                <!-- bsc#1112937: Online repos during installation -->
+                <module>
+                    <label>Online Repositories</label>
+                    <name>productsources</name>
+                    <enable_back>yes</enable_back>
+                </module>
                 <module>
                     <name>download_release_notes</name>
                 </module>
