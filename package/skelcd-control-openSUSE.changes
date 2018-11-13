@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Nov 12 15:17:06 UTC 2018 - Stasiek Michalski <hellcp@mailbox.org>
+
+- Switch installation UI for openSUSE to sidebar (boo#1088785)
+- 15.1.5
+
+-------------------------------------------------------------------
 Tue Nov  6 10:12:39 UTC 2018 - lnussel@suse.de
 
 - Use $releasever, cleanup (boo#1090193)
