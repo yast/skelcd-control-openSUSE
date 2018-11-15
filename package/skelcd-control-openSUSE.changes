@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Nov 14 13:55:08 UTC 2018 - Stefan Hundhammer <shundhammer@suse.com>
+
+- Added workflow step to add online repos during installation
+  (bsc#1112937)
+- 20181114
+
+-------------------------------------------------------------------
 Sat Nov 10 21:05:05 UTC 2018 - hellcp@opensuse.org
 
 - Switch installation UI for openSUSE to sidebar (boo#1088785) 
