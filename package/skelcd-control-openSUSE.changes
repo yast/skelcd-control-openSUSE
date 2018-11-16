@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Fri Nov 16 14:02:56 UTC 2018 - Richard Brown <rbrown@suse.com>
+
+- Improve default partition sizes (boo#1093372)
+- Enable sshd and disable firewall by default on server roles
+  (boo#1090372)
+- 20181122
+
+-------------------------------------------------------------------
 Wed Nov 21 11:33:48 UTC 2018 - dgonzalez@suse.com
 
 - Remove not needed step names from the sidebar (bsc#1115986)
