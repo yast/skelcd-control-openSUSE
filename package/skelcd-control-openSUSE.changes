@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Fri Nov 16 14:02:56 UTC 2018 - Richard Brown <rbrown@suse.com>
+
+- Improve default partition sizes (boo#1093372)
+- Enable sshd and disable firewall by default on server roles
+  (boo#1090372)
+- 15.1.6
+
+-------------------------------------------------------------------
 Mon Nov 12 15:17:06 UTC 2018 - Stasiek Michalski <hellcp@mailbox.org>
 
 - Switch installation UI for openSUSE to sidebar (boo#1088785)

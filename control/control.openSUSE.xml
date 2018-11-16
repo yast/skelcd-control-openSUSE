@@ -207,19 +207,19 @@ textdomain="control"
         </proposal>
 
         <volumes config:type="list">
-            <!-- / volume: 5 GiB - 20 GiB, *2 if snapshots are used -->
+            <!-- / volume: 5 GiB - unlimited, *4 if snapshots are used -->
             <volume>
                 <mount_point>/</mount_point>
                 <fs_type>btrfs</fs_type>
 
                 <desired_size config:type="disksize">10 GiB</desired_size>
                 <min_size config:type="disksize">5 GiB</min_size>
-                <max_size config:type="disksize">20 GiB</max_size>
-                <weight config:type="integer">60</weight>
+                <max_size config:type="disksize">unlimited</max_size>
+                <weight config:type="integer">30</weight>
 
                 <snapshots config:type="boolean">true</snapshots>
                 <snapshots_configurable config:type="boolean">true</snapshots_configurable>
-                <snapshots_percentage config:type="integer">100</snapshots_percentage>
+                <snapshots_percentage config:type="integer">300</snapshots_percentage>
 
                 <!-- the default subvolume "@" was requested by product management -->
                 <btrfs_default_subvolume>@</btrfs_default_subvolume>
@@ -275,18 +275,18 @@ textdomain="control"
                 </subvolumes>
             </volume>
 
-            <!-- separate /home: 7 GiB - unlimited -->
+            <!-- separate /home: 10 GiB - unlimited -->
             <volume>
                 <mount_point>/home</mount_point>
                 <fs_type>xfs</fs_type>
 
+                <proposed config:type="boolean">false</proposed>
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 
-                <desired_size config:type="disksize">10 GiB</desired_size>
-                <min_size config:type="disksize">7 GiB</min_size>
+                <desired_size config:type="disksize">40 GiB</desired_size>
+                <min_size config:type="disksize">10 GiB</min_size>
                 <max_size config:type="disksize">unlimited</max_size>
-                <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
-                <weight config:type="integer">40</weight>
+                <weight config:type="integer">60</weight>
 
                 <disable_order config:type="integer">1</disable_order>
 
@@ -307,7 +307,7 @@ textdomain="control"
                 <min_size config:type="disksize">1 GiB</min_size>
                 <max_size config:type="disksize">2 GiB</max_size>
                 <weight config:type="integer">10</weight>
-                <adjust_by_ram config:type="boolean">true</adjust_by_ram>
+                <adjust_by_ram config:type="boolean">false</adjust_by_ram>
                 <adjust_by_ram_configurable config:type="boolean">true</adjust_by_ram_configurable>
 
                 <disable_order config:type="integer">2</disable_order>
@@ -360,6 +360,11 @@ textdomain="control"
 
       <system_role>
         <id>server</id>
+        <globals>
+            <enable_firewall config:type="boolean">false</enable_firewall>
+            <firewall_enable_ssh config:type="boolean">true</firewall_enable_ssh>
+            <enable_sshd config:type="boolean">true</enable_sshd>
+        </globals>
         <software>
           <default_patterns>enhanced_base</default_patterns>
         </software>
@@ -368,6 +373,11 @@ textdomain="control"
 
       <system_role>
         <id>serverro</id>
+        <globals>
+            <enable_firewall config:type="boolean">false</enable_firewall>
+            <firewall_enable_ssh config:type="boolean">true</firewall_enable_ssh>
+            <enable_sshd config:type="boolean">true</enable_sshd>
+        </globals>
         <software>
           <default_patterns>transactional_base</default_patterns>
         </software>
@@ -381,15 +391,16 @@ textdomain="control"
             </proposal>
 
             <volumes config:type="list">
-                <!-- / volume: 16 GiB - 30 GiB, like Kubic -->
+                <!-- / volume: 20 GiB - unlimited -->
                 <volume>
                     <mount_point>/</mount_point>
                     <fs_type>btrfs</fs_type>
 
-                    <desired_size config:type="disksize">25 GiB</desired_size>
-                    <min_size config:type="disksize">16 GiB</min_size>
-                    <max_size config:type="disksize">30 GiB</max_size>
-                    <weight config:type="integer">80</weight>
+                    <desired_size config:type="disksize">40 GiB</desired_size>
+                    <min_size config:type="disksize">20 GiB</min_size>
+                    <max_size config:type="disksize">unlimited</max_size>
+                    <weight config:type="integer">30</weight>
+
                     <!-- Always use snapshots, no matter what -->
                     <snapshots config:type="boolean">true</snapshots>
                     <snapshots_configurable config:type="boolean">false</snapshots_configurable>
@@ -455,18 +466,18 @@ textdomain="control"
                     </subvolumes>
                 </volume>
 
-                <!-- separate /home: 7 GiB - unlimited -->
+                <!-- separate /home: 10 GiB - unlimited -->
                 <volume>
                     <mount_point>/home</mount_point>
                     <fs_type>xfs</fs_type>
 
+                    <proposed config:type="boolean">false</proposed>
                     <proposed_configurable config:type="boolean">true</proposed_configurable>
 
-                    <desired_size config:type="disksize">10 GiB</desired_size>
-                    <min_size config:type="disksize">7 GiB</min_size>
+                    <desired_size config:type="disksize">40 GiB</desired_size>
+                    <min_size config:type="disksize">10 GiB</min_size>
                     <max_size config:type="disksize">unlimited</max_size>
-                    <max_size_lvm config:type="disksize">25 GiB</max_size_lvm>
-                    <weight config:type="integer">40</weight>
+                    <weight config:type="integer">60</weight>
 
                     <disable_order config:type="integer">1</disable_order>
 
@@ -488,7 +499,7 @@ textdomain="control"
                     <min_size config:type="disksize">1 GiB</min_size>
                     <max_size config:type="disksize">2 GiB</max_size>
                     <weight config:type="integer">10</weight>
-                    <adjust_by_ram config:type="boolean">true</adjust_by_ram>
+                    <adjust_by_ram config:type="boolean">false</adjust_by_ram>
                     <adjust_by_ram_configurable config:type="boolean">true</adjust_by_ram_configurable>
 
                     <disable_order config:type="integer">2</disable_order>
