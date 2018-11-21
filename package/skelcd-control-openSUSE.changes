@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Nov 21 11:33:48 UTC 2018 - dgonzalez@suse.com
+
+- Remove not needed step names from the sidebar (bsc#1115986)
+- 20181121
+
+-------------------------------------------------------------------
 Wed Nov 14 13:55:08 UTC 2018 - Stefan Hundhammer <shundhammer@suse.com>
 
 - Added workflow step to add online repos during installation
