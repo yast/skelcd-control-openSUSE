@@ -1,5 +1,5 @@
 -------------------------------------------------------------------
-Fri Nov 16 14:02:56 UTC 2018 - Richard Brown <rbrown@suse.com>
+Thu Nov 22 14:52:11 UTC 2018 - Richard Brown <rbrown@suse.com>
 
 - Improve default partition sizes (boo#1093372)
 - Enable sshd and disable firewall by default on server roles
