@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Nov 29 14:14:18 UTC 2018 - Stasiek Michalski <hellcp@mailbox.org>
+
+- Update yast2-theme dependency (boo#1108422)
+- 15.1.7
+
+-------------------------------------------------------------------
 Fri Nov 16 14:02:56 UTC 2018 - Richard Brown <rbrown@suse.com>
 
 - Improve default partition sizes (boo#1093372)
