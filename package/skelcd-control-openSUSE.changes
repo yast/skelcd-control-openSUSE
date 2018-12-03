@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Dec 03 09:46:41 UTC 2018 - Richard Brown <rbrown@suse.com>
+
+- Remove fallback_for_XXX parameters for /home (boo#1093372)
+- 20181203
+
+-------------------------------------------------------------------
 Thu Nov 29 13:52:29 UTC 2018 - Stasiek Michalski <hellcp@mailbox.org>
 
 - Update yast2-theme dependency (boo#1108422)
