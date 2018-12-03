@@ -283,12 +283,6 @@ textdomain="control"
                 <weight config:type="integer">60</weight>
 
                 <disable_order config:type="integer">1</disable_order>
-
-                <!-- if this volume is disabled we want "/" to increase -->
-                <fallback_for_desired_size>/</fallback_for_desired_size>
-                <fallback_for_max_size>/</fallback_for_max_size>
-                <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
-                <fallback_for_weight>/</fallback_for_weight>
             </volume>
 
             <!-- swap: 1 GiB - 2 GiB, but at least RAM size -->
@@ -475,12 +469,6 @@ textdomain="control"
                     <weight config:type="integer">60</weight>
 
                     <disable_order config:type="integer">1</disable_order>
-
-                    <!-- if this volume is disabled we want "/" to increase -->
-                    <fallback_for_desired_size>/</fallback_for_desired_size>
-                    <fallback_for_max_size>/</fallback_for_max_size>
-                    <fallback_for_max_size_lvm>/</fallback_for_max_size_lvm>
-                    <fallback_for_weight>/</fallback_for_weight>
                 </volume>
 
                 <!-- swap: 1 GiB - 2 GiB, but at least RAM size -->
