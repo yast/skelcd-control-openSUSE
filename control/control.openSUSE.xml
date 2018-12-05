@@ -214,6 +214,8 @@ textdomain="control"
                 <snapshots config:type="boolean">true</snapshots>
                 <snapshots_configurable config:type="boolean">true</snapshots_configurable>
                 <snapshots_percentage config:type="integer">300</snapshots_percentage>
+                <!-- disable snapshots if not enough room -->
+                <disable_order config:type="integer">3</disable_order>
 
                 <!-- the default subvolume "@" was requested by product management -->
                 <btrfs_default_subvolume>@</btrfs_default_subvolume>

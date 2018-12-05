@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Dec 05 14:17:11 UTC 2018 - Richard Brown <rbrown@suse.com>
+
+- Allow snapshot disabling if not enough disk space (boo#1093372)
+- 20181205
+
+-------------------------------------------------------------------
 Mon Dec 03 09:46:41 UTC 2018 - Richard Brown <rbrown@suse.com>
 
 - Remove fallback_for_XXX parameters for /home (boo#1093372)
