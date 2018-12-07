@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Fri Dec 07 14:16:26 UTC 2018 - Richard Brown <rbrown@suse.com>
+
+- Adjust / partition size to fit with 20GB aspirational minimum
+  * btrfs root will be at least 17.5GB, leaving 2.5 GB swap & EFI
+  * boo#1093372
+- 20181207
+
+-------------------------------------------------------------------
 Wed Dec 05 14:17:11 UTC 2018 - Richard Brown <rbrown@suse.com>
 
 - Allow snapshot disabling if not enough disk space (boo#1093372)
