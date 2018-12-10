@@ -201,7 +201,7 @@ textdomain="control"
         </proposal>
 
         <volumes config:type="list">
-            <!-- / volume: 5 GiB - unlimited, *4 if snapshots are used -->
+            <!-- / volume: 5 GiB - unlimited, +250% if snapshots are used (aka 17.5GB - unlimited) -->
             <volume>
                 <mount_point>/</mount_point>
                 <fs_type>btrfs</fs_type>
@@ -213,7 +213,7 @@ textdomain="control"
 
                 <snapshots config:type="boolean">true</snapshots>
                 <snapshots_configurable config:type="boolean">true</snapshots_configurable>
-                <snapshots_percentage config:type="integer">300</snapshots_percentage>
+                <snapshots_percentage config:type="integer">250</snapshots_percentage>
                 <!-- disable snapshots if not enough room -->
                 <disable_order config:type="integer">3</disable_order>
 
