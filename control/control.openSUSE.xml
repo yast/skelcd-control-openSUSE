@@ -337,6 +337,17 @@ textdomain="control"
         </software>
         <order config:type="integer">200</order>
       </system_role>
+	    
+      <system_role>
+        <id>xfce</id>
+        <network>
+          <network_manager>always</network_manager>
+        </network>
+        <software>
+          <default_patterns>xfce x11 base</default_patterns>
+        </software>
+        <order config:type="integer">220</order>
+      </system_role>
 
       <system_role>
         <id>generic_desktop</id>
