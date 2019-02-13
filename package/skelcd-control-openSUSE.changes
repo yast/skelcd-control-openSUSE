@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Feb 13 08:36:09 UTC 2019 - jsegitz@suse.com
+
+- Enable firewall by default in server install profiles (boo#1090372)
+- 15.1.11
+
+-------------------------------------------------------------------
 Fri Dec 07 14:16:26 UTC 2018 - Richard Brown <rbrown@suse.com>
 
 - Adjust / partition size to fit with 20GB aspirational minimum
