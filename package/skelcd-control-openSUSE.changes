@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Feb 25 14:52:21 UTC 2019 - dgonzalez@suse.com
+
+- Add network to the installation proposal (fate#326480).
+- 15.1.12
+
+-------------------------------------------------------------------
 Wed Feb 13 08:36:09 UTC 2019 - jsegitz@suse.com
 
 - Enable firewall by default in server install profiles (boo#1090372)
