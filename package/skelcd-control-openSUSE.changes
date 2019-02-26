@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Feb 26 12:00:01 UTC 2019 - dgonzalez@suse.com
+
+- Remove not needed step names from the sidebar
+  (bsc#1115986, bsc#1126509).
+- 15.1.13
+
+-------------------------------------------------------------------
 Mon Feb 25 14:52:21 UTC 2019 - dgonzalez@suse.com
 
 - Add network to the installation proposal (fate#326480).
