@@ -863,7 +863,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
             <stage>initial</stage>
             <modules config:type="list">
                 <module>
-                    <label>Load linuxrc Network Configuration</label>
+                    <label>Network Autosetup</label>
                     <name>install_inf</name>
                 </module>
                 <module>
@@ -969,7 +969,7 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 the file system or storage kernel modules from inst-sys. They need to be already
                 loaded and active. -->
                 <module>
-                    <label>Installer Cleanup</label>
+                    <label>Perform Installation</label>
                     <name>instsys_cleanup</name>
                 </module>
                 <!-- Installation from images -->
@@ -1022,7 +1022,7 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
             <stage>initial</stage>
             <modules config:type="list">
                 <module>
-                    <label>Load linuxrc Network Configuration</label>
+                    <label>Network Autosetup</label>
                     <name>install_inf</name>
                 </module>
                 <module>
@@ -1103,7 +1103,7 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 the file system or storage kernel modules from inst-sys. They need to be already
                 loaded and active. -->
                 <module>
-                    <label>Installer Cleanup</label>
+                    <label>Perform Update</label>
                     <name>instsys_cleanup</name>
                 </module>
                 <module>
@@ -1187,11 +1187,11 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 the file system or storage kernel modules from inst-sys. They need to be already
                 loaded and active. -->
                 <module>
-                    <label>Installer Cleanup</label>
+                    <label>Perform Installation</label>
                     <name>instsys_cleanup</name>
                 </module>
                 <module>
-                <label>Perform Installation</label>
+                    <label>Perform Installation</label>
                     <name>deploy_image</name>
                 </module>
                 <module>
@@ -1294,7 +1294,7 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 the file system or storage kernel modules from inst-sys. They need to be already
                 loaded and active. -->
                 <module>
-                    <label>Installer Cleanup</label>
+                    <label>Perform Update</label>
                     <name>instsys_cleanup</name>
                 </module>
                 <module>
