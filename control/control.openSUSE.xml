@@ -625,6 +625,10 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <presentation_order>97</presentation_order>
                 </proposal_module>
                 <proposal_module>
+                    <name>network</name>
+                    <presentation_order>98</presentation_order>
+                </proposal_module>
+                <proposal_module>
                     <name>clone</name>
                     <presentation_order>99</presentation_order>
                 </proposal_module>
@@ -674,6 +678,10 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                 <proposal_module>
                     <name>firewall</name>
                     <presentation_order>50</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>network</name>
+                    <presentation_order>55</presentation_order>
                 </proposal_module>
             </proposal_modules>
         </proposal>
