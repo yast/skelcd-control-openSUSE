@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Mar 12 14:32:04 UTC 2019 - Dominique Leuenberger <dimstar@opensuse.org>
+
+- Change product_license_dir to /usr/share/licenses/product/base
+  after discussion, FATE#324053
+
+-------------------------------------------------------------------
 Tue Mar 12 11:42:39 UTC 2019 - Dominique Leuenberger <dimstar@opensuse.org>
 
 - Changed product_license_dir define from /etc/YaST2/licenses/base/
