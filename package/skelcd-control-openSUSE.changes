@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Mar 12 11:42:39 UTC 2019 - Dominique Leuenberger <dimstar@opensuse.org>
+
+- Changed product_license_dir define from /etc/YaST2/licenses/base/
+  to /usr/share/licenses/product/, see jsc#SLE-3067
+
+-------------------------------------------------------------------
 Mon Feb 25 15:25:59 UTC 2019 - dgonzalez@suse.com
 
 - Add network to the installation proposal (fate#326480).
