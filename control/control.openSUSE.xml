@@ -568,7 +568,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
           <label>Generic Desktop</label>
         </generic_desktop>
         <generic_desktop_description>
-          <label>Graphical system with reduced package set. Intended as base for a customized software selection.</label>
+          <label>Graphical system with reduced package set. Customize software selection under 'Software' on the Installation Overview (e.g. add your desktop environment).</label>
         </generic_desktop_description>
         <server>
           <!-- TRANSLATORS: a label for a system role -->
