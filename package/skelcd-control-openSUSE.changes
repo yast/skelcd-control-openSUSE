@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Wed Mar 13 14:29:14 UTC 2019 - David Díaz <dgonzalez@suse.com>
+
+- Change path for base product license to
+  /usr/share/licenses/product/base (fate#324053, jsc#SLE-3067,
+  jsc#SLE-4173).
+- 15.1.14
+
+-------------------------------------------------------------------
 Tue Feb 26 12:00:01 UTC 2019 - dgonzalez@suse.com
 
 - Remove not needed step names from the sidebar
