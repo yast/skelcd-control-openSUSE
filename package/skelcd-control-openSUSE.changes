@@ -5,6 +5,11 @@ Mon Mar 25 11:17:45 UTC 2019 - Dirk Mueller <dmueller@suse.com>
 - 15.1.15
 
 -------------------------------------------------------------------
+Mon Mar 25 10:26:35 UTC 2019 - Guillaume GARDET <guillaume@opensuse.org>
+
+- Fix %arm links
+
+-------------------------------------------------------------------
 Wed Mar 13 14:29:14 UTC 2019 - David Díaz <dgonzalez@suse.com>
 
 - Change path for base product license to
