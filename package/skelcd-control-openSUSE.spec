@@ -122,10 +122,15 @@ mkdir -p $RPM_BUILD_ROOT%{?skelcdpath}/CD1
 install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control.xml
 
 %ifarch aarch64 %arm ppc ppc64 ppc64le
+    ports_arch="%{_arch}"
     %ifarch ppc ppc64 ppc64le
         ports_arch="ppc"
-    %else
-        ports_arch="%{_arch}"
+    %endif
+    %ifarch armv6l armv6hl
+        ports_arch="armv6hl"
+    %endif
+    %ifarch armv7l armv7hl
+        ports_arch="armv7hl"
     %endif
     sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse.org/ports/$ports_arch/distribution/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/tumbleweed/," %{buildroot}%{?skelcdpath}/CD1/control.xml
