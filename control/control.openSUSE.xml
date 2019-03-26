@@ -340,9 +340,6 @@ textdomain="control"
 
       <system_role>
         <id>generic_desktop</id>
-        <network>
-          <network_manager>always</network_manager>
-        </network>
         <software>
           <default_patterns>x11 base</default_patterns>
         </software>

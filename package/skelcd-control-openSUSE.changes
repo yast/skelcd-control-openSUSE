@@ -17,6 +17,14 @@ Tue Mar 12 14:32:04 UTC 2019 - Dominique Leuenberger <dimstar@opensuse.org>
   after discussion, FATE#324053
 
 -------------------------------------------------------------------
+Tue Mar 12 11:55:40 UTC 2019 - Dominique Leuenberger <dimstar@opensuse.org>
+
+- Default to wicked on generic desktop: do the same as we did
+  before yast learned to auto-pick NetworkManager if the
+  control.xml happened to request it (bsc#1127228).
+- 20190326
+
+-------------------------------------------------------------------
 Tue Mar 12 11:42:39 UTC 2019 - Dominique Leuenberger <dimstar@opensuse.org>
 
 - Changed product_license_dir define from /etc/YaST2/licenses/base/
