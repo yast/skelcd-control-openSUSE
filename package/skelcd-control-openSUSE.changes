@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Thu Mar 28 10:33:45 UTC 2019 - Ladislav Slezák <lslezak@suse.cz>
+
+- Added workflow step to add online repos during installation
+  (bsc#1130390)
+- 15.1.16
+
+-------------------------------------------------------------------
 Mon Mar 25 11:17:45 UTC 2019 - Dirk Mueller <dmueller@suse.com>
 
 - Fix update repository for ports (bsc#1101334)
