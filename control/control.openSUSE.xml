@@ -59,7 +59,7 @@ textdomain="control"
         <kexec_reboot config:type="boolean">true</kexec_reboot>
 
         <!-- FATE: #304865: Enhance YaST Modules to cooperate better handling the product licenses -->
-        <base_product_license_directory>/etc/YaST2/licenses/base/</base_product_license_directory>
+        <base_product_license_directory>/usr/share/licenses/product/base/</base_product_license_directory>
 
         <!-- #303798: YaST2 runlevel editor: offer easy enablement and configuration of runlevel 4 -->
         <rle_offer_rulevel_4 config:type="boolean">false</rle_offer_rulevel_4>
@@ -351,9 +351,6 @@ textdomain="control"
 
       <system_role>
         <id>generic_desktop</id>
-        <network>
-          <network_manager>always</network_manager>
-        </network>
         <software>
           <default_patterns>x11 base</default_patterns>
         </software>
@@ -363,7 +360,6 @@ textdomain="control"
       <system_role>
         <id>server</id>
         <globals>
-            <enable_firewall config:type="boolean">false</enable_firewall>
             <firewall_enable_ssh config:type="boolean">true</firewall_enable_ssh>
             <enable_sshd config:type="boolean">true</enable_sshd>
         </globals>
@@ -376,7 +372,6 @@ textdomain="control"
       <system_role>
         <id>serverro</id>
         <globals>
-            <enable_firewall config:type="boolean">false</enable_firewall>
             <firewall_enable_ssh config:type="boolean">true</firewall_enable_ssh>
             <enable_sshd config:type="boolean">true</enable_sshd>
         </globals>
@@ -645,6 +640,10 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <presentation_order>97</presentation_order>
                 </proposal_module>
                 <proposal_module>
+                    <name>network</name>
+                    <presentation_order>98</presentation_order>
+                </proposal_module>
+                <proposal_module>
                     <name>clone</name>
                     <presentation_order>99</presentation_order>
                 </proposal_module>
@@ -694,6 +693,10 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                 <proposal_module>
                     <name>firewall</name>
                     <presentation_order>50</presentation_order>
+                </proposal_module>
+                <proposal_module>
+                    <name>network</name>
+                    <presentation_order>55</presentation_order>
                 </proposal_module>
             </proposal_modules>
         </proposal>

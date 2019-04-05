@@ -1,3 +1,47 @@
+------------------------------------------------------------------
+Mon Mar 25 11:13:31 UTC 2019 - Dirk Mueller <dmueller@suse.com>
+
+- Fix update repository for ports (forward port of change that
+  went into Leap 15.0) (bsc#1101334)
+- 20190325
+
+-------------------------------------------------------------------
+Mon Mar 25 10:26:35 UTC 2019 - Guillaume GARDET <guillaume@opensuse.org>
+
+- Fix %arm links (boo#1130382)
+
+-------------------------------------------------------------------
+Tue Mar 12 14:32:04 UTC 2019 - Dominique Leuenberger <dimstar@opensuse.org>
+
+- Change product_license_dir to /usr/share/licenses/product/base
+  after discussion, FATE#324053
+
+-------------------------------------------------------------------
+Tue Mar 12 11:55:40 UTC 2019 - Dominique Leuenberger <dimstar@opensuse.org>
+
+- Default to wicked on generic desktop: do the same as we did
+  before yast learned to auto-pick NetworkManager if the
+  control.xml happened to request it (bsc#1127228).
+- 20190326
+
+-------------------------------------------------------------------
+Tue Mar 12 11:42:39 UTC 2019 - Dominique Leuenberger <dimstar@opensuse.org>
+
+- Changed product_license_dir define from /etc/YaST2/licenses/base/
+  to /usr/share/licenses/product/, see jsc#SLE-3067
+
+-------------------------------------------------------------------
+Mon Feb 25 15:25:59 UTC 2019 - dgonzalez@suse.com
+
+- Add network to the installation proposal (fate#326480).
+- 20190225
+
+-------------------------------------------------------------------
+Wed Feb 13 08:41:14 UTC 2019 - jsegitz@suse.com
+
+- Enable firewall by default in server install profiles (boo#1090372)
+- 20190213
+
 -------------------------------------------------------------------
 Fri Apr  5 09:29:00 UTC 2019 - Maurizio Galli <maurizio.galli@gmail.com>
 
