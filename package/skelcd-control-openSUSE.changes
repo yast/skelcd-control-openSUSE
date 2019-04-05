@@ -1,4 +1,10 @@
 ------------------------------------------------------------------
+Fri Apr  5 09:29:00 UTC 2019 - Maurizio Galli <maurizio.galli@gmail.com>
+
+- Added Xfce System Role to Yast Installer  (boo#1131666)
+- 20190405
+
+-------------------------------------------------------------------
 Mon Mar 25 11:13:31 UTC 2019 - Dirk Mueller <dmueller@suse.com>
 
 - Fix update repository for ports (forward port of change that
@@ -43,6 +49,7 @@ Wed Feb 13 08:41:14 UTC 2019 - jsegitz@suse.com
 - 20190213
 
 -------------------------------------------------------------------
+
 Fri Dec 07 14:16:26 UTC 2018 - Richard Brown <rbrown@suse.com>
 
 - Adjust / partition size to fit with 20GB aspirational minimum

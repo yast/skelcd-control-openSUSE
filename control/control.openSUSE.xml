@@ -337,6 +337,17 @@ textdomain="control"
         </software>
         <order config:type="integer">200</order>
       </system_role>
+	    
+      <system_role>
+        <id>xfce</id>
+        <network>
+          <network_manager>always</network_manager>
+        </network>
+        <software>
+          <default_patterns>xfce x11 base</default_patterns>
+        </software>
+        <order config:type="integer">220</order>
+      </system_role>
 
       <system_role>
         <id>generic_desktop</id>
@@ -560,7 +571,14 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
 	  <label>Graphical system with GNOME as desktop environment. Suitable for Workstations, Desktops and Laptops.
 	  </label>
         </gnome_description>
-        <generic_desktop>
+        <xfce>
+          <!-- TRANSLATORS: a label for a system role -->
+          <label>Desktop with Xfce</label>
+        </xfce>
+        <xfce_description>
+          <label>Graphical system with Xfce as desktop environment. Suitable for Workstations, Desktops and Laptops.</label>
+        </xfce_description>   
+	<generic_desktop>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Generic Desktop</label>
         </generic_desktop>
