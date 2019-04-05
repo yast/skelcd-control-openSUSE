@@ -573,10 +573,10 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
         </gnome_description>
         <xfce>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>Desktop with XFCE</label>
+          <label>Desktop with Xfce</label>
         </xfce>
         <xfce_description>
-          <label>Graphical system with XFCE as desktop environment. Suitable for Workstations, Desktops and Laptops.</label>
+          <label>Graphical system with Xfce as desktop environment. Suitable for Workstations, Desktops and Laptops.</label>
         </xfce_description>   
 	<generic_desktop>
           <!-- TRANSLATORS: a label for a system role -->
