@@ -1,3 +1,9 @@
+-------------------------------------------------------------------
+Mon Apr 15 09:20:37 UTC 2019 - Guillaume GARDET <guillaume.gardet@opensuse.org>
+
+- Fix debug update repo for ports (boo#1132482)
+- 20190415
+
 ------------------------------------------------------------------
 Fri Apr  5 09:29:00 UTC 2019 - Maurizio Galli <maurizio.galli@gmail.com>
 
