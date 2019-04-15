@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        20190405
+Version:        20190415
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -134,6 +134,8 @@ install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control
     %endif
     sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse.org/ports/$ports_arch/distribution/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/tumbleweed/," %{buildroot}%{?skelcdpath}/CD1/control.xml
+    # Leap debug repo (from :Update) has a different path since all 'ports' (ARM and PPC) are in the same repo
+    sed -i -e "s,http://download.opensuse.org/debug/update,http://download.opensuse.org/ports/debug/update," %{buildroot}%{?skelcdpath}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/debug/,http://download.opensuse.org/ports/$ports_arch/debug/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/$ports_arch/source/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/update/leap/,http://download.opensuse.org/ports/update/leap/," %{buildroot}%{?skelcdpath}/CD1/control.xml
