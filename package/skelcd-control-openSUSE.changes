@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Tue Apr 16 07:57:26 UTC 2019 - lnussel@suse.de
+
+- make sure yast gets installed with all roles except
+  transactional-server (boo#1130998)
+- 15.1.18
+
+-------------------------------------------------------------------
 Mon Apr 15 09:20:37 UTC 2019 - Guillaume GARDET <guillaume.gardet@opensuse.org>
 
 - Fix debug update repo for ports (boo#1132482)
