@@ -137,9 +137,9 @@ install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control
     # Leap debug repo (from :Update) has a different path since all 'ports' (ARM and PPC) are in the same repo
     sed -i -e "s,http://download.opensuse.org/debug/update,http://download.opensuse.org/ports/debug/update," %{buildroot}%{?skelcdpath}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/debug/,http://download.opensuse.org/ports/$ports_arch/debug/," %{buildroot}%{?skelcdpath}/CD1/control.xml
-    sed -i -e "s,http://download.opensuse.org/source/,http://download.opensuse.org/ports/$ports_arch/source/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/update/leap/,http://download.opensuse.org/ports/update/leap/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/update/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/update/tumbleweed/," %{buildroot}%{?skelcdpath}/CD1/control.xml
+    # For source-repo keep same URI for all arches.
     #we parse out non existing non-oss repo for ports
     xsltproc -o %{buildroot}%{?skelcdpath}/CD1/control_ports.xml control/nonoss.xsl %{buildroot}%{?skelcdpath}/CD1/control.xml
     mv %{buildroot}%{?skelcdpath}/CD1/control{_ports,}.xml
