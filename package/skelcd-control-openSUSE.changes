@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Wed Jun 12 07:16:39 UTC 2019 - Guillaume GARDET <guillaume.gardet@opensuse.org>
+
+- Update link to https://download.opensuse.org/YaST/Repos/* 
+  for non-x86 (boo#1120938 and boo#1132748)
+- 20190612
+
+-------------------------------------------------------------------
 Tue Apr 30 10:01:57 UTC 2019 - Maurizio Galli <maurizio.galli@gmail.com>
 
 - make sure yast gets installed with Xfce system role too 
