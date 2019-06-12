@@ -352,7 +352,7 @@ textdomain="control"
       <system_role>
         <id>generic_desktop</id>
         <software>
-          <default_patterns>x11 base x11_yast yast2_basis</default_patterns>
+          <default_patterns>basic_desktop x11 base x11_yast yast2_basis</default_patterns>
         </software>
         <order config:type="integer">250</order>
       </system_role>
