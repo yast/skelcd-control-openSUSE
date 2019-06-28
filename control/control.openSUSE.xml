@@ -321,7 +321,7 @@ textdomain="control"
           <network_manager>always</network_manager>
         </network>
         <software>
-          <default_patterns>kde x11 base x11_yast yast2_basis</default_patterns>
+          <default_patterns>kde x11 base enhanced_base x11_yast yast2_basis</default_patterns>
         </software>
         <order config:type="integer">100</order>
         <no_default config:type="boolean">true</no_default>
@@ -333,7 +333,7 @@ textdomain="control"
           <network_manager>always</network_manager>
         </network>
         <software>
-          <default_patterns>gnome x11 base x11_yast yast2_basis</default_patterns>
+          <default_patterns>gnome x11 base enhanced_base x11_yast yast2_basis</default_patterns>
         </software>
         <order config:type="integer">200</order>
       </system_role>
@@ -344,7 +344,7 @@ textdomain="control"
           <network_manager>always</network_manager>
         </network>
         <software>
-          <default_patterns>xfce x11 base x11_yast yast2_basis</default_patterns>
+          <default_patterns>xfce x11 base enhanced_base x11_yast yast2_basis</default_patterns>
         </software>
         <order config:type="integer">220</order>
       </system_role>

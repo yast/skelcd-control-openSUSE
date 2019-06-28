@@ -1,15 +1,11 @@
 -------------------------------------------------------------------
-Wed Jun 12 08:16:39 UTC 2019 - Simon Lees <sflees@suse.de>
+Fri Jun 28 08:16:39 UTC 2019 - Simon Lees <sflees@suse.de>
 
 - Generic Desktop should also now install basic_desktop patterns
   as it now pulls in icewm rather then X11 (boo#1124865)
-
--------------------------------------------------------------------
-Wed Jun 12 07:16:39 UTC 2019 - Guillaume GARDET <guillaume.gardet@opensuse.org>
-
-- Update link to https://download.opensuse.org/YaST/Repos/*
-  for non-x86 (boo#1120938 and boo#1132748)
-- 20190612
+- Gnome, KDE and XFCE system roles now pull in enhanced_base as
+  they have always done so in the past.
+- 20190628
 
 -------------------------------------------------------------------
 Wed Jun 12 07:16:39 UTC 2019 - Guillaume GARDET <guillaume.gardet@opensuse.org>
