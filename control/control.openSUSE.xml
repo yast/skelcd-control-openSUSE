@@ -186,6 +186,8 @@ textdomain="control"
                 </window_manager>
             </window_managers>
         </upgrade>
+        <!-- boo#1124590 - Ensure correct product is selected -->
+        <select_product>openSUSE</select_product>
 
     </software>
 

@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Jul 19 12:25:45 UTC 2019 - Dominique Leuenberger <dimstar@opensuse.org>
+
+- Select product on installation [boo#1124590]
+- 20190719
+
+-------------------------------------------------------------------
 Fri Jun 28 08:16:39 UTC 2019 - Simon Lees <sflees@suse.de>
 
 - Generic Desktop should also now install basic_desktop patterns
