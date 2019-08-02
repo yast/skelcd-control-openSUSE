@@ -432,6 +432,9 @@ textdomain="control"
                             <path>tmp</path>
                         </subvolume>
                         <subvolume>
+                            <path>boot/writable</path>
+                        </subvolume>
+                        <subvolume>
                             <path>usr/local</path>
                         </subvolume>
                         <!-- unified var subvolume - https://lists.opensuse.org/opensuse-packaging/2017-11/msg00017.html -->
