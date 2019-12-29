@@ -354,7 +354,7 @@ textdomain="control"
       <system_role>
         <id>generic_desktop</id>
         <software>
-          <default_patterns>basic_desktop x11 base x11_yast yast2_basis</default_patterns>
+          <default_patterns>basic_desktop x11 base x11_yast yast2_basis yast2_desktop</default_patterns>
         </software>
         <order config:type="integer">250</order>
       </system_role>
@@ -366,7 +366,7 @@ textdomain="control"
             <enable_sshd config:type="boolean">true</enable_sshd>
         </globals>
         <software>
-          <default_patterns>enhanced_base yast2_basis</default_patterns>
+          <default_patterns>enhanced_base yast2_basis yast2_server</default_patterns>
         </software>
         <order config:type="integer">300</order>
       </system_role>

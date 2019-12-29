@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Sun Dec 29 12:08:13 UTC 2019 - Stasiek Michalski <hellcp@mailbox.org>
+
+- Adjust the roles to the new YaST Patterns (boo#1159875)
+- 20191229
+
+-------------------------------------------------------------------
 Fri Aug 02 13:17:11 UTC 2019 - Richard Brown <rbrown@suse.de>
 
 - Add /boot/writable subvolume to Transactional Server [boo#1138725]
