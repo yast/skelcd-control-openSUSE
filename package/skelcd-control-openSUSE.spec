@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        20190802
+Version:        20200312
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
