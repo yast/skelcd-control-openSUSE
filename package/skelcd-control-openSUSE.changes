@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Mar 12 16:16:57 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Add /boot/grub2/arm64-efi subvolume for all roles (bsc#1162320).
+- 15.2.2
+
+-------------------------------------------------------------------
 Thu Aug 22 15:00:07 UTC 2019 - Ludwig Nussel <lnussel@suse.de>
 
 - request 15.2 server list (bsc#1141654)
