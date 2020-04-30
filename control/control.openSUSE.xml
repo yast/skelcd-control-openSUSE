@@ -9,7 +9,7 @@ textdomain="control"
     <textdomain>control</textdomain>
 
     <globals>
-        <additional_kernel_parameters/>
+        <additional_kernel_parameters config:type="string"/>
         <enable_autologin config:type="boolean">true</enable_autologin>
         <enable_firewall config:type="boolean">true</enable_firewall>
         <firewall_enable_ssh config:type="boolean">false</firewall_enable_ssh>
@@ -99,7 +99,7 @@ textdomain="control"
         <!-- FATE #300898, List of external sources accesible during the installation time -->
         <external_sources_link>https://download.opensuse.org/YaST/Repos/openSUSE_Factory_Servers.xml</external_sources_link>
 
-        <dropped_packages/>
+        <dropped_packages config:type="string"/>
         <extra_urls config:type="list">
             <!-- Default update repository, bnc #381360 -->
             <extra_url>
@@ -208,9 +208,9 @@ textdomain="control"
                 <mount_point>/</mount_point>
                 <fs_type>btrfs</fs_type>
 
-                <desired_size config:type="disksize">10 GiB</desired_size>
-                <min_size config:type="disksize">5 GiB</min_size>
-                <max_size config:type="disksize">unlimited</max_size>
+                <desired_size config:type="string">10 GiB</desired_size>
+                <min_size config:type="string">5 GiB</min_size>
+                <max_size config:type="string">unlimited</max_size>
                 <weight config:type="integer">30</weight>
 
                 <snapshots config:type="boolean">true</snapshots>
@@ -285,9 +285,9 @@ textdomain="control"
                 <proposed config:type="boolean">false</proposed>
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 
-                <desired_size config:type="disksize">40 GiB</desired_size>
-                <min_size config:type="disksize">10 GiB</min_size>
-                <max_size config:type="disksize">unlimited</max_size>
+                <desired_size config:type="string">40 GiB</desired_size>
+                <min_size config:type="string">10 GiB</min_size>
+                <max_size config:type="string">unlimited</max_size>
                 <weight config:type="integer">60</weight>
 
                 <disable_order config:type="integer">1</disable_order>
@@ -300,9 +300,9 @@ textdomain="control"
 
                 <proposed_configurable config:type="boolean">true</proposed_configurable>
 
-                <desired_size config:type="disksize">2 GiB</desired_size>
-                <min_size config:type="disksize">1 GiB</min_size>
-                <max_size config:type="disksize">2 GiB</max_size>
+                <desired_size config:type="string">2 GiB</desired_size>
+                <min_size config:type="string">1 GiB</min_size>
+                <max_size config:type="string">2 GiB</max_size>
                 <weight config:type="integer">10</weight>
                 <adjust_by_ram config:type="boolean">false</adjust_by_ram>
                 <adjust_by_ram_configurable config:type="boolean">true</adjust_by_ram_configurable>
@@ -399,9 +399,9 @@ textdomain="control"
                     <mount_point>/</mount_point>
                     <fs_type>btrfs</fs_type>
 
-                    <desired_size config:type="disksize">40 GiB</desired_size>
-                    <min_size config:type="disksize">20 GiB</min_size>
-                    <max_size config:type="disksize">unlimited</max_size>
+                    <desired_size config:type="string">40 GiB</desired_size>
+                    <min_size config:type="string">20 GiB</min_size>
+                    <max_size config:type="string">unlimited</max_size>
                     <weight config:type="integer">30</weight>
 
                     <!-- Always use snapshots, no matter what -->
@@ -480,9 +480,9 @@ textdomain="control"
                     <proposed config:type="boolean">false</proposed>
                     <proposed_configurable config:type="boolean">true</proposed_configurable>
 
-                    <desired_size config:type="disksize">40 GiB</desired_size>
-                    <min_size config:type="disksize">10 GiB</min_size>
-                    <max_size config:type="disksize">unlimited</max_size>
+                    <desired_size config:type="string">40 GiB</desired_size>
+                    <min_size config:type="string">10 GiB</min_size>
+                    <max_size config:type="string">unlimited</max_size>
                     <weight config:type="integer">60</weight>
 
                     <disable_order config:type="integer">1</disable_order>
@@ -495,9 +495,9 @@ textdomain="control"
 
                     <proposed_configurable config:type="boolean">true</proposed_configurable>
 
-                    <desired_size config:type="disksize">2 GiB</desired_size>
-                    <min_size config:type="disksize">1 GiB</min_size>
-                    <max_size config:type="disksize">2 GiB</max_size>
+                    <desired_size config:type="string">2 GiB</desired_size>
+                    <min_size config:type="string">1 GiB</min_size>
+                    <max_size config:type="string">2 GiB</max_size>
                     <weight config:type="integer">10</weight>
                     <adjust_by_ram config:type="boolean">false</adjust_by_ram>
                     <adjust_by_ram_configurable config:type="boolean">true</adjust_by_ram_configurable>
@@ -547,7 +547,7 @@ After clicking &lt;b&gt;Finish&lt;/b&gt;, you can log in to the system.&lt;/p&gt
         </congratulate>
 
         <!-- Empty string is intentional, bnc #431251, bnc #431336 -->
-        <dummy_desktop><label/></dummy_desktop>
+        <dummy_desktop><label config:type="string"/></dummy_desktop>
 
         <roles_caption>
           <!-- TRANSLATORS: dialog caption -->
