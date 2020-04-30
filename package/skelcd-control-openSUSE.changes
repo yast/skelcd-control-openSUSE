@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Thu Apr 30 07:43:34 UTC 2020 - Josef Reidinger <jreidinger@suse.com>
+
+- fix XML to be valid for strict checking (bsc#1170886)
+- 20200430
+
+-------------------------------------------------------------------
 Thu Mar 26 21:00:00 UTC 2020 - Sergio Lindo <sergiolindo.empresa@gmail.com>
 
 - Fix %s390x links (boo#1165922)
