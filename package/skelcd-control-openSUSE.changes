@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon May 11 07:37:30 UTC 2020 - Steffen Winterfeldt <snwint@suse.com>
+
+- remove obsolete proposal_settings_editable (bsc#1171423)
+- 20200511
+
+-------------------------------------------------------------------
 Thu Mar 26 21:00:00 UTC 2020 - Sergio Lindo <sergiolindo.empresa@gmail.com>
 
 - Fix %s390x links (boo#1165922)
