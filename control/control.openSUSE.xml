@@ -381,7 +381,7 @@ textdomain="control"
             <enable_sshd config:type="boolean">true</enable_sshd>
         </globals>
         <software>
-          <default_patterns>transactional_base</default_patterns>
+          <default_patterns>enhanced_base transactional_base</default_patterns>
         </software>
         <order config:type="integer">400</order>
         <partitioning>
