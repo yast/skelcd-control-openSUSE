@@ -91,6 +91,9 @@ Requires:       yast2-s390
 Requires:       yast2-vm
 %endif
 
+# Release notes should be part of the installation media (bsc#1167866)
+Requires:	release-notes
+
 %if 0%{?suse_version} >= 1500 && !0%{?skelcd_compat}
 %define skelcdpath /usr/lib/skelcd
 %endif
