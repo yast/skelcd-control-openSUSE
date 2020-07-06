@@ -1070,6 +1070,10 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <retranslate config:type="boolean">true</retranslate>
                 </module>
                 <module>
+                    <label>Network Activation</label>
+                    <name>lan</name>
+                </module>
+                <module>
                     <label>Disk Activation</label>
                     <name>disks_activate</name>
                 </module>
