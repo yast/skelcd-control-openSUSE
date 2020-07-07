@@ -431,6 +431,9 @@ textdomain="control"
                             <path>srv</path>
                         </subvolume>
                         <subvolume>
+                            <path>tmp</path>
+                        </subvolume>
+                        <subvolume>
                             <path>boot/writable</path>
                         </subvolume>
                         <subvolume>
