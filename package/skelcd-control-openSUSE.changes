@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Jul 28 15:07:34 UTC 2020 - Richard Brown <rbrown@suse.de>
+
+- Remove tmp subvolume for all system roles [boo#1173461][jsc#PM-1898]
+- 20200728
+
+-------------------------------------------------------------------
 Tue Jul 07 11:07:34 UTC 2020 - Richard Brown <rbrown@suse.de>
 
 - Revert remove tmp subvolume for transactional systems [boo#1173461][jsc#PM-1898]
