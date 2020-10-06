@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Tue Oct  6 04:59:22 UTC 2020 - Simon Lees <sflees@suse.de>
+
+- Server Role should install the new yast2_server pattern.
+
+-------------------------------------------------------------------
 Thu Jul 30 16:57:34 UTC 2020 - Richard Brown <rbrown@suse.de>
 
 - Remove tmp subvolume for all system roles [boo#1173461][jsc#PM-1898]

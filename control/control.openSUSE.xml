@@ -366,7 +366,7 @@ textdomain="control"
             <enable_sshd config:type="boolean">true</enable_sshd>
         </globals>
         <software>
-          <default_patterns>enhanced_base yast2_basis</default_patterns>
+          <default_patterns>enhanced_base yast2_basis yast2_server</default_patterns>
         </software>
         <order config:type="integer">300</order>
       </system_role>
