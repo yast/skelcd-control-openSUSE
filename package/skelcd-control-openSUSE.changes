@@ -1,7 +1,15 @@
 -------------------------------------------------------------------
+Wed Oct  7 15:59:00 CEST 2020 - schubi@suse.de
+
+- Upgrade openSUSE->Jump. Allow vendor change without asking
+  the user. Added "product_upgrade" tag in software/upgrade.
+  (jsc#SLE-15184)
+- 15.2.6
+
+-------------------------------------------------------------------
 Tue Oct  6 09:47:16 UTC 2020 - Guillaume GARDET <guillaume.gardet@opensuse.org>
 
--  Fix update external link for non-x86 on Leap (bsc#1120938)
+- Fix update external link for non-x86 on Leap (bsc#1120938)
 - 15.2.5
 
 -------------------------------------------------------------------
