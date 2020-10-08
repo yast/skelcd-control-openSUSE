@@ -2,7 +2,7 @@
 Wed Oct  7 15:59:00 CEST 2020 - schubi@suse.de
 
 - Upgrade openSUSE->Jump. Allow vendor change without asking
-  the user. Added "product_upgrade" tag in software/upgrade.
+  the user. Added "product_upgrades" tag in software/upgrade.
   (jsc#SLE-14807)
 - 15.2.6
 
