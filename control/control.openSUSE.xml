@@ -185,15 +185,26 @@ textdomain="control"
                     <install_patterns>lxde</install_patterns>
                 </window_manager>
             </window_managers>
-            <!-- Do not ask for vendor change during this defined upgrade -->
-            <product_upgrade>
-                <from>openSUSE Leap</from>
-                <to>openSUSE Jump 15.2.1</to>
-                <compatible_vendors config:type="list">
-                  <compatible_vendor>openSUSE</compatible_vendor>
-                  <compatible_vendor>SUSE LLC</compatible_vendor>
-                </compatible_vendors>
-             </product_upgrade>
+            <!-- Do not ask for vendor change during this defined upgrades -->
+            <product_upgrades config:type="list">
+                <product_upgrade>
+                    <from>openSUSE Leap</from>
+                    <to>openSUSE Jump</to>
+                    <compatible_vendors config:type="list">
+                      <compatible_vendor>openSUSE</compatible_vendor>
+                      <compatible_vendor>SUSE LLC</compatible_vendor>
+                    </compatible_vendors>
+                </product_upgrade>
+	        <!-- Remove this entry when bsc#1177443 has been fixed -->
+                <product_upgrade>
+                    <from>openSUSE Leap</from>
+                    <to>openSUSE Jump 15.2.1</to>
+                    <compatible_vendors config:type="list">
+                      <compatible_vendor>openSUSE</compatible_vendor>
+                      <compatible_vendor>SUSE LLC</compatible_vendor>
+                    </compatible_vendors>
+                </product_upgrade>
+	    </product_upgrades>
         </upgrade>
         <!-- boo#1124590 - Ensure correct product is selected -->
         <select_product>openSUSE</select_product>
