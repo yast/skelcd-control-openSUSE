@@ -1170,6 +1170,11 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 <enable_next>no</enable_next>
             </defaults>
             <modules config:type="list">
+                <module>
+                    <!-- writes hostname and proxy config bsc#1177768 -->
+                    <label>Load Linuxrc Network Configuration</label>
+                    <name>install_inf</name>
+                </module>
                 <!-- As soon as possible -->
                 <module>
                     <label>Installer Update</label>
