@@ -1,7 +1,7 @@
 #
 # spec file for package skelcd-control-openSUSE
 #
-# Copyright (c) 2017 SUSE LINUX GmbH, Nuernberg, Germany.
+# Copyright (c) 2017-2020 SUSE LINUX GmbH, Nuernberg, Germany.
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        20191229
+Version:        20201104
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -41,7 +41,7 @@ BuildRequires:  libxml2-tools
 # xsltproc
 BuildRequires:  libxslt-tools
 # RNG schema
-BuildRequires:  yast2-installation-control >= 4.0.10
+BuildRequires:  yast2-installation-control >= 4.3.6
 ######################################################################
 #
 # Here is the list of Yast packages which are needed in the
@@ -91,6 +91,9 @@ Requires:       yast2-s390
 Requires:       yast2-vm
 %endif
 
+# Release notes should be part of the installation media (bsc#1167866)
+Requires:	release-notes
+
 %if 0%{?suse_version} >= 1500 && !0%{?skelcd_compat}
 %define skelcdpath /usr/lib/skelcd
 %endif
@@ -121,7 +124,7 @@ make %{?_smp_mflags} -C control check
 mkdir -p $RPM_BUILD_ROOT%{?skelcdpath}/CD1
 install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control.xml
 
-%ifarch aarch64 %arm ppc ppc64 ppc64le
+%ifarch aarch64 %arm ppc ppc64 ppc64le s390x
     ports_arch="%{_arch}"
     %ifarch ppc ppc64 ppc64le
         ports_arch="ppc"
@@ -131,6 +134,9 @@ install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control
     %endif
     %ifarch armv7l armv7hl
         ports_arch="armv7hl"
+    %endif
+    %ifarch s390x
+        ports_arch="zsystems"
     %endif
     sed -i -e "s,http://download.opensuse.org/distribution/,http://download.opensuse.org/ports/$ports_arch/distribution/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     sed -i -e "s,http://download.opensuse.org/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/tumbleweed/," %{buildroot}%{?skelcdpath}/CD1/control.xml
@@ -142,6 +148,7 @@ install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control
     sed -i -e "s,http://download.opensuse.org/update/tumbleweed/,http://download.opensuse.org/ports/$ports_arch/update/tumbleweed/," %{buildroot}%{?skelcdpath}/CD1/control.xml
     # Update external link
     sed -i -e "s,https://download.opensuse.org/YaST/Repos/openSUSE_Factory_Servers.xml,https://download.opensuse.org/YaST/Repos/openSUSE_$ports_arch\_Factory_Servers.xml," %{buildroot}%{?skelcdpath}/CD1/control.xml
+    sed -i -e "s,https://download.opensuse.org/YaST/Repos/openSUSE_Leap_,https://download.opensuse.org/YaST/Repos/openSUSE_$ports_arch\Leap_," %{buildroot}%{?skelcdpath}/CD1/control.xml
     #we parse out non existing non-oss repo for ports
     xsltproc -o %{buildroot}%{?skelcdpath}/CD1/control_ports.xml control/nonoss.xsl %{buildroot}%{?skelcdpath}/CD1/control.xml
     mv %{buildroot}%{?skelcdpath}/CD1/control{_ports,}.xml

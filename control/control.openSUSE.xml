@@ -185,6 +185,26 @@ textdomain="control"
                     <install_patterns>lxde</install_patterns>
                 </window_manager>
             </window_managers>
+            <!-- Do not ask for vendor change during this defined upgrades -->
+            <product_upgrades config:type="list">
+                <product_upgrade>
+                    <from>openSUSE Leap</from>
+                    <to>openSUSE Jump</to>
+                    <compatible_vendors config:type="list">
+                      <compatible_vendor>openSUSE</compatible_vendor>
+                      <compatible_vendor>SUSE LLC</compatible_vendor>
+                    </compatible_vendors>
+                </product_upgrade>
+	        <!-- Remove this entry when bsc#1177443 has been fixed -->
+                <product_upgrade>
+                    <from>openSUSE Leap</from>
+                    <to>openSUSE Jump 15.2.1</to>
+                    <compatible_vendors config:type="list">
+                      <compatible_vendor>openSUSE</compatible_vendor>
+                      <compatible_vendor>SUSE LLC</compatible_vendor>
+                    </compatible_vendors>
+                </product_upgrade>
+	    </product_upgrades>
         </upgrade>
         <!-- boo#1124590 - Ensure correct product is selected -->
         <select_product>openSUSE</select_product>
@@ -199,7 +219,6 @@ textdomain="control"
 
         <proposal>
             <lvm config:type="boolean">false</lvm>
-            <proposal_settings_editable config:type="boolean">true</proposal_settings_editable>
         </proposal>
 
         <volumes config:type="list">
@@ -241,9 +260,6 @@ textdomain="control"
                         <path>srv</path>
                     </subvolume>
                     <subvolume>
-                        <path>tmp</path>
-                    </subvolume>
-                    <subvolume>
                         <path>usr/local</path>
                     </subvolume>
                     <!-- unified var subvolume - https://lists.opensuse.org/opensuse-packaging/2017-11/msg00017.html -->
@@ -269,6 +285,10 @@ textdomain="control"
                     <subvolume>
                         <path>boot/grub2/s390x-emu</path>
                         <archs>s390</archs>
+                    </subvolume>
+                    <subvolume>
+                        <path>boot/grub2/arm64-efi</path>
+                        <archs>aarch64</archs>
                     </subvolume>
                 </subvolumes>
             </volume>
@@ -378,7 +398,7 @@ textdomain="control"
             <enable_sshd config:type="boolean">true</enable_sshd>
         </globals>
         <software>
-          <default_patterns>transactional_base</default_patterns>
+          <default_patterns>enhanced_base transactional_base</default_patterns>
         </software>
         <order config:type="integer">400</order>
         <partitioning>
@@ -386,7 +406,6 @@ textdomain="control"
 
             <proposal>
                 <lvm config:type="boolean">false</lvm>
-                <proposal_settings_editable config:type="boolean">true</proposal_settings_editable>
             </proposal>
 
             <volumes config:type="list">
@@ -427,9 +446,6 @@ textdomain="control"
                         </subvolume>
                         <subvolume>
                             <path>srv</path>
-                        </subvolume>
-                        <subvolume>
-                            <path>tmp</path>
                         </subvolume>
                         <subvolume>
                             <path>boot/writable</path>
@@ -1071,6 +1087,10 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                     <retranslate config:type="boolean">true</retranslate>
                 </module>
                 <module>
+                    <label>Network Activation</label>
+                    <name>lan</name>
+                </module>
+                <module>
                     <label>Disk Activation</label>
                     <name>disks_activate</name>
                 </module>
@@ -1219,10 +1239,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                 <module>
                     <label>Perform Installation</label>
                     <name>kickoff</name>
-                </module>
-                <module>
-                    <label>Perform Installation</label>
-                    <name>autoimage</name>
                 </module>
                 <module>
                     <label>Perform Installation</label>

@@ -1,8 +1,85 @@
 -------------------------------------------------------------------
-Sun Dec 29 12:08:13 UTC 2019 - Stasiek Michalski <hellcp@mailbox.org>
+Wed Nov  4 15:6:59 UTC 2020 - Stasiek Michalski <hellcp@mailbox.org>
 
 - Adjust the roles to the new YaST Patterns (boo#1159875)
 - 20191229
+
+-------------------------------------------------------------------
+Wed Oct  7 15:59:00 CEST 2020 - schubi@suse.de
+
+- Upgrade openSUSE->Jump. Allow vendor change without asking
+  the user. Added "product_upgrades" tag in software/upgrade.
+  (jsc#SLE-14807)
+- 20201007
+
+-------------------------------------------------------------------
+Thu Jul 30 16:57:34 UTC 2020 - Richard Brown <rbrown@suse.de>
+
+- Remove tmp subvolume for all system roles [boo#1173461][jsc#PM-1898]
+- 20200730
+
+-------------------------------------------------------------------
+Wed Jul 29 10:59:21 CEST 2020 - schubi@suse.de
+
+- Removed unneeded AY installation step "autoimage" (bsc#1140711).
+- 20200729
+
+-------------------------------------------------------------------
+Tue Jul 07 11:07:34 UTC 2020 - Richard Brown <rbrown@suse.de>
+
+- Revert remove tmp subvolume for transactional systems [boo#1173461][jsc#PM-1898]
+- 20200707
+
+-------------------------------------------------------------------
+Mon Jul  6 09:56:47 UTC 2020 - José Iván López González <jlopez@suse.com>
+
+- Update mode: add Network Activation (bsc#1173676).
+- 20200706
+
+-------------------------------------------------------------------
+Wed Jul 01 13:50:11 UTC 2020 - Richard Brown <rbrown@suse.de>
+
+- Remove tmp subvolume for transactional systems [boo#1173461][jsc#PM-1898]
+- 20200701
+
+-------------------------------------------------------------------
+Thu Jun 25 10:49:55 UTC 2020 - José Iván López González <jlopez@suse.com>
+
+- Add release-notes dependency (bsc#1167866).
+- 20200625
+
+-------------------------------------------------------------------
+Wed May 13 12:40:28 UTC 2020 - Ludwig Nussel <lnussel@suse.de>
+
+- Require enhanced_base for serverro (poo#66105)
+
+  The server role explicitly requests enhanced_base, serverro didn't
+  as transactional_base pulled it in. That depencency was cleaned up
+  so we need to request enhanced_base explicitly.
+- 20200513
+
+-------------------------------------------------------------------
+Mon May 11 07:37:30 UTC 2020 - Steffen Winterfeldt <snwint@suse.com>
+
+- remove obsolete proposal_settings_editable (bsc#1171423)
+- 20200511
+
+-------------------------------------------------------------------
+Thu Mar 26 21:00:00 UTC 2020 - Sergio Lindo <sergiolindo.empresa@gmail.com>
+
+- Fix %s390x links (boo#1165922)
+
+-------------------------------------------------------------------
+Fri Mar 20 08:23:19 UTC 2020 - Guillaume GARDET <guillaume.gardet@opensuse.org>
+
+- Update external link for non-x86 on Leap (bsc#1120938)
+- 20200320
+
+-------------------------------------------------------------------
+Thu Mar 12 16:16:57 UTC 2020 - Imobach Gonzalez Sosa <igonzalezsosa@suse.com>
+
+- Add /boot/grub2/arm64-efi subvolume for all roles (bsc#1162320).
+- 20200312
 
 -------------------------------------------------------------------
 Fri Aug 02 13:17:11 UTC 2019 - Richard Brown <rbrown@suse.de>
