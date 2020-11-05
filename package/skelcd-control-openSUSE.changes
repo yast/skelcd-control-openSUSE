@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Nov  2 09:20:50 UTC 2020 - Guillaume GARDET <guillaume.gardet@opensuse.org>
+
+- Fix update external link for non-x86 on Leap (bsc#1120938)
+- 20201102
+
+-------------------------------------------------------------------
 Wed Oct  7 15:59:00 CEST 2020 - schubi@suse.de
 
 - Upgrade openSUSE->Jump. Allow vendor change without asking
