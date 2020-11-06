@@ -124,6 +124,8 @@ make %{?_smp_mflags} -C control check
 mkdir -p $RPM_BUILD_ROOT%{?skelcdpath}/CD1
 install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control.xml
 
+%if 0%{?sle_version} <= 150200
+# With Leap 15.3 and later, all supported archs are in the same repo. TW remains separated.
 %ifarch aarch64 %arm ppc ppc64 ppc64le s390x
     ports_arch="%{_arch}"
     %ifarch ppc ppc64 ppc64le
@@ -153,6 +155,7 @@ install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control
     xsltproc -o %{buildroot}%{?skelcdpath}/CD1/control_ports.xml control/nonoss.xsl %{buildroot}%{?skelcdpath}/CD1/control.xml
     mv %{buildroot}%{?skelcdpath}/CD1/control{_ports,}.xml
     xmllint --noout --relaxng %{_datadir}/YaST2/control/control.rng %{buildroot}%{?skelcdpath}/CD1/control.xml
+%endif
 %endif
 
 %files
