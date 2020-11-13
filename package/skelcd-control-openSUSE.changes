@@ -1,7 +1,9 @@
 -------------------------------------------------------------------
 Tue Oct  6 04:59:22 UTC 2020 - Simon Lees <sflees@suse.de>
 
-- Server Role should install the new yast2_server pattern.
+- Server Role should install the new yast2_server pattern
+  (boo#1159875)
+- 20201006
 
 -------------------------------------------------------------------
 Thu Jul 30 16:57:34 UTC 2020 - Richard Brown <rbrown@suse.de>
