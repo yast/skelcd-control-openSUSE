@@ -1,10 +1,18 @@
 -------------------------------------------------------------------
+Tue Nov  10 04:59:22 UTC 2020 - Simon Lees <sflees@suse.de>
+
+- Server Role should install the new yast2_server pattern
+  (boo#1159875)
+- 20201110
+
+-------------------------------------------------------------------
 Mon Nov  9 12:21:02 UTC 2020 - Knut Anderssen <kanderssen@suse.com>
 
 - Write linuxrc hostname and proxy configuration also during an
   autoinstallation (bsc#1177768)
 - 20201109
 
+-------------------------------------------------------------------
 Fri Nov  6 09:04:28 UTC 2020 - Guillaume GARDET <guillaume.gardet@opensuse.org>
 
 - Do not update repo paths for Leap 15.3 and later as all supported
