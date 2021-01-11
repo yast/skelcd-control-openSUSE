@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Jan 11 16:44:46 UTC 2021 - Josef Reidinger <jreidinger@suse.com>
+
+- Define default ntp servers (bsc#1180699)
+- 20210111
+
+-------------------------------------------------------------------
 Tue Nov  10 04:59:22 UTC 2020 - Simon Lees <sflees@suse.de>
 
 - Server Role should install the new yast2_server pattern
