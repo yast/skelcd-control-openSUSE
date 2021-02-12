@@ -87,67 +87,66 @@ textdomain="control"
             <regexp_item>^openSUSE Leap 42\..*$</regexp_item>
             <!-- Updating from openSUSE Leap 15.x -->
             <regexp_item>^openSUSE Leap 15\..*$</regexp_item>
-            <!-- old TW snapshots -->
-            <regexp_item>^openSUSE 20[0-9]*$</regexp_item>
-            <!-- new TW snapshots -->
-            <regexp_item>^openSUSE Tumbleweed$</regexp_item>
         </products_supported_for_upgrade>
 
         <!-- Bugzilla #327791, if not set, default is true -->
         <online_repos_preselected config:type="boolean">false</online_repos_preselected>
 
         <!-- FATE #300898, List of external sources accesible during the installation time -->
-        <external_sources_link>https://download.opensuse.org/YaST/Repos/openSUSE_Factory_Servers.xml</external_sources_link>
+        <external_sources_link>https://download.opensuse.org/YaST/Repos/openSUSE_Leap_15.2_Servers.xml</external_sources_link>
 
         <dropped_packages/>
         <extra_urls config:type="list">
             <!-- Default update repository, bnc #381360 -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/update/tumbleweed/</baseurl>
+                <baseurl>http://download.opensuse.org/update/leap/$releasever/oss/</baseurl>
                 <alias>repo-update</alias>
-                <name>openSUSE-Tumbleweed-Update</name>
-                <prod_dir>/</prod_dir>
+                <name>Main Update Repository</name>
                 <enabled config:type="boolean">true</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/update/leap/$releasever/non-oss/</baseurl>
+                <alias>repo-update-non-oss</alias>
+                <name>Update Repository (Non-Oss)</name>
+                <enabled config:type="boolean">true</enabled>
             </extra_url>
 
             <!-- Replacement for EXTRAURLS and OPTIONALURLS -->
             <extra_url>
-                <baseurl>http://download.opensuse.org/tumbleweed/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/distribution/leap/$releasever/repo/oss/</baseurl>
                 <alias>repo-oss</alias>
-                <name>openSUSE-Tumbleweed-Oss</name>
-                <prod_dir>/</prod_dir>
+                <name>Main Repository</name>
                 <enabled config:type="boolean">true</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/tumbleweed/repo/non-oss/</baseurl>
+                <baseurl>http://download.opensuse.org/distribution/leap/$releasever/repo/non-oss/</baseurl>
                 <alias>repo-non-oss</alias>
-                <name>openSUSE-Tumbleweed-Non-Oss</name>
-                <prod_dir>/</prod_dir>
+                <name>Non-OSS Repository</name>
                 <enabled config:type="boolean">true</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/debug/tumbleweed/repo/oss/</baseurl>
+                <baseurl>http://download.opensuse.org/debug/distribution/leap/$releasever/repo/oss/</baseurl>
                 <alias>repo-debug</alias>
-                <name>openSUSE-Tumbleweed-Debug</name>
-                <prod_dir>/</prod_dir>
+                <name>Debug Repository</name>
                 <enabled config:type="boolean">false</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
             </extra_url>
             <extra_url>
-                <baseurl>http://download.opensuse.org/source/tumbleweed/repo/oss/</baseurl>
-                <alias>repo-source</alias>
-                <name>openSUSE-Tumbleweed-Source</name>
-                <prod_dir>/</prod_dir>
+                <baseurl>http://download.opensuse.org/debug/distribution/leap/$releasever/repo/non-oss/</baseurl>
+                <alias>repo-debug-non-oss</alias>
+                <name>Debug Repository (Non-OSS)</name>
                 <enabled config:type="boolean">false</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/debug/update/leap/$releasever/non-oss/</baseurl>
+                <alias>repo-debug-update-non-oss</alias>
+                <name>Update Repository (Debug, Non-OSS)</name>
+                <enabled config:type="boolean">false</enabled>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/source/distribution/leap/$releasever/repo/oss/</baseurl>
+                <alias>repo-source</alias>
+                <name>Source Repository</name>
+                <enabled config:type="boolean">false</enabled>
             </extra_url>
         </extra_urls>
 
@@ -189,7 +188,7 @@ textdomain="control"
             <product_upgrades config:type="list">
                 <product_upgrade>
                     <from>openSUSE Leap</from>
-                    <to>openSUSE Jump</to>
+                    <to>openSUSE Leap</to>
                     <compatible_vendors config:type="list">
                       <compatible_vendor>openSUSE</compatible_vendor>
                       <compatible_vendor>SUSE LLC</compatible_vendor>
@@ -198,7 +197,7 @@ textdomain="control"
 	        <!-- Remove this entry when bsc#1177443 has been fixed -->
                 <product_upgrade>
                     <from>openSUSE Leap</from>
-                    <to>openSUSE Jump 15.2.1</to>
+                    <to>openSUSE Leap 15.3</to>
                     <compatible_vendors config:type="list">
                       <compatible_vendor>openSUSE</compatible_vendor>
                       <compatible_vendor>SUSE LLC</compatible_vendor>
@@ -206,8 +205,6 @@ textdomain="control"
                 </product_upgrade>
 	    </product_upgrades>
         </upgrade>
-        <!-- boo#1124590 - Ensure correct product is selected -->
-        <select_product>openSUSE</select_product>
 
     </software>
 
@@ -258,6 +255,9 @@ textdomain="control"
                     </subvolume>
                     <subvolume>
                         <path>srv</path>
+                    </subvolume>
+                    <subvolume>
+                        <path>tmp</path>
                     </subvolume>
                     <subvolume>
                         <path>usr/local</path>
@@ -343,7 +343,7 @@ textdomain="control"
           <network_manager>always</network_manager>
         </network>
         <software>
-          <default_patterns>kde x11 base enhanced_base x11_yast yast2_basis</default_patterns>
+          <default_patterns>kde x11 base x11_yast yast2_basis</default_patterns>
         </software>
         <order config:type="integer">100</order>
         <no_default config:type="boolean">true</no_default>
@@ -355,7 +355,7 @@ textdomain="control"
           <network_manager>always</network_manager>
         </network>
         <software>
-          <default_patterns>gnome x11 base enhanced_base x11_yast yast2_basis</default_patterns>
+          <default_patterns>gnome x11 base x11_yast yast2_basis</default_patterns>
         </software>
         <order config:type="integer">200</order>
       </system_role>
@@ -366,7 +366,7 @@ textdomain="control"
           <network_manager>always</network_manager>
         </network>
         <software>
-          <default_patterns>xfce x11 base enhanced_base x11_yast yast2_basis</default_patterns>
+          <default_patterns>xfce x11 base x11_yast yast2_basis</default_patterns>
         </software>
         <order config:type="integer">220</order>
       </system_role>
@@ -386,7 +386,7 @@ textdomain="control"
             <enable_sshd config:type="boolean">true</enable_sshd>
         </globals>
         <software>
-          <default_patterns>enhanced_base yast2_basis yast2_server</default_patterns>
+          <default_patterns>yast2_basis yast2_server</default_patterns>
         </software>
         <order config:type="integer">300</order>
       </system_role>
@@ -398,7 +398,7 @@ textdomain="control"
             <enable_sshd config:type="boolean">true</enable_sshd>
         </globals>
         <software>
-          <default_patterns>enhanced_base transactional_base</default_patterns>
+          <default_patterns>transactional_base</default_patterns>
         </software>
         <order config:type="integer">400</order>
         <partitioning>
@@ -448,7 +448,7 @@ textdomain="control"
                             <path>srv</path>
                         </subvolume>
                         <subvolume>
-                            <path>boot/writable</path>
+                            <path>tmp</path>
                         </subvolume>
                         <subvolume>
                             <path>usr/local</path>
@@ -592,7 +592,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
 	  <label>Graphical system with GNOME as desktop environment. Suitable for Workstations, Desktops and Laptops.
 	  </label>
         </gnome_description>
-        <xfce>
+-        <xfce>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Desktop with Xfce</label>
         </xfce>
@@ -603,7 +603,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
 	<generic_desktop>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Generic Desktop</label>
-        </generic_desktop>
+  	</generic_desktop>
         <generic_desktop_description>
           <label>Graphical system with reduced package set. Intended as base for a customized software selection.</label>
         </generic_desktop_description>
@@ -1085,10 +1085,6 @@ TODO: prepare disk here when it does not break space calculation (and remove bel
                         <first_run>yes</first_run>
                     </arguments>
                     <retranslate config:type="boolean">true</retranslate>
-                </module>
-                <module>
-                    <label>Network Activation</label>
-                    <name>lan</name>
                 </module>
                 <module>
                     <label>Disk Activation</label>
