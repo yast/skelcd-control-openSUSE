@@ -1,6 +1,10 @@
 require "yast/rake"
 
 Yast::Tasks.configuration do |conf|
+  conf.obs_api = "https://api.opensuse.org"
+  conf.obs_target = "openSUSE_Leap_15.3"
+  conf.obs_sr_project = "openSUSE:Leap:15.3"
+  conf.obs_project = "YaST:openSUSE:15.3"
   #lets ignore license check for now
   conf.skip_license_check << /.*/
   conf.exclude_files << /README.md/ #do not pack readme
@@ -15,31 +19,3 @@ end
 
 # generate the *-promo files when creating the tarball
 task :tarball => :create_promo
-
-# this package uses the date versioning in master (for openSUSE Tumbleweed),
-# replace the standard yast task implementation
-Rake::Task[:'version:bump'].clear
-namespace :version do
-  desc "Update version in the package/skelcd-control-openSUSE.spec file"
-  task :bump do
-    spec_file = "package/skelcd-control-openSUSE.spec"
-    spec = File.read(spec_file)
-
-    # parse the current version, it can be in <date> or <date>.<release> format
-    _, version, release = spec.match(/^\s*Version:\s*(\w+)(?:\.(\w+))?$/).to_a
-    # use the UTC time to avoid conflicts when updating from different time zones
-    date = Time.now.utc.strftime("%Y%m%d")
-
-    # add a release version if the package has been already updated today
-    new_version = if version == date
-      # if the release was missing it starts from 1
-      "#{date}.#{release.to_i + 1}"
-    else
-      "#{date}"
-    end
-
-    puts "Updating to #{new_version}"
-    spec.gsub!(/^\s*Version:.*$/, "Version:        #{new_version}")
-    File.write(spec_file, spec)
-  end
-end

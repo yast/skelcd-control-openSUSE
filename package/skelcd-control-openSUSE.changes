@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Feb 12 16:49:22 UTC 2021 - Ladislav Slezák <lslezak@suse.cz>
+
+- Adapt the package for openSUSE Leap 15.3
+- Version 15.3.0
+
+-------------------------------------------------------------------
 Tue Nov  10 04:59:22 UTC 2020 - Simon Lees <sflees@suse.de>
 
 - Server Role should install the new yast2_server pattern
