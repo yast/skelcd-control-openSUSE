@@ -592,7 +592,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
 	  <label>Graphical system with GNOME as desktop environment. Suitable for Workstations, Desktops and Laptops.
 	  </label>
         </gnome_description>
--        <xfce>
+        <xfce>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Desktop with Xfce</label>
         </xfce>
@@ -603,7 +603,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
 	<generic_desktop>
           <!-- TRANSLATORS: a label for a system role -->
           <label>Generic Desktop</label>
-  	</generic_desktop>
+        </generic_desktop>
         <generic_desktop_description>
           <label>Graphical system with reduced package set. Intended as base for a customized software selection.</label>
         </generic_desktop_description>
