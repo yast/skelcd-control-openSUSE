@@ -70,6 +70,13 @@ textdomain="control"
         <!-- FATE: #303893, #305588: Default to enabled kdump -->
         <enable_kdump config:type="boolean">true</enable_kdump>
 
+        <!-- Set SELinux permissive mode by default, https://github.com/yast/yast-installation/pull/906#issuecomment-784238549 -->
+        <selinux>
+          <mode>permissive</mode>
+          <configurable config:type="boolean">true</configurable>
+          <patterns>selinux</patterns>
+        </selinux>
+
         <!-- to debug deploying, set to 'true' -->
         <debug_deploying config:type="boolean">false</debug_deploying>
     </globals>
@@ -651,9 +658,9 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <name>default_target</name>
                     <presentation_order>70</presentation_order>
                 </proposal_module>
-                <!-- FaTE #303859 - simple network (in fact firewall) cfg in 1st stage -->
+                <!-- security proposal including firewall, cpu mitigation, selinux and polkit -->
                 <proposal_module>
-                    <name>firewall</name>
+                    <name>security</name>
                     <presentation_order>95</presentation_order>
                 </proposal_module>
                 <!-- Fate #319624 - proposal and dialog for existing SSH host keys -->
@@ -713,7 +720,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <presentation_order>75</presentation_order>
                 </proposal_module>
                 <proposal_module>
-                    <name>firewall</name>
+                    <name>security</name>
                     <presentation_order>50</presentation_order>
                 </proposal_module>
                 <proposal_module>
@@ -766,9 +773,8 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <name>default_target</name>
                     <presentation_order>70</presentation_order>
                 </proposal_module>
-                <!-- FaTE #303859 - simple network (in fact firewall) cfg in 1st stage -->
                 <proposal_module>
-                    <name>firewall</name>
+                    <name>security</name>
                     <presentation_order>99</presentation_order>
                 </proposal_module>
                 <!-- Fate #319624 - proposal and dialog for existing SSH host keys -->
