@@ -72,7 +72,7 @@ textdomain="control"
 
         <!-- Set SELinux permissive mode by default, https://github.com/yast/yast-installation/pull/906#issuecomment-784238549 -->
         <selinux>
-          <mode>permissive</mode>
+          <mode>disabled</mode>
           <configurable config:type="boolean">true</configurable>
           <patterns>selinux</patterns>
         </selinux>
