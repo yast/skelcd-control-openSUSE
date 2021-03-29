@@ -648,6 +648,12 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <name>hwinfo</name>
                     <presentation_order>80</presentation_order>
                 </proposal_module>
+                <!-- security proposal including firewall, cpu mitigation, selinux and polkit -->
+                <!-- It adds to software proposal, so it needs to above of it and it needs to be below bootloader to modify it -->
+                <proposal_module>
+                    <name>security</name>
+                    <presentation_order>95</presentation_order>
+                </proposal_module>
                 <!-- software proposal should be computed almost at the end -->
                 <proposal_module>
                     <name>software</name>
@@ -657,11 +663,6 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
         <!-- propose the default runlevel after software is selected, bnc #380141 -->
                     <name>default_target</name>
                     <presentation_order>70</presentation_order>
-                </proposal_module>
-                <!-- security proposal including firewall, cpu mitigation, selinux and polkit -->
-                <proposal_module>
-                    <name>security</name>
-                    <presentation_order>95</presentation_order>
                 </proposal_module>
                 <!-- Fate #319624 - proposal and dialog for existing SSH host keys -->
                 <proposal_module>
@@ -709,6 +710,10 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <name>kdump</name>
                     <presentation_order>60</presentation_order>
                 </proposal_module>
+                <proposal_module>
+                    <name>security</name>
+                    <presentation_order>50</presentation_order>
+                </proposal_module>
                 <!-- software proposal should be computed almost at the end -->
                 <proposal_module>
                     <name>software</name>
@@ -718,10 +723,6 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                 <proposal_module>
                     <name>default_target</name>
                     <presentation_order>75</presentation_order>
-                </proposal_module>
-                <proposal_module>
-                    <name>security</name>
-                    <presentation_order>50</presentation_order>
                 </proposal_module>
                 <proposal_module>
                     <name>network</name>
@@ -763,6 +764,10 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <name>hwinfo</name>
                     <presentation_order>80</presentation_order>
                 </proposal_module>
+                <proposal_module>
+                    <name>security</name>
+                    <presentation_order>99</presentation_order>
+                </proposal_module>
                 <!-- software proposal should be computed almost at the end -->
                 <proposal_module>
                     <name>software</name>
@@ -772,10 +777,6 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                 <proposal_module>
                     <name>default_target</name>
                     <presentation_order>70</presentation_order>
-                </proposal_module>
-                <proposal_module>
-                    <name>security</name>
-                    <presentation_order>99</presentation_order>
                 </proposal_module>
                 <!-- Fate #319624 - proposal and dialog for existing SSH host keys -->
                 <proposal_module>

@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Mon Mar 29 09:07:18 UTC 2021 - Josef Reidinger <jreidinger@suse.com>
+
+- Respect additional software needed by security proposal
+  (bsc#1183804)
+- 20210329
+
+-------------------------------------------------------------------
 Tue Mar 16 15:51:39 UTC 2021 - Josef Reidinger <jreidinger@suse.com>
 
 - Set SELinux disabled by default (bsc#1183583)
