@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Tue Mar 30 09:00:15 UTC 2021 - David Diaz <dgonzalez@suse.com>
+
+- Use the new security client (related to jsc#SLE-17307)
+- Respect additional software needed by security (related to
+  bsc#1183804)
+- 15.3.2
+
+-------------------------------------------------------------------
 Wed Feb 24 09:06:46 UTC 2021 - David Diaz <dgonzalez@suse.com>
 
 - Set SELinux disabled mode by default (related to jsc#SLE-17307)
