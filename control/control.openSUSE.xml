@@ -297,6 +297,10 @@ textdomain="control"
                         <path>boot/grub2/arm64-efi</path>
                         <archs>aarch64</archs>
                     </subvolume>
+		    <subvolume>
+                        <path>boot/grub2/arm-efi</path>
+                        <archs>arm</archs>
+                    </subvolume>
                 </subvolumes>
             </volume>
 
