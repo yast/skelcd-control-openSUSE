@@ -1,7 +1,7 @@
 -------------------------------------------------------------------
 Wed Apr 14 13:53:36 UTC 2021 - Guillaume GARDET <guillaume.gardet@opensuse.org>
 
-- Add missing arm grub2 efi subvolume
+- Add missing arm grub2 efi subvolume (boo#1184788)
 - 20210414
 
 -------------------------------------------------------------------
