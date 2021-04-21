@@ -137,6 +137,12 @@ textdomain="control"
                 <enabled config:type="boolean">false</enabled>
             </extra_url>
             <extra_url>
+                <baseurl>http://download.opensuse.org/debug/update/leap/$releasever/oss/</baseurl>
+                <alias>repo-debug-update</alias>
+                <name>Update Repository (Debug)</name>
+                <enabled config:type="boolean">false</enabled>
+            </extra_url>
+            <extra_url>
                 <baseurl>http://download.opensuse.org/debug/distribution/leap/$releasever/repo/non-oss/</baseurl>
                 <alias>repo-debug-non-oss</alias>
                 <name>Debug Repository (Non-OSS)</name>
