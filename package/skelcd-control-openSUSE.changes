@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Apr 21 20:04:24 UTC 2021 - Knut Anderssen <kanderssen@suse.com>
+
+- Added debug update repo (boo#1182915)
+- 15.3.3
+
+-------------------------------------------------------------------
 Tue Mar 30 09:00:15 UTC 2021 - David Diaz <dgonzalez@suse.com>
 
 - Use the new security client (related to jsc#SLE-17307)
