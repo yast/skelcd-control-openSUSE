@@ -1,4 +1,9 @@
 -------------------------------------------------------------------
+Wed Apr 21 11:20:34 UTC 2021 - Ladislav Slezák <lslezak@suse.cz>
+
+- 15.4.0
+
+-------------------------------------------------------------------
 Tue Mar 30 09:00:15 UTC 2021 - David Diaz <dgonzalez@suse.com>
 
 - Use the new security client (related to jsc#SLE-17307)
