@@ -787,6 +787,10 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <name>ssh_import</name>
                     <presentation_order>90</presentation_order>
                 </proposal_module>
+                <proposal_module>
+                    <name>network</name>
+                    <presentation_order>98</presentation_order>
+                </proposal_module>
             </proposal_modules>
         </proposal>
 
