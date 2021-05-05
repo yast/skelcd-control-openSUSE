@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed May  5 13:40:25 UTC 2021 - Guillaume GARDET <guillaume.gardet@opensuse.org>
+
+- Fix path of repo for Leap 15.3+ armv7 (boo#1183795)
+- 15.4.1
+
+-------------------------------------------------------------------
 Wed Apr 21 11:20:34 UTC 2021 - Ladislav Slezák <lslezak@suse.cz>
 
 - 15.4.0
