@@ -41,7 +41,7 @@ BuildRequires:  libxml2-tools
 # xsltproc
 BuildRequires:  libxslt-tools
 # RNG schema
-BuildRequires:  yast2-installation-control >= 4.3.8
+BuildRequires:  yast2-installation-control >= 4.4.3
 ######################################################################
 #
 # Here is the list of Yast packages which are needed in the
