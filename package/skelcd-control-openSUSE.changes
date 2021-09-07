@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Tue Sep  7 14:14:29 UTC 2021 - Knut Anderssen <kanderssen@suse.com>
+
+- Define default NTP servers for Leap (bsc#1180699)
+- 20210907
+
+-------------------------------------------------------------------
 Tue Jul 27 08:52:36 UTC 2021 - Knut Anderssen <kanderssen@suse.com>
 
 - During upgrade run also the manual network configuration when it
