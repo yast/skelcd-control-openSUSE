@@ -47,6 +47,14 @@ textdomain="control"
         <show_addons config:type="boolean">true</show_addons>
         <addons_default config:type="boolean">false</addons_default>
 
+        <!-- #1180699: Use openSUSE default NTP servers instead of SUSE ones -->
+        <default_ntp_servers config:type="list">
+          <ntp_server>0.opensuse.pool.ntp.org</ntp_server>
+          <ntp_server>1.opensuse.pool.ntp.org</ntp_server>
+          <ntp_server>2.opensuse.pool.ntp.org</ntp_server>
+          <ntp_server>3.opensuse.pool.ntp.org</ntp_server>
+        </default_ntp_servers>
+
         <!-- FATE #301937, Save /root content from the installation system to the installed system -->
         <save_instsys_content config:type="list">
             <save_instsys_item>
