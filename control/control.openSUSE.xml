@@ -124,6 +124,30 @@ textdomain="control"
                 <name>Update Repository (Non-Oss)</name>
                 <enabled config:type="boolean">true</enabled>
             </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/update/leap/$releasever/backports/</baseurl>
+                <alias>repo-backports-update</alias>
+                <name>Update repository of openSUSE Backports</name>
+                <enabled config:type="boolean">true</enabled>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/update/leap/$releasever/backports_debug/</baseurl>
+                <alias>repo-backports-debug-update</alias>
+                <name>Update repository of openSUSE Backports (Debug)</name>
+                <enabled config:type="boolean">false</enabled>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/update/leap/$releasever/sle/</baseurl>
+                <alias>repo-sle-update</alias>
+                <name>Update repository with updates from SUSE Linux Enterprise 15</name>
+                <enabled config:type="boolean">true</enabled>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/debug/update/leap/$releasever/sle/</baseurl>
+                <alias>repo-sle-debug-update</alias>
+                <name>Update repository with updates from SUSE Linux Enterprise 15 (Debug)</name>
+                <enabled config:type="boolean">false</enabled>
+            </extra_url>
 
             <!-- Replacement for EXTRAURLS and OPTIONALURLS -->
             <extra_url>
@@ -142,6 +166,12 @@ textdomain="control"
                 <baseurl>http://download.opensuse.org/debug/distribution/leap/$releasever/repo/oss/</baseurl>
                 <alias>repo-debug</alias>
                 <name>Debug Repository</name>
+                <enabled config:type="boolean">false</enabled>
+            </extra_url>
+            <extra_url>
+                <baseurl>http://download.opensuse.org/debug/update/leap/$releasever/oss/</baseurl>
+                <alias>repo-debug-update</alias>
+                <name>Update Repository (Debug)</name>
                 <enabled config:type="boolean">false</enabled>
             </extra_url>
             <extra_url>
