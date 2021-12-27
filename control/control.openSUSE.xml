@@ -78,17 +78,15 @@ textdomain="control"
         <!-- FATE: #303893, #305588: Default to enabled kdump -->
         <enable_kdump config:type="boolean">true</enable_kdump>
 
-        <!-- Set SELinux permissive mode by default, https://github.com/yast/yast-installation/pull/906#issuecomment-784238549 -->
         <lsm>
-          <default>apparmor</default>
-          <!-- Set SELinux disabled mode by default -->
+          <select>apparmor</select>
           <apparmor>
             <patterns>apparmor</patterns>
             <selectable config:type="boolean">true</selectable>
           </apparmor>
+          <!-- Set SELinux permissive mode by default, https://github.com/yast/yast-installation/pull/906#issuecomment-784238549 -->
           <selinux>
-            <!-- Set SELinux enforcing mode by default -->
-            <mode>enforcing</mode>
+            <mode>permissive</mode>
             <configurable config:type="boolean">true</configurable>
             <selectable config:type="boolean">true</selectable>
             <patterns>selinux</patterns>
