@@ -10,8 +10,13 @@ jobs:
   # checks into one job avoids that overhead
   Checks:
     runs-on: ubuntu-latest
+
+    strategy:
+      matrix:
+        distro: [ "tumbleweed" ]
+
     container:
-      image: registry.opensuse.org/yast/head/containers/yast-ruby:latest
+      image: registry.opensuse.org/yast/head/containers_${{matrix.distro}}/yast-ruby
 
     steps:
 
