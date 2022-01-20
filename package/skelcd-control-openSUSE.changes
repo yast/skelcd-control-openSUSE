@@ -1,7 +1,7 @@
 -------------------------------------------------------------------
 Wed Jan 19 12:48:38 UTC 2022 - Ludwig Nussel <lnussel@suse.de>
 
-- Use NetworkManager always
+- Use NetworkManager always (boo#1172684)
 - 20220119
 
 -------------------------------------------------------------------
