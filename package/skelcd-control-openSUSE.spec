@@ -59,8 +59,6 @@ Requires:       yast2-firewall
 Requires:       yast2-installation >= 3.1.201
 Requires:       yast2-iscsi-client
 Requires:       yast2-kdump
-# yast2-kdump has only runtime dependency but the package is also needed in the inst-sys
-Requires:       kdump
 Requires:       yast2-multipath
 Requires:       yast2-network >= 3.1.24
 Requires:       yast2-nfs-client
