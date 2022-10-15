@@ -605,26 +605,26 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
         </roles_help>
         <kde>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>Full desktop with KDE Plasma</label>
+          <label>Desktop with KDE Plasma</label>
         </kde>
         <kde_description>
-	  <label>Complete graphical system with KDE Plasma as desktop environment. Suitable for Workstations, Desktops and Laptops.
+	  <label>Graphical system with KDE Plasma as desktop environment and additional set of software. Suitable for Workstations, Desktops and Laptops.
           </label>
         </kde_description>
         <gnome>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>Full desktop with GNOME</label>
+          <label>Desktop with GNOME</label>
         </gnome>
         <gnome_description>
-	  <label>Complete graphical system with GNOME as desktop environment. Suitable for Workstations, Desktops and Laptops.
+	  <label>Graphical system with GNOME as desktop environment and additional set of software. Suitable for Workstations, Desktops and Laptops.
 	  </label>
         </gnome_description>
         <xfce>
           <!-- TRANSLATORS: a label for a system role -->
-          <label>Full desktop with Xfce</label>
+          <label>Desktop with Xfce</label>
         </xfce>
         <xfce_description>
-          <label>Complete graphical system with Xfce as desktop environment. Suitable for Workstations, Desktops and Laptops.
+          <label>Graphical system with Xfce as desktop environment and additional set of software. Suitable for Workstations, Desktops and Laptops.
           </label>
         </xfce_description>
 	<generic_desktop>
