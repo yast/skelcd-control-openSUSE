@@ -608,7 +608,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
           <label>Desktop with KDE Plasma</label>
         </kde>
         <kde_description>
-	  <label>Graphical system with KDE Plasma as desktop environment. Suitable for Workstations, Desktops and Laptops.
+	  <label>Graphical system with KDE Plasma as desktop environment and additional set of software. Suitable for Workstations, Desktops and Laptops.
           </label>
         </kde_description>
         <gnome>
@@ -616,7 +616,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
           <label>Desktop with GNOME</label>
         </gnome>
         <gnome_description>
-	  <label>Graphical system with GNOME as desktop environment. Suitable for Workstations, Desktops and Laptops.
+	  <label>Graphical system with GNOME as desktop environment and additional set of software. Suitable for Workstations, Desktops and Laptops.
 	  </label>
         </gnome_description>
         <xfce>
@@ -624,7 +624,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
           <label>Desktop with Xfce</label>
         </xfce>
         <xfce_description>
-          <label>Graphical system with Xfce as desktop environment. Suitable for Workstations, Desktops and Laptops.
+          <label>Graphical system with Xfce as desktop environment and additional set of software. Suitable for Workstations, Desktops and Laptops.
           </label>
         </xfce_description>
 	<generic_desktop>
