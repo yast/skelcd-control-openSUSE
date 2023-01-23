@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Mon Jan 23 16:13:13 UTC 2023 - Ladislav Slezák <lslezak@suse.com>
+
+- Adapt the package for openSUSE Leap 15.5 (bsc#1207424)
+- Version 15.5.0
+
+-------------------------------------------------------------------
 Thu Feb  3 08:36:35 UTC 2022 - David Diaz <dgonzalez@suse.com>
 
 - Set a full preemption mode via additional kernel param.
