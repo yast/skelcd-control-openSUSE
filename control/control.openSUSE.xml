@@ -192,6 +192,15 @@ textdomain="control"
                 <name>Source Repository</name>
                 <enabled config:type="boolean">false</enabled>
             </extra_url>
+            <extra_url>
+                <baseurl>https://codecs.opensuse.org/openh264/openSUSE_Leap</baseurl>
+                <alias>repo-openh264</alias>
+                <name>Open H.264 Codec (openSUSE Leap)</name>
+                <prod_dir>/</prod_dir>
+                <enabled config:type="boolean">true</enabled>
+                <autorefresh config:type="boolean">true</autorefresh>
+                <priority config:type="integer">99</priority>
+            </extra_url>
         </extra_urls>
 
         <!-- bnc#874116: Handling software proposal during product upgrade -->
