@@ -178,7 +178,7 @@ textdomain="control"
             <extra_url>
                 <baseurl>https://codecs.opensuse.org/openh264/openSUSE_Tumbleweed</baseurl>
                 <alias>repo-openh264</alias>
-                <name>openSUSE-Tumbleweed-openh264</name>
+                <name>Open H.264 Codec (openSUSE Leap)</name>
                 <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
                 <autorefresh config:type="boolean">true</autorefresh>
