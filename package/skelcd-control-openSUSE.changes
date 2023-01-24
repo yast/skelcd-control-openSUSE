@@ -1,3 +1,10 @@
+Tue Jan 24 10:37:00 UTC 2023 - Lubos Kocman <Lubos.Kocman@suse.com>
+
+- Enable Open H.264 repo by default code-o-o#leap/features/22
+  Resolves jsc#OPENSUSE-46 jsc#SLE-18915
+  fix changelog date
+- 15.4.6
+
 -------------------------------------------------------------------
 Thu Feb  3 08:36:35 UTC 2022 - David Diaz <dgonzalez@suse.com>
 
