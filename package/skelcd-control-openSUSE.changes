@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Thu Jan 26 10:24:00 UTC 2023 - Lubos Kocman <Lubos.Kocman@suse.com>
+
+- Use http:// for openh264 as the redirectiont target
+  does not support https:// (Resolves boo#1207567).
+
+- 20230126
+
+-------------------------------------------------------------------
 Wed Jan 25 09:44:50 UTC 2023 - Josef Reidinger <jreidinger@suse.com>
 
 - drop unused proposals definition ( related to drop of yast2-sound
