@@ -3,6 +3,7 @@ Thu Jan 26 10:24:00 UTC 2023 - Lubos Kocman <Lubos.Kocman@suse.com>
 
 - Use http:// for openh264 as the redirectiont target
   does not support https:// (Resolves boo#1207567).
+- Bump external sources and migrate-to to 15.4
 
 - 15.4.7
 +-------------------------------------------------------------------
