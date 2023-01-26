@@ -870,52 +870,6 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                 <proposal_module>bootloader</proposal_module>
             </proposal_modules>
         </proposal>
-
-        <proposal>
-            <label>Network Configuration</label>
-            <name>network</name>
-            <stage>continue,normal</stage>
-            <unique_id>network_continue</unique_id>
-            <enable_skip>yes</enable_skip>
-            <proposal_modules config:type="list">
-                <proposal_module>
-                    <name>lan</name>
-                    <presentation_order>20</presentation_order>
-                </proposal_module>
-                <proposal_module>
-                    <name>general</name>
-                    <presentation_order>5</presentation_order>
-                </proposal_module>
-                <proposal_module>
-                    <name>isdn</name>
-                    <presentation_order>40</presentation_order>
-                </proposal_module>
-                <proposal_module>
-                    <name>remote</name>
-                    <presentation_order>60</presentation_order>
-                </proposal_module>
-                <proposal_module>
-                    <name>firewall</name>
-                    <presentation_order>10</presentation_order>
-                </proposal_module>
-                <proposal_module>
-                    <name>proxy</name>
-                    <presentation_order>70</presentation_order>
-                </proposal_module>
-            </proposal_modules>
-        </proposal>
-
-        <proposal>
-            <label>Hardware Configuration</label>
-            <name>hardware</name>
-            <stage>continue</stage>
-            <unique_id>hardware_continue</unique_id>
-            <enable_skip>yes</enable_skip>
-            <proposal_modules config:type="list">
-                <proposal_module>printer</proposal_module>
-                <proposal_module>sound</proposal_module>
-            </proposal_modules>
-        </proposal>
     </proposals>
 
     <workflows config:type="list">
