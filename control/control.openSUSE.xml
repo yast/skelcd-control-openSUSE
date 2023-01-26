@@ -107,7 +107,7 @@ textdomain="control"
         <online_repos_preselected config:type="boolean">false</online_repos_preselected>
 
         <!-- FATE #300898, List of external sources accesible during the installation time -->
-        <external_sources_link>https://download.opensuse.org/YaST/Repos/openSUSE_Leap_15.3_Servers.xml</external_sources_link>
+        <external_sources_link>https://download.opensuse.org/YaST/Repos/openSUSE_Leap_15.5_Servers.xml</external_sources_link>
 
         <dropped_packages/>
         <extra_urls config:type="list">
@@ -250,7 +250,7 @@ textdomain="control"
 	        <!-- Remove this entry when bsc#1177443 has been fixed -->
                 <product_upgrade>
                     <from>openSUSE Leap</from>
-                    <to>openSUSE Leap 15.3</to>
+                    <to>openSUSE Leap 15.5</to>
                     <compatible_vendors config:type="list">
                       <compatible_vendor>openSUSE</compatible_vendor>
                       <compatible_vendor>SUSE LLC</compatible_vendor>
