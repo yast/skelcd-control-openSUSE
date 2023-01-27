@@ -176,7 +176,7 @@ textdomain="control"
             </extra_url>
             <!-- https://en.opensuse.org/OpenH264 -->
             <extra_url>
-                <baseurl>https://codecs.opensuse.org/openh264/openSUSE_Tumbleweed</baseurl>
+                <baseurl>http://codecs.opensuse.org/openh264/openSUSE_Tumbleweed</baseurl>
                 <alias>repo-openh264</alias>
                 <name>Open H.264 Codec (openSUSE Tumbleweed)</name>
                 <prod_dir>/</prod_dir>
