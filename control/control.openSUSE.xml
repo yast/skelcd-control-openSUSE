@@ -306,6 +306,10 @@ textdomain="control"
                     <!-- architecture specific subvolumes -->
 
                     <subvolume>
+                        <path>boot/grub2/i386-efi</path>
+                        <archs>i386,x86_64</archs>
+                    </subvolume>
+                    <subvolume>
                         <path>boot/grub2/i386-pc</path>
                         <archs>i386,x86_64</archs>
                     </subvolume>
