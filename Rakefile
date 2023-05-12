@@ -6,16 +6,6 @@ Yast::Tasks.configuration do |conf|
   conf.exclude_files << /README.md/ #do not pack readme
 end
 
-desc "Generate *-promo package files"
-task :create_promo do
-  Dir.chdir("package") do
-    sh "./pre_checkin.sh"
-  end
-end
-
-# generate the *-promo files when creating the tarball
-task :tarball => :create_promo
-
 # this package uses the date versioning in master (for openSUSE Tumbleweed),
 # replace the standard yast task implementation
 Rake::Task[:'version:bump'].clear

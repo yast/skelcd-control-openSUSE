@@ -1,4 +1,12 @@
 -------------------------------------------------------------------
+Fri May 12 07:45:59 UTC 2023 - Ladislav Slezák <lslezak@suse.com>
+
+- Drop the *-promo subpackage (not used anymore and we would have
+  to switch it to _multibuild to use it further, related to
+  bsc#1211319)
+- 20230512
+
+-------------------------------------------------------------------
 Thu Jan 26 10:24:00 UTC 2023 - Lubos Kocman <Lubos.Kocman@suse.com>
 
 - Use http:// for openh264 as the redirection target
