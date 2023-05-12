@@ -1,4 +1,11 @@
 -------------------------------------------------------------------
+Fri May 12 08:59:41 UTC 2023 - Ladislav Slezák <lslezak@suse.com>
+
+- Fix up for the previous update: xsltproc tool is still needed
+  for building on some architectures
+- 15.5.3
+
+-------------------------------------------------------------------
 Fri May 12 07:45:59 UTC 2023 - Ladislav Slezák <lslezak@suse.com>
 
 - Drop the *-promo subpackage (not used anymore, related to
