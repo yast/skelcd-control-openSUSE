@@ -27,7 +27,7 @@
 #
 ######################################################################
 Name:           skelcd-control-openSUSE
-Version:        20230126
+Version:        20230512
 Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
@@ -38,8 +38,6 @@ Source:         skelcd-control-openSUSE-%{version}.tar.bz2
 Source99:       README.md
 # xmllint
 BuildRequires:  libxml2-tools
-# xsltproc
-BuildRequires:  libxslt-tools
 # Added 'lsm' section (jsc#SLE-22069)
 BuildRequires:  yast2-installation-control >= 4.4.7
 ######################################################################
@@ -119,11 +117,7 @@ make %{?_smp_mflags} -C control check
 #
 # Add control file
 #
-%if "%{name}" == "skelcd-control-openSUSE-promo"
-    CONTROL_FILE=control.openSUSE-promo.xml
-%else
-    CONTROL_FILE=control.openSUSE.xml
-%endif
+CONTROL_FILE=control.openSUSE.xml
 
 mkdir -p $RPM_BUILD_ROOT%{?skelcdpath}/CD1
 install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control.xml
