@@ -107,7 +107,8 @@ textdomain="control"
         <online_repos_preselected config:type="boolean">false</online_repos_preselected>
 
         <!-- FATE #300898, List of external sources accesible during the installation time -->
-        <external_sources_link>https://download.opensuse.org/YaST/Repos/openSUSE_Leap_15.5_Servers.xml</external_sources_link>
+        <!-- the file for 15.5 does not exist, but the 15.3 file uses $releasever so it can be reused -->
+        <external_sources_link>https://download.opensuse.org/YaST/Repos/openSUSE_Leap_15.3_Servers.xml</external_sources_link>
 
         <dropped_packages/>
         <extra_urls config:type="list">
@@ -193,13 +194,10 @@ textdomain="control"
                 <enabled config:type="boolean">false</enabled>
             </extra_url>
             <extra_url>
-                <baseurl>http://codecs.opensuse.org/openh264/openSUSE_Leap</baseurl>
+                <baseurl>http://codecs.opensuse.org/openh264/openSUSE_Leap/</baseurl>
                 <alias>repo-openh264</alias>
                 <name>Open H.264 Codec (openSUSE Leap)</name>
-                <prod_dir>/</prod_dir>
                 <enabled config:type="boolean">true</enabled>
-                <autorefresh config:type="boolean">true</autorefresh>
-                <priority config:type="integer">99</priority>
             </extra_url>
         </extra_urls>
 
