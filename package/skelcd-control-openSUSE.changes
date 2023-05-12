@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri May 12 13:55:53 UTC 2023 - Ladislav Slezák <lslezak@suse.com>
+
+- Imported the fix by Yuchen Lin from OBS to Git
+- 15.5.4
+
+-------------------------------------------------------------------
 Fri May 12 08:59:41 UTC 2023 - Ladislav Slezák <lslezak@suse.com>
 
 - Fix up for the previous update: xsltproc tool is still needed
@@ -11,6 +17,14 @@ Fri May 12 07:45:59 UTC 2023 - Ladislav Slezák <lslezak@suse.com>
 - Drop the *-promo subpackage (not used anymore, related to
   bsc#1211319)
 - 15.5.2
+
+-------------------------------------------------------------------
+Sat Mar  4 10:00:23 UTC 2023 - Yuchen Lin <mlin+factory@suse.de>
+
+- Fix openh264 repo url
+  * Add fix_openh264_format.patch
+- Change the file of external_sources_link back to openSUSE_Leap_15.3_Servers.xml
+  * the filename is not right, but the url noted in the file uses $releasever
 
 -------------------------------------------------------------------
 Thu Jan 26 10:24:00 UTC 2023 - Lubos Kocman <Lubos.Kocman@suse.com>
