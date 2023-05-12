@@ -34,8 +34,6 @@ License:        MIT
 Group:          Metapackages
 Url:            https://github.com/yast/skelcd-control-openSUSE
 Source:         skelcd-control-openSUSE-%{version}.tar.bz2
-# we do not distribute it, but need to have it here, otherwise build service checks complain
-Source99:       README.md
 # xmllint
 BuildRequires:  libxml2-tools
 # Added 'lsm' section (jsc#SLE-22069)
