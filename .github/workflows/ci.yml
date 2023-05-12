@@ -20,5 +20,8 @@ jobs:
     - name: POT Check
       run: rake check:pot
 
-    - name: CI checks
-      run: sh .ci.sh
+    - name: Validate XML
+      run: make -C control check
+
+    - name: Package Build
+      run: yast-ci-ruby
