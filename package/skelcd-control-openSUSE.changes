@@ -2,6 +2,8 @@
 Fri May 12 13:55:53 UTC 2023 - Ladislav Slezák <lslezak@suse.com>
 
 - Imported the fix by Yuchen Lin from OBS to Git
+  (the fix_openh264_format.patch has been included upstream,
+  removing the patch from OBS)
 - 15.5.4
 
 -------------------------------------------------------------------
