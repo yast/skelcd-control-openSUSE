@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Sep 20 12:31:53 UTC 2023 - Stefan Hundhammer <shundhammer@suse.com>
+
+- Adapted for openSUSE Leap 15.6 (bsc#1215432)
+- 15.6.0
+
+-------------------------------------------------------------------
 Fri May 12 13:55:53 UTC 2023 - Ladislav Slezák <lslezak@suse.com>
 
 - Imported the fix by Yuchen Lin from OBS to Git
