@@ -117,7 +117,7 @@ make %{?_smp_mflags} -C control check
 #
 # Add control file
 #
-CONTROL_FILE=control.openSUSE.xml
+CONTROL_FILE=control.xml
 
 mkdir -p $RPM_BUILD_ROOT%{?skelcdpath}/CD1
 install -m 644 control/${CONTROL_FILE} $RPM_BUILD_ROOT%{?skelcdpath}/CD1/control.xml
