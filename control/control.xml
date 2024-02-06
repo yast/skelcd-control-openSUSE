@@ -27,6 +27,7 @@ textdomain="control"
         <enable_clone config:type="boolean">false</enable_clone>
         <enable_register_hwdata config:type="boolean">true</enable_register_hwdata>
         <enable_register_optional config:type="boolean">true</enable_register_optional>
+        <enable_systemd_boot config:type="boolean">true</enable_systemd_boot>
         <display_register_forcereg config:type="boolean">true</display_register_forcereg>
         <disable_register_w3m config:type="boolean">true</disable_register_w3m>
         <register_monthly config:type="boolean">false</register_monthly>
