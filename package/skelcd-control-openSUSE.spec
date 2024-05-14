@@ -1,7 +1,7 @@
 #
 # spec file for package skelcd-control-openSUSE
 #
-# Copyright (c) 2017-2020 SUSE LINUX GmbH, Nuernberg, Germany.
+# Copyright (c) 2024 SUSE LLC
 #
 # All modifications and additions to the file contributed by third parties
 # remain the property of their copyright owners, unless otherwise agreed
@@ -12,7 +12,7 @@
 # license that conforms to the Open Source Definition (Version 1.9)
 # published by the Open Source Initiative.
 
-# Please submit bugfixes or comments via http://bugs.opensuse.org/
+# Please submit bugfixes or comments via https://bugs.opensuse.org/
 #
 
 
@@ -32,7 +32,7 @@ Release:        0
 Summary:        The openSUSE Installation Control file
 License:        MIT
 Group:          Metapackages
-Url:            https://github.com/yast/skelcd-control-openSUSE
+URL:            https://github.com/yast/skelcd-control-openSUSE
 Source:         skelcd-control-openSUSE-%{version}.tar.bz2
 # xmllint
 BuildRequires:  libxml2-tools
@@ -68,8 +68,8 @@ Requires:       yast2-ntp-client
 Requires:       yast2-proxy
 # this is the default theme
 Requires:       yast2-qt-branding-openSUSE
-Requires:       yast2-services-manager
 Requires:       yast2-configuration-management
+Requires:       yast2-services-manager
 Requires:       yast2-slp
 Requires:       yast2-theme
 Requires:       yast2-trans-stats
@@ -94,7 +94,7 @@ Requires:       yast2-vm
 %endif
 
 # Release notes should be part of the installation media (bsc#1167866)
-Requires:	release-notes
+Requires:       release-notes
 
 %if 0%{?suse_version} >= 1500 && !0%{?skelcd_compat}
 %define skelcdpath /usr/lib/skelcd
