@@ -117,6 +117,9 @@ textdomain="control"
             <regexp_item>^openSUSE 20[0-9]*$</regexp_item>
             <!-- new TW snapshots -->
             <regexp_item>^openSUSE Tumbleweed$</regexp_item>
+            <!-- Slowroll snapshots -->
+            <regexp_item>^openSUSE Tumbleweed-Slowroll$</regexp_item>
+            <regexp_item>^openSUSE Slowroll$</regexp_item>
         </products_supported_for_upgrade>
 
         <!-- Bugzilla #327791, if not set, default is true -->
