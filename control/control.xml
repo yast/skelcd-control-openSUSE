@@ -258,6 +258,8 @@ textdomain="control"
 
         <proposal>
             <lvm config:type="boolean">false</lvm>
+            <encryption_method>luks2</encryption_method>
+            <encryption_pbkdf>pbkdf2</encryption_pbkdf>
         </proposal>
 
         <volumes config:type="list">
