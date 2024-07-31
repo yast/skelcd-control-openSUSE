@@ -800,6 +800,7 @@ configured accordingly to match the use case of the role. &lt;/p&gt;</label>
                     <name>download_release_notes</name>
                 </module>
                 <module>
+                    <label>System Role</label>
                     <name>system_role</name>
                 </module>
                 <module>
