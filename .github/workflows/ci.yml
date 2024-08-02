@@ -3,7 +3,13 @@
 
 name: CI
 
-on: [push, pull_request]
+on:
+  pull_request:
+  push:
+    branches:
+      # skip in master, the package is built in the submit.yml action
+      - "!master"
+
 
 jobs:
   # downloading the Docker image takes some time so bundling several fast
@@ -31,4 +37,6 @@ jobs:
       run: make -C control check
 
     - name: Package Build
+      # skip in master, but run in forks
+      if:  github.ref_name != 'master' || github.repository_owner != 'yast'
       run: yast-ci-ruby
