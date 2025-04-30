@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Wed Apr 30 07:09:20 UTC 2025 - Stefan Schubert <schubi@suse.de>
+
+- Set grub2-bls as default bootloader (jsc#PED-10703).
+- 20250430
+
+-------------------------------------------------------------------
 Tue Sep  3 08:30:52 UTC 2024 - Cathy Hu <cathy.hu@suse.com>
 
 - Set SELinux as default LSM in enforcing mode instead of AppArmor (bsc#1230118)
