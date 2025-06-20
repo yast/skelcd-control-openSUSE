@@ -1,4 +1,10 @@
 -------------------------------------------------------------------
+Fri Jun 20 10:03:35 UTC 2025 - Stefan Schubert <schubi@suse.de>
+
+- Using systemd_fde in partition proposal (jsc#PED-10703).
+- 20250620
+
+-------------------------------------------------------------------
 Wed Apr 30 07:09:20 UTC 2025 - Stefan Schubert <schubi@suse.de>
 
 - Set grub2-bls as default bootloader (jsc#PED-10703).
