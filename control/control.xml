@@ -390,12 +390,26 @@ textdomain="control"
         <software>
           <default_patterns>kde x11 base enhanced_base x11_yast yast2_basis</default_patterns>
         </software>
+        <partitioning>
+          <proposal>
+            <encryption_method>systemd_fde</encryption_method>
+            <encryption_pbkdf>argon2id</encryption_pbkdf>
+            <encryption_authentication>tpm2+pin</encryption_authentication>
+          </proposal>
+        </partitioning>
         <order config:type="integer">100</order>
         <no_default config:type="boolean">true</no_default>
       </system_role>
 
       <system_role>
         <id>gnome</id>
+        <partitioning>
+          <proposal>
+            <encryption_method>systemd_fde</encryption_method>
+            <encryption_pbkdf>argon2id</encryption_pbkdf>
+            <encryption_authentication>tpm2+pin</encryption_authentication>
+          </proposal>
+        </partitioning>
         <software>
           <default_patterns>gnome x11 base enhanced_base x11_yast yast2_basis</default_patterns>
         </software>
@@ -404,6 +418,13 @@ textdomain="control"
 
       <system_role>
         <id>xfce</id>
+        <partitioning>
+          <proposal>
+            <encryption_method>systemd_fde</encryption_method>
+            <encryption_pbkdf>argon2id</encryption_pbkdf>
+            <encryption_authentication>tpm2+pin</encryption_authentication>
+          </proposal>
+        </partitioning>
         <software>
           <default_patterns>xfce x11 base enhanced_base x11_yast yast2_basis</default_patterns>
         </software>
@@ -412,6 +433,13 @@ textdomain="control"
 
       <system_role>
         <id>generic_desktop</id>
+        <partitioning>
+          <proposal>
+            <encryption_method>systemd_fde</encryption_method>
+            <encryption_pbkdf>argon2id</encryption_pbkdf>
+            <encryption_authentication>tpm2+pin</encryption_authentication>
+          </proposal>
+        </partitioning>
         <software>
           <default_patterns>basic_desktop x11 base x11_yast yast2_basis yast2_desktop</default_patterns>
         </software>
@@ -420,6 +448,13 @@ textdomain="control"
 
       <system_role>
         <id>server</id>
+        <partitioning>
+          <proposal>
+            <encryption_method>systemd_fde</encryption_method>
+            <encryption_pbkdf>argon2id</encryption_pbkdf>
+            <encryption_authentication>tpm2</encryption_authentication>
+          </proposal>
+        </partitioning>
         <globals>
             <firewall_enable_ssh config:type="boolean">true</firewall_enable_ssh>
             <enable_sshd config:type="boolean">true</enable_sshd>
