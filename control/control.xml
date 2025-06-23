@@ -421,13 +421,6 @@ textdomain="control"
 
       <system_role>
         <id>server</id>
-        <partitioning>
-          <proposal>
-            <encryption_method>systemd_fde</encryption_method>
-            <encryption_pbkdf>argon2id</encryption_pbkdf>
-            <encryption_authentication>tpm2</encryption_authentication>
-          </proposal>
-        </partitioning>
         <globals>
             <firewall_enable_ssh config:type="boolean">true</firewall_enable_ssh>
             <enable_sshd config:type="boolean">true</enable_sshd>
