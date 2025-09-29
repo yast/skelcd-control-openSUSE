@@ -398,7 +398,7 @@ textdomain="control"
       <system_role>
         <id>gnome</id>
         <software>
-          <default_patterns>gnome x11 base enhanced_base x11_yast yast2_basis</default_patterns>
+          <default_patterns>gnome base enhanced_base x11_yast yast2_basis</default_patterns>
         </software>
         <order config:type="integer">200</order>
       </system_role>
