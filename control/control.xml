@@ -401,6 +401,9 @@ textdomain="control"
           <default_patterns>gnome base enhanced_base x11_yast yast2_basis</default_patterns>
         </software>
         <order config:type="integer">200</order>
+        <globals>
+          <default_target>graphical</default_target>
+        </globals>
       </system_role>
 
       <system_role>
